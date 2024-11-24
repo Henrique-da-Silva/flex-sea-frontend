@@ -1,0 +1,14 @@
+{
+  "name": "flex-sea-frontend",
+  "version": "1.0.0",
+  "description": "Desenvolvimento do Front-End para projeto Flex Sea",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server" 
+  },
+  "author": "Goncalves",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
