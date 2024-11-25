@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=DM+Sans:opsz,wght@9..40,500&display=swap');
+
+/* Inicio do formulário com checkbox e botão */
+
+footer{
+
+    font-family: 'Dm Sans';
+
+}
+.dm-mono-medium {
+  font-family: "DM Mono", monospace; /* Define a fonte DM Mono */
+  font-weight: 500; /* Define o peso da fonte */
+  font-style: normal; /* Fonte sem itálico */
+}
+
+.container{
+    display: flex;
+    
+}
+
+.form{
+    margin-top: 19px;
+     margin-left: 139px;
+}
+
+.title{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.input-name{
+    width: 351px;
+    height: 56.9px;
+    border-radius: 5px;
+    border: 0.5px solid;
+    padding: 10px;
+}
+
+.input-email{
+    width: 351px;
+    height: 56.9px;
+    border-radius: 5px;
+    border: 0.5px solid;
+    padding: 10px;
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px; 
+}
+
+
+input[type="checkbox"] {
+    appearance: none; 
+    width: 21px; 
+    height: 21px; 
+    border: 0.5px solid #000000; 
+    background-color: #EFEDE5; /* Cor de fundo */
+    cursor: pointer; 
+    margin: 0;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #EFEDE5; /* Cor de fundo quando marcado verificar com Mário*/
+}
+
+label {
+    font-family: 'DM+mono';
+    font-size: 12px;
+    line-height: 15,62px;
+    color: #333;
+    text-transform: uppercase; 
+}
+
+label span {
+    color: #d35400; /* Cor do texto "PRIVACY POLICY" */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.button{
+    background-color: white;
+    width: 140.82px;
+    height: 54px;
+    border: 0.5px solid;
+    border-radius: 50px;
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+/* Fim estilização formulário check boa e botão*/
+
+
