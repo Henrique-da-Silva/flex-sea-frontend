@@ -6,7 +6,6 @@
 footer{
 
     font-family: 'Dm Sans';
-    font-weight: 500;
 
 }
 .dm-mono-medium {
@@ -27,6 +26,7 @@ footer{
 
 .title{
     font-size: 22px;
+    font-weight: 500;
 }
 
 .input-name{
@@ -54,6 +54,7 @@ footer{
     gap: 10px;
     margin-top: 15px; 
 }
+
 
 input[type="checkbox"] {
     appearance: none; 
