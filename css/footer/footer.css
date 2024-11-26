@@ -3,6 +3,31 @@
 
 /* Inicio do formulário com checkbox e botão */
 
+
+.hr{
+    color: #9A9998;
+}
+
+.image5{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.image5 img{
+    width: 1238px;
+    height: 103px;
+    
+}
+
+.image5 p{
+    font-family: 'DM Mono';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15.62px;
+}
+
 footer{
 
     font-family: 'Dm Sans';
@@ -14,14 +39,13 @@ footer{
   font-style: normal; /* Fonte sem itálico */
 }
 
-.container{
-    display: flex;
+.form{
     
 }
 
-.form{
-    margin-top: 19px;
-     margin-left: 139px;
+.container{
+    display: flex;
+    justify-content:space-evenly;
 }
 
 .title{
@@ -61,7 +85,7 @@ input[type="checkbox"] {
     width: 21px; 
     height: 21px; 
     border: 0.5px solid #000000; 
-    background-color: #EFEDE5; /* Cor de fundo */
+    background-color: white; /* Cor de fundo */
     cursor: pointer; 
     margin: 0;
 }
@@ -92,8 +116,114 @@ label span {
     border-radius: 50px;
     margin-top: 15px;
     font-size: 12px;
+    cursor: pointer;
 }
 
-/* Fim estilização formulário check boa e botão*/
+.group87{
+
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.group87 ul{
+    list-style: none;
+    color: #858585;
+    font-family: 'Dm sans';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+     
+
+}
+
+/* Links */
+
+.list{
+
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px ;
+}
+
+.ul{
+
+    list-style: none;
+    
+}
+
+.ul a{
+
+    text-decoration: none;
+    color: #858585;
+    font-family: 'Dm sans';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+        
+}
+
+.linkedin img{
+    width: 28px;
+    height: 28px;
+}
+
+.linkedin{
+    margin-top: 17px;
+    margin-left: 30px;
+}
+
+/* Rodapé */
+
+.container-rodape{
+    display: flex; 
+}
+
+.p{
+    margin-left: 144px;
+    font-family: 'DM Mono';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15.62px;
+    
+}
+
+.p a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.a{
+    margin-left: 500px;
+    
+}
+
+.a a{
+
+    text-decoration: none;
+    font-family: 'DM Mono';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15.62px;
+    color:#000000;
+}
+
+.gridspace{
+
+    margin-left: 60px;
+    
+}
+
+.gridspace a{
+    
+    text-decoration: none;
+    color: #9A9998;
+     font-family: 'DM Mono';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15.62px;
+        
+}
+
 
 
