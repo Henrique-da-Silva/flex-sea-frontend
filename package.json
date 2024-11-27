@@ -4,11 +4,12 @@
   "description": "Desenvolvimento do Front-End para projeto Flex Sea",
   "main": "index.js",
   "scripts": {
-    "start": "live-server" 
+    "start": "live-server"
   },
   "author": "Goncalves",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "live-server": "^1.2.1"
   }
 }
