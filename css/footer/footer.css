@@ -41,7 +41,7 @@ footer{
   font-style: normal; /* Fonte sem itálico */
 }
 
-.container{
+.containerfooter{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
