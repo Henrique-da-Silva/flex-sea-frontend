@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=DM+Sans:opsz,wght@9..40,500&display=swap');
 
-.slick-carousel{
-    margin-left: 135px;
-}
+    .slick-carousel{
+        margin-left: 135px;
+    }
 
 
         .card {
-            max-width: 378px;
-            max-height: 500px;
+            width: 379px;
+            height: 455px;
+            max-width: 379px;
+            max-height: 455px;
             background-color: #F9F6EC;
             padding: 30px;
             border-radius: 50px;
-            text-align: center;
             text-align: left;
-            margin: 10px;
+            margin: 5px;
            
             
            
@@ -34,6 +35,8 @@
             font-size: 22px;
             line-height: 26px;
             font-weight: 500;
+             min-height: 60px;
+             max-height: 60px;
         }
 
         .card img {
