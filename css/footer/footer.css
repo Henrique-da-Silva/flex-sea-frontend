@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=DM+Sans:opsz,wght@9..40,500&display=swap');
 
-/* Inicio do formulário com checkbox e botão */
-
 
 .hr{
     color: #9A9998;
@@ -15,19 +13,28 @@
     flex-direction: column;
 }
 
-.image5 img{
-    width: 100%;
-    max-width: 1238px;
-    height: auto;
-    
-}
-
 .image5 p{
     font-family: 'DM Mono';
     font-size: 12px;
     font-weight: 500;
     line-height: 15.62px;
 }
+/* Carousel com logos*/
+
+.footer-carousel {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.footer-carousel img {
+    
+  max-width: 262px;
+  height: 108px;
+  margin: 0 auto;
+}
+
+/* Inicio do formulário com checkbox e botão */
 
 footer{
 
@@ -235,11 +242,6 @@ label span {
     }
 
 }
-
-
-
-
-
 
 
 @media (max-width: 768px) {
