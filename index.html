@@ -131,6 +131,133 @@
         display: inline;           /* Exibir o texto ao passar o mouse */
         opacity: 1;                /* Exibir suavemente */
       }
+
+       /* Estilo da seção Bioplastic */
+    .bioplastic-section {
+        text-align: left;
+        padding: 50px;
+        position: relative;
+      }
+
+      .bioplastic-section .row {
+        width: 120%; /* Aumenta um pouco a largura */
+        max-width: none; /* Remove limite de largura padrão */
+        margin-left: -10%; /* Ajusta a posição para centralizar o conteúdo */
+      }
+
+      .bioplastic-section img {
+        width: 100%;
+        height: auto;
+      }
+
+      .bioplastic-section h1 {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+    /* Estilo do botão LERN MORE da seção Bioplastic */
+      .learn-more-button {
+        position: relative; /* ou absolute dependendo do contexto */
+        float: right; /* Alternativa: use position */
+        margin-right: 20px; /* Ajuste a margem conforme necessário */
+        padding: 10px 20px;
+        background-color: #ffffff; /* Cor do botão */
+        color: #000;
+        border: 1px solid #000; /* Borda preta */
+        border-radius: 40px; /* Arredondamento da borda */
+        cursor: pointer;
+        font-size: 16px;
+        width: 223px;
+        height: 54px;
+        font-family: 'DM Mono', monospace; /* Fonte DM Mono */
+        margin: 30px;
+      }
+
+      .learn-more-button:hover {
+        background-color: #d4d4d4; /* Efeito ao passar o mouse */
+        color: #fff; /* Alterar cor do texto no hover */
+        border-color: #ffffff; /* Alterar cor da borda no hover */
+      }
+
+      /* Estilo do - What We Do - da seção Bioplastic */
+      .what-we-do {
+        font-family: 'DM Mono', monospace;
+        margin-bottom: 0;
+      }
+
+      /* Estilo de - 1, 2 - da seção Bioplastic e biotech */
+      .number-style {
+        font-family: 'DM Mono', monospace;
+        font-size: 20px;
+      }
+
+          /* Estilo da seção Biotech */
+      .biotech-section {
+        text-align: left;
+        padding: 50px;
+        position: relative;
+      }
+
+      .biotech-section .row {
+        width: 120%; /* Aumenta um pouco a largura */
+        max-width: none; /* Remove limite de largura padrão */
+        margin-left: -10%; /* Ajusta a posição para centralizar o conteúdo */
+      }
+
+      .biotech-section img {
+        width: 100%;
+        height: auto;
+      }
+
+      .biotech-section h1 {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+
+      /*Texto acima da imagem*/
+
+      .text-overlay {
+        position: absolute;
+        top: 50%; /* Ajuste conforme necessário */
+        left: 75%; /* Centraliza horizontalmente */
+        transform: translate(-75%, -50%); /* Ajusta para centralizar completamente */
+        color: white;
+        font-size: 24px; /* Ajuste conforme necessário */
+        font-weight: bold;
+        background-color: #0E0466;
+        padding: 40px;
+        border-radius: 5px;
+        border-radius: 60px;
+        font-family: 'DM Sans', sans-serif;
+      }
+
+      .text-overlay h2{
+        width: 372px;
+        height: 231px;
+        font-size: 32px;
+        font-weight: 500;        
+      }
+
+      .text-overlay p{
+        width: 372px;
+        height: 150px;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 70px;
+      }
+
+      .text-overlay button{
+        width: 223px;
+        height: 54px;
+        font-size: 12px;
+        font-weight: 500;
+        border-radius: 50px;
+        background-color: #0E0466;
+        color: white;
+        font-family: 'DM Mono', monospace;
+        border-color: rgb(196, 196, 196);
+      }
     </style>
   </head>
   
@@ -209,6 +336,43 @@
       </div>
     </div>
 
+        <!-- Seção Bioplastic -->
+        <section class="bioplastic-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <p class="what-we-do"><strong>WHAT WE DO</strong></p>
+                <h1><sup class="number-style">1 </sup><strong>Bioplastic</strong></h1>
+                <button class="learn-more-button">LEARN MORE</button>
+              </div>
+              <div class="col-12">
+                <img src="img/3.png" alt="Imagem Bioplastic">
+              </div>
+            </div>
+          </div>
+        </section>
+    
+        <!-- Seção Biotech -->
+        <section class="biotech-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <p class="what-we-do"><strong>BUT THAT´S NOT ALL...</strong></p>
+                <h1><sup class="number-style">2 </sup><strong>Biotech</strong></h1>
+              </div>
+              <div class="col-12">
+                <img src="img/4.png" alt="Imagem Bioplastic">
+                <div class="text-overlay">
+                  <h2>FlexSea is dedicated to creating sustainable processes that utilise the full biomass of the seaweed.</h2>
+                  <p>This passion for circularity has given rise to our Biotechnology vertical which sees us use natural practices such as bacterial fermentation to extract the full wealth of available material from our seaweed sources.</p>
+                  <button>LEARN MORE</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
     <!-- Área principal de conteúdo -->
     <div class="container my-5 d-grid gap-5">
       <!-- Conteúdo de exemplo com borda -->
@@ -229,6 +393,102 @@
         </p>
       </div>
     </div>
+
+    <section class="image5">
+    
+      <p>SUPPORTED BY</p>
+      <img src="img/footer/image 5.png" alt="">
+  
+  </section>
+  <br><br>
+  
+  <hr class="hr">
+  
+  <footer>
+  
+      <div class="container">
+  
+          <!-- Coluna 1 -->
+          <div class="form">
+  
+              <p class="title">Sign up to our newsletter:</p>
+  
+              <form action="" method="">
+                  <!-- Campo de Nome -->
+                  <input class="input-name" type="text" id="nome" name="nome" required placeholder="Name">
+  
+                  <!-- Campo de E-mail -->
+                  <input class="input-email" type="email" id="email" name="email" required placeholder="E-mail">
+  
+                  <!-- Checkbox -->
+                  <div class="checkbox-container">
+                      <input type="checkbox" id="privacy-checkbox">
+                      <label class="dm-mono-medium" for="privacy-checkbox">I HAVE READ AND ACCEPT THE <span>PRIVACY
+                              POLICY</span></label>
+                  </div>
+  
+                  <!-- Botão de Envio -->
+                  <button class="button dm-mono-medium" type="submit">SIGN UP</button>
+                  <br><br><br><br>
+  
+                  <div class="group87">
+                      <img src="img/footer/Group 87.svg" alt="">
+                      <ul>
+                          <li>contact@flex-sea.com</li>
+                          <li>+44 1234 12334345</li>
+                      </ul>
+  
+                  </div>
+  
+          </div>
+  
+          <!-- Coluna 2 -->
+          <div class="list">
+              <ul class="ul">
+                  <li><a href="pages/bioplastics.html">Bioplastic</a></li>
+                  <li><a href="pages/biotech.html">Biotech</a></li>
+                  <li><a href="pages/news.html">News & Media</a></li>
+              </ul>
+  
+              <ul class="ul">
+                  <li><a href="pages/about-us.html">Our story</a></li>
+                  <li><a href="">Our approach</a></li>
+                  <li><a href="">Our team</a></li>
+              </ul>
+  
+  
+              <ul class="ul">
+                  <li><a href="">Material request</a></li>
+                  <li><a href="pages/faqs.html">FAQs</a></li>
+                  <li><a href="">Careers</a></li>
+                  <li><a href="">Contact us</a></li>
+              </ul>
+  
+              <a class="linkedin" href=""><img src="img/footer/linkedinsvg.svg" alt=""></a>
+  
+          </div>
+  
+      </div>
+      <br><br>
+  
+      <!--Rodapé-->
+  
+      <div class="container-rodape">
+  
+          <div class="p">
+              <a href="index.html">©2024 – FLEXSEA</a>
+          </div>
+          <div class="a">
+              <a href="">PRIVACY POLICY - TERMS & CONDITIONS</a>
+  
+          </div>
+          <div class="gridspace">
+              <a href=""><span style="color: #D2D2D2;">DEVELOPED BY </span>GRID SPACE</a>
+          </div>
+      </div>
+  
+  
+  </footer>
 
     <!-- Script do Bootstrap -->
     <script src="js/bootstrap.bundle.min.js"></script>

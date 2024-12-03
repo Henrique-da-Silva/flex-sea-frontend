@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=DM+Sans:opsz,wght@9..40,500&display=swap');
+
+/* Inicio do formulário com checkbox e botão */
+
+
+.hr{
+    color: #9A9998;
+}
+
+.image5{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.image5 img{
+    width: 100%;
+    max-width: 1238px;
+    height: auto;
+    
+}
+
+.image5 p{
+    font-family: 'DM Mono';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15.62px;
+}
+
+footer{
+
+    font-family: 'Dm Sans';
+
+}
+
+.dm-mono-medium {
+  font-family: "DM Mono", monospace; /* Define a fonte DM Mono */
+  font-weight: 500; /* Define o peso da fonte */
+  font-style: normal; /* Fonte sem itálico */
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.title{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.input-name{
+    width: 330px;
+    height: 36.9px;
+    border-radius: 5px;
+    border: 0.5px solid;
+    padding: 10px;
+}
+
+.input-email{
+    width: 330px;
+    height: 36.9px;
+    border-radius: 5px;
+    border: 0.5px solid;
+    padding: 10px;
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px; 
+}
+
+
+input[type="checkbox"] {
+    appearance: none; 
+    width: 21px; 
+    height: 21px; 
+    border: 0.5px solid #000000; 
+    background-color: white; /* Cor de fundo */
+    cursor: pointer; 
+    margin: 0;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #EFEDE5; /* Cor de fundo quando marcado verificar com Mário*/
+}
+
+label {
+    font-family: 'DM+mono';
+    font-size: 12px;
+    line-height: 15,62px;
+    color: #333;
+    text-transform: uppercase; 
+}
+
+label span {
+    color: #d35400; /* Cor do texto "PRIVACY POLICY" */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.button{
+    background-color: white;
+    width: 140.82px;
+    height: 54px;
+    border: 0.5px solid;
+    border-radius: 50px;
+    margin-top: 15px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.group87{
+
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.group87 ul{
+    list-style: none;
+    color: #858585;
+    font-family: 'Dm sans';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+     
+
+}
+
+/* Links */
+
+.list{
+
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.ul{
+
+    list-style: none;
+    
+}
+
+.ul a{
+
+    text-decoration: none;
+    color: #858585;
+    font-family: 'Dm sans';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+        
+}
+
+.linkedin img{
+    width: 28px;
+    height: 28px;
+}
+
+.linkedin{
+    margin-top: 17px;
+    margin-left: 30px;
+}
+
+/* Rodapé */
+
+.container-rodape{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.p{
+    margin-left: 144px;
+}
+
+.a{
+    margin-left: 500px;
+}
+
+.gridspace{
+    margin-left: 80px;
+}
+
+.p, .a, .gridspace {
+    
+    font-family: 'DM Mono';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15.62px;
+}
+    
+    .p a, .a a, .gridspace a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.gridspace a {
+    color: #9A9998;
+}
+
+.p a{
+    text-decoration: none;
+    color: #000000;
+}
+
+
+
+/* Responsividade para dispositivos médios (tablets) */
+
+
+@media (max-width: 1300px){
+
+      .container-rodape {
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .p, .a, .gridspace {
+        
+        margin: 10px 0;
+        text-align: center;
+    }
+
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form {
+        margin-bottom: 20px;
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .list {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .ul {
+        margin-bottom: 20px;
+    }
+
+       .container-rodape {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .p, .a, .gridspace {
+        
+        margin: 10px 0;
+        text-align: center;
+    }
+
+   } 
+
+
+/* Responsividade para dispositivos pequenos (smartphones) */
+@media (max-width: 480px) {
+    .input-name, .input-email {
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .linkedin {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .group87 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .group87 ul {
+        text-align: center;
+    }
+
+    .container-rodape {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .p, .a, .gridspace {
+        
+        margin: 10px 0;
+        text-align: center;
+    }
+
+
+   
+}
+
+
+
+
+
+
