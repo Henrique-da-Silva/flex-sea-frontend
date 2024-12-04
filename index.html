@@ -28,6 +28,7 @@
         font-family: 'DM Sans', sans-serif; /* Fonte DM Sans aplicada */
       }
 
+
       .btn-custom {
         background-color: #F9F6EC; /* Cor de fundo do botão */
         border: none; /* Sem borda */
@@ -36,6 +37,25 @@
         color: #000; /* Cor do texto do botão */
         transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
         font-family: 'DM Mono', monospace; /* Fonte DM Mono aplicada */
+        margin-bottom: 10px;
+        width: 90%;
+        max-width: 244px;
+      }
+
+      @media (min-width: 768px) {
+        .btn-custom {
+          width: auto; /* Ajusta o tamanho dos botões em telas maiores */
+        }
+      }
+
+      .button-group {
+        flex-direction: column; /* Botões em coluna por padrão */
+      }
+
+      @media (min-width: 768px) {
+        .button-group {
+          flex-direction: row; /* Botões lado a lado em telas maiores */
+        }
       }
 
       .btn-custom:hover {
@@ -54,6 +74,12 @@
         height: 2px; /* Espessura da linha */
         background-color: #ffffff; /* Cor da linha, branca como o texto */
         margin-bottom: 20px; /* Espaço entre a linha e os botões */
+      }
+
+      @media (max-width: 768px) {
+        .line {
+          display: none; /* Esconde a linha em telas menores */
+        }
       }
 
       .navbar-nav .nav-link {
@@ -80,6 +106,14 @@
 
       .navbar.scrolled .nav-link {
         color: #000000 !important; /* Cor branca quando a barra de navegação faz scroll */
+      }
+
+      /* Responsividade da barra de navegação */
+      @media (max-width: 768px) {
+      .navbar-nav .nav-link {
+        font-size: 16px;
+        margin-bottom: 15px;
+        }
       }
 
       .bg-white {
@@ -158,7 +192,7 @@
       }
 
        /* Estilo da seção Bioplastic */
-    .bioplastic-section {
+      .bioplastic-section {
         text-align: left;
         padding: 50px;
         position: relative;
@@ -216,6 +250,27 @@
         font-size: 20px;
       }
 
+      /* Seções Bioplastic e Biotech */
+        .bioplastic-section,
+        .biotech-section {
+          text-align: left;
+          padding: 30px 20px;
+        }
+
+      @media (min-width: 768px) {
+        .bioplastic-section,
+        .biotech-section {
+          padding: 50px;
+        }
+      }
+
+      /* Responsividade da imagem e do vídeo */
+      .bioplastic-section video,
+      .biotech-section video {
+        width: 100%;
+        height: auto;
+      }
+
           /* Estilo da seção Biotech */
       .biotech-section {
         text-align: left;
@@ -255,6 +310,14 @@
         border-radius: 5px;
         border-radius: 60px;
         font-family: 'DM Sans', sans-serif;
+        max-width: 90%;
+      }
+
+      @media (min-width: 768px) {
+        .text-overlay {
+          max-width: 50%;
+          padding: 40px;
+        }
       }
 
       .text-overlay h2{
@@ -283,18 +346,68 @@
         font-family: 'DM Mono', monospace;
         border-color: rgb(196, 196, 196);
       }
+
+/* Ajuste da barra de navegação */
+.navbar {
+  padding: 1rem; /* Ajuste o padding para manter a barra compacta */
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem; /* Garante espaçamento lateral suficiente */
+}
+
+.navbar-brand {
+  margin-right: auto; /* Coloca o logotipo à esquerda */
+}
+
+.navbar-toggler {
+  margin-left: 0; /* Remova qualquer margem para o lado esquerdo */
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+}
+
+/* Ajuste do tamanho do logotipo e do botão em telas pequenas */
+@media (max-width: 767px) {
+  .navbar-brand img {
+    max-height: 50px; /* Ajuste o tamanho do logotipo para caber na navbar em dispositivos menores */
+  }
+
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem; /* Ajuste o espaçamento do botão para torná-lo visualmente consistente */
+    margin-right: 30px;
+  }
+
+  .navbar-toggler-icon {
+    height: 1.5rem; /* Ajuste o tamanho do ícone para combiná-lo ao tamanho do logo */
+
+  }
+}
+
+/* Navbar Collapse */
+.collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
     </style>
   </head>
   
   <body>
     <!-- Navbar fixa no topo -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
-      <div class="container">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
         <!-- Logo da empresa -->
-        <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Flex Sea"></a>
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="img/logo.png" alt="Flex Sea" class="logo">
+        </a>
+    
         <!-- Botão para colapsar o menu em dispositivos menores -->
         <button
-          class="navbar-toggler"
+          class="navbar-toggler d-flex align-items-center"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -365,6 +478,7 @@
       <video autoplay muted loop class="w-100 h-100 position-absolute" style="object-fit: cover;">
         <source src="video/FlexSeaWebsiteAnimationH264.mp4" type="video/mp4">
       </video>
+      
       <!-- Texto "Make a request" posicionado -->
       <div class="request-text position-absolute" style="bottom: 4%; left: 10%;">
         <p class="text-white mb-2">Make a request:</p>
