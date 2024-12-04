@@ -60,16 +60,16 @@ footer{
 }
 
 .input-name{
-    width: 330px;
-    height: 36.9px;
+    width: 351px;
+    height: 56.9px;
     border-radius: 5px;
     border: 0.5px solid;
     padding: 10px;
 }
 
 .input-email{
-    width: 330px ;
-    height: 36.9px;
+    width: 351px ;
+    height: 56.9px;
     border-radius: 5px;
     border: 0.5px solid;
     padding: 10px;
@@ -175,7 +175,7 @@ label span {
 }
 
 .linkedin{
-    margin-top: 17px;
+    
     margin-left: 30px;
 }
 
@@ -241,6 +241,16 @@ label span {
         text-align: center;
     }
 
+      .list {
+     
+        margin-top: 15px;
+        
+    }
+
+    .group87{
+        margin-top: 0px;
+    }
+
 }
 
 
@@ -252,13 +262,13 @@ label span {
 
     .form {
         margin-bottom: 20px;
-        width: 90%;
+        
         max-width: 400px;
     }
 
     .list {
         flex-direction: column;
-        align-items: center;
+        
         
     }
 
@@ -280,7 +290,7 @@ label span {
    } 
 
 
-/* Responsividade para dispositivos pequenos (smartphones) */
+/* Responsividade para dispositivos pequenos (mobile) */
 @media (max-width: 480px) {
     .input-name, .input-email {
         width: 100%;
