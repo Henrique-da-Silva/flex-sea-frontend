@@ -54,13 +54,13 @@
             flex-direction: column;
             justify-content: space-between;
             width: 378px;
-            height: 480px;
+            height: 500px;
             max-width: 378px;
-            max-height: 480px;
+            max-height: 500px;
             background-color: #F9F6EC;
             padding: 30px;
             border-radius: 50px;
-            border: nonegi;
+            border: none;
             margin: 5px;
            
             
