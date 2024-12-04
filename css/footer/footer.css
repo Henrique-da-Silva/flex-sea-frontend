@@ -291,7 +291,7 @@ label span {
 
 
 /* Responsividade para dispositivos pequenos (mobile) */
-@media (max-width: 480px) {
+@media (max-width: 522px) {
     .input-name, .input-email {
         width: 100%;
     }
