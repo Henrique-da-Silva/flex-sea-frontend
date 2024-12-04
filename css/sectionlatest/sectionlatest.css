@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=DM+Sans:opsz,wght@9..40,500&display=swap');
 
+
     /* Estilos Latest H1 e Button*/
 
    .latest-news{
@@ -48,6 +49,7 @@
 
 
         .card {
+            
             display: flex;
             flex-direction: column;
             justify-content: space-between;
