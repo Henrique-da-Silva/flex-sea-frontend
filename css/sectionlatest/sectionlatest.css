@@ -61,9 +61,7 @@
             padding: 30px;
             border-radius: 50px;
             border: none;
-            margin: 5px;
-           
-            
+            margin: 5px;        
            
         
         }
@@ -222,9 +220,9 @@
       .card {
          
             width: 321px;
-            height: 432px;
+            height: 452px;
             max-width: 321px;
-            max-height: 432px;
+            max-height: 452px;
           
         
         }

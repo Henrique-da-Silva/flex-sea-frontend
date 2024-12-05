@@ -308,8 +308,7 @@ label span {
 
     .desktop{
         display: none;
-    }
-    
+    } 
 
     .mobile{
         display: flex;
@@ -317,11 +316,6 @@ label span {
         margin-left: 30px;
     }
 
-
-    .p-a{
-        display: flex;
-        justify-content: space-between;
-    }
 
     .p-a h3{
 
@@ -339,8 +333,6 @@ label span {
         margin-left: 105px;
 
     }
-
-  
 
     .list-mobile{
         display: flex;
@@ -391,7 +383,6 @@ label span {
   .rodape{
     display: flex;
   }
-
 
 
    
