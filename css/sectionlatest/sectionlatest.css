@@ -201,30 +201,23 @@
     @media (max-width: 500px) {
 
     .latest-news {
-
        
     display: flex;
     flex-direction: column;
    
-    
     } 
 
-          .latest-news h1{
+    .latest-news h1 {
+
     margin-left: 0px;
     margin-bottom: 5px;
     font-size: 36px;
     text-align: left;
-   
-    
  
    }
 
    /* Cards*/ 
 
-        .slick-slide{
-            max-width: 321px;
-            max-height: 432px;
-        }
 
       .card {
          

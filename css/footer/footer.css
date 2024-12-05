@@ -230,6 +230,10 @@ label span {
 
 @media (max-width: 1300px){
 
+     .mobile{
+        display: none;
+    }
+
       .container-rodape {
         justify-content: space-around;
         align-items: center;
@@ -255,6 +259,11 @@ label span {
 
 
 @media (max-width: 768px) {
+
+    .mobile{
+        display: none;
+    }
+
     .container {
         flex-direction: column;
         align-items: center;
@@ -292,38 +301,96 @@ label span {
 
 /* Responsividade para dispositivos pequenos (mobile) */
 @media (max-width: 522px) {
-    .input-name, .input-email {
-        width: 100%;
-    }
 
-    .button {
-        width: 100%;
+    .desktop{
+        display: none;
     }
+    
 
-    .linkedin {
-        margin-left: 0;
-        margin-top: 20px;
-    }
-
-    .group87 {
+    .mobile{
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        margin-left: 30px;
     }
 
-    .group87 ul {
-        text-align: center;
+
+    .p-a{
+        display: flex;
+        justify-content: space-between;
     }
 
-    .container-rodape {
-        flex-direction: column;
-        align-items: center;
+    .p-a h3{
+
+        font-size: 18px;
+        font-family: 'DM Sans';
+        font-weight: 500;
+        line-height: 22px;
+        width: 351px;
+
     }
 
-    .p, .a, .gridspace {
+    .p-a img{
+        width: 28px;
+        height: 28px;
+        margin-left: 105px;
+
+    }
+
+  
+
+    .list-mobile{
+        display: flex;
         
-        margin: 10px 0;
-        text-align: center;
     }
+
+    ul, li {
+
+    margin: 0;
+    padding: 0;
+
+    }
+
+    #list2{
+
+        margin-left: 100px;
+
+    }
+
+    #nm{
+        width: 125px;
+    }
+
+    .group87{
+        align-items: center;
+    }
+
+    #logo-footer{
+        width: 69px;
+        height: 64px;
+    }
+
+    #cl4{
+        margin-left: 30px;
+    }
+
+  .privacy-policy, a{
+
+    font-family: 'DM Mono';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15.62px;
+    color: #000000;
+    text-decoration: none;     
+
+  }
+
+  .rodape{
+    display: flex;
+  }
+
+
+
+   
 
 
    
