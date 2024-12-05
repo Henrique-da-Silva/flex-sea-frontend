@@ -160,6 +160,34 @@
     cursor: pointer;
 }
 
+.image5{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.image5 p{
+    font-family: 'DM Mono';
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15.62px;
+}
+/* Carousel com logos*/
+
+.footer-carousel {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.footer-carousel img {
+    
+  max-width: 262px;
+  height: 108px;
+  margin: 0 auto;
+}
+
 
 /* Responsividade Latest News H1 e Button*/
 
