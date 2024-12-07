@@ -1,0 +1,94 @@
+      /*================= HEADER DESKTOP =====================*/
+      .navbar-nav .nav-link {
+        color: #000 !important; /* Cor preta para os links de navegação */
+        font-family: 'DM Sans', sans-serif; /* Fonte DM Sans */
+        font-weight: 500; /* Peso da fonte */
+        font-size: 18px; /* Tamanho da fonte */
+        line-height: 28px; /* Altura da linha */
+        letter-spacing: -0.02em; /* Espaçamento entre letras (-2%) */
+        margin-bottom: 25px; /* Espaçamento inferior entre parágrafos */
+      }
+
+      .navbar {
+        background-color: transparent;
+      }
+
+      .navbar .nav-link {
+        color: #000000 !important;
+      }
+
+      .navbar.scrolled {
+        background-color: #fff;
+      }
+
+      .navbar.scrolled .nav-link {
+        color: #000000 !important; /* Cor branca quando a barra de navegação faz scroll */
+      }
+
+      /* Responsividade da barra de navegação */
+      @media (max-width: 768px) {
+      .navbar-nav .nav-link {
+        font-size: 16px;
+        margin-bottom: 15px;
+        }
+      }
+
+      .bg-white {
+        background-color: #fff !important;
+      }
+
+      /* Remove o caret do About us e Enquiries */
+      #aboutDropdown::after,
+      #enquiriesDropdown::after {
+        display: none; /* Esconde a seta */
+      }
+
+      /*================= HEADER MOBILE =====================*/
+
+      /* Ajuste da barra de navegação */
+    .navbar {
+        padding: 1rem; /* Ajuste o padding para manter a barra compacta */
+      }
+      
+      .container-fluid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem; /* Garante espaçamento lateral suficiente */
+      }
+      
+      .navbar-brand {
+        margin-right: auto; /* Coloca o logotipo à esquerda */
+      }
+      
+      .navbar-toggler {
+        margin-left: 0; /* Remova qualquer margem para o lado esquerdo */
+        display: flex;
+        align-items: center; /* Alinha verticalmente */
+      }
+  
+  /* Ajuste do tamanho do logotipo e do botão em telas pequenas */
+  @media (max-width: 767px) {
+    .navbar-brand img {
+      max-height: 50px; /* Ajuste o tamanho do logotipo para caber na navbar em dispositivos menores */
+    }
+  
+    .navbar-toggler {
+      padding: 0.25rem 0.5rem; /* Ajuste o espaçamento do botão para torná-lo visualmente consistente */
+      margin-right: 30px;
+    }
+  
+    .navbar-toggler-icon {
+      height: 1.5rem; /* Ajuste o tamanho do ícone para combiná-lo ao tamanho do logo */
+  
+    }
+  }
+  
+  /* Navbar Collapse */
+  .collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+  
+
