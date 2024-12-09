@@ -2,8 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=DM+Sans:opsz,wght@9..40,500&display=swap');
 
 .main{
-   margin-left: 140px;
-    
+    margin-top: 150px;
+    margin-left: 140px;     
+}
+
+body{
+    background-image: url('/img/biotech/Frame.svg');
+    background-repeat: no-repeat;
+    background-position: 250px 298px;
 }
 
 .title h1{
