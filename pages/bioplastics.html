@@ -4,19 +4,395 @@
     <!-- Metadados básicos -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flex Sea</title>
+    <title>Bioplastic</title>
     
+    <!-- Inclui estilos Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Fonte Google DM Mono e DM Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=DM+Sans:wght@400&display=swap" rel="stylesheet" />
+    <!-- Inclui ícones do Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/footer/footer.css">
     
-    <link rel="stylesheet" href="/css/bootstrap.min.css" /> <!-- Inclui estilos Bootstrap -->
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=DM+Sans:wght@400&display=swap" rel="stylesheet" /> <!-- Fonte Google DM Mono e DM Sans -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Inclui ícones do Font Awesome -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- CSS do Bootstrap -->
-    <link rel="stylesheet" href="../css/footer/footer.css"> <!-- CSS do Footer -->
-    <link rel="stylesheet" href="../css/header/header.css"> <!-- CSS do Header -->
-    <link rel="stylesheet" href="../css/index/index.css"> <!-- CSS do Index -->
-    <link rel="stylesheet" href="../css/bioplastic/bioplastic.css"> <!-- CSS do Index -->
-
+    <!-- Estilos customizados -->
     <style>
+      .banner-image {
+        background-image: url('img/1.png'); /* Define a imagem de fundo do banner */
+        background-size: cover; /* Imagem de fundo cobre toda a área */
+      }
+
+      .request-text p {
+        font-size: 1.2rem;
+        font-family: 'DM Sans', sans-serif; /* Fonte DM Sans aplicada */
+      }
+
+
+      .btn-custom {
+        background-color: #F9F6EC; /* Cor de fundo do botão */
+        border: none; /* Sem borda */
+        padding: 10px 30px; /* Preenchimento interno do botão */
+        font-size: 0.75rem; /* Tamanho do texto */
+        color: #000; /* Cor do texto do botão */
+        transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+        font-family: 'DM Mono', monospace; /* Fonte DM Mono aplicada */
+        margin-bottom: 10px;
+        width: 90%;
+        max-width: 244px;
+      }
+
+      @media (min-width: 768px) {
+        .btn-custom {
+          width: auto; /* Ajusta o tamanho dos botões em telas maiores */
+        }
+      }
+
+      .button-group {
+        flex-direction: column; /* Botões em coluna por padrão */
+      }
+
+      @media (min-width: 768px) {
+        .button-group {
+          flex-direction: row; /* Botões lado a lado em telas maiores */
+        }
+      }
+
+      .btn-custom:hover {
+        background-color: #e0e0e0; /* Cor de fundo do botão ao passar o mouse */
+      }
+
+      .button-group button {
+        width: 244px; /* Largura dos botões */
+        height: 54px; /* Altura dos botões */
+        border-radius: 40px; /* Bordas arredondadas */
+        margin-right: 10px; /* Espaço entre os botões */
+      }
+
+      .line {
+        width: 100%; /* Linha ocupa toda a largura */
+        height: 2px; /* Espessura da linha */
+        background-color: #ffffff; /* Cor da linha, branca como o texto */
+        margin-bottom: 20px; /* Espaço entre a linha e os botões */
+      }
+
+      @media (max-width: 768px) {
+        .line {
+          display: none; /* Esconde a linha em telas menores */
+        }
+      }
+
+      .navbar-nav .nav-link {
+        color: #000 !important; /* Cor preta para os links de navegação */
+        font-family: 'DM Sans', sans-serif; /* Fonte DM Sans */
+        font-weight: 500; /* Peso da fonte */
+        font-size: 18px; /* Tamanho da fonte */
+        line-height: 28px; /* Altura da linha */
+        letter-spacing: -0.02em; /* Espaçamento entre letras (-2%) */
+        margin-bottom: 25px; /* Espaçamento inferior entre parágrafos */
+      }
+
+      .navbar {
+        background-color: transparent;
+      }
+
+      .navbar .nav-link {
+        color: #000000 !important;
+      }
+
+      .navbar.scrolled {
+        background-color: #fff;
+      }
+
+      .navbar.scrolled .nav-link {
+        color: #000000 !important; /* Cor branca quando a barra de navegação faz scroll */
+      }
+
+      /* Responsividade da barra de navegação */
+      @media (max-width: 768px) {
+      .navbar-nav .nav-link {
+        font-size: 16px;
+        margin-bottom: 15px;
+        }
+      }
+
+      .bg-white {
+        background-color: #fff !important;
+      }
+
+      /* Remove o caret do About us e Enquiries */
+      #aboutDropdown::after,
+      #enquiriesDropdown::after {
+        display: none; /* Esconde a seta */
+      }
+
+      /* Estilo para o ícone circular no menu */
+      .icon-circle {
+        width: 20px;               /* Ajuste a largura do círculo */
+        height: 20px;              /* Ajuste a altura do círculo */
+        background-color: #ffffff; /* Cor de fundo do círculo: branca */
+        border-radius: 50%;        /* Deixa o elemento circular */
+        display: inline-flex;      /* Exibe em linha com o link */
+        align-items: center;       /* Centraliza verticalmente o ícone */
+        justify-content: center;   /* Centraliza horizontalmente o ícone */
+        margin-left: 8px;          /* Espaço entre o texto e o ícone */
+      }
+
+      .icon-circle i {
+        font-size: 14px;           /* Tamanho do ícone */
+        color: #000;               /* Cor do ícone preta */
+      }
+
+      /* Estilo para o botão azul fixo à direita */
+      .fixed-circle {
+        position: fixed;           /* Mantém o elemento fixo na tela mesmo com scroll */
+        right: 40px;               /* Ajusta a distância da borda direita da tela */
+        top: 50%;                  /* Ajusta a posição para ficar alinhado ao centro da tela verticalmente */
+        transform: translateY(-50%); /* Centraliza verticalmente */
+        width: 60px;               /* Largura do círculo */
+        height: 60px;              /* Altura do círculo */
+        background-color: #0E0466; /* Cor azul escura */
+        border-radius: 50%;        /* Deixa o elemento circular inicialmente */
+        display: flex;             /* Para centralizar a imagem dentro do círculo */
+        align-items: center;       /* Alinha verticalmente a imagem no centro */
+        justify-content: center;   /* Alinha horizontalmente a imagem no centro */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra suave ao círculo */
+        cursor: pointer;           /* Define o ponteiro do mouse como 'pointer' */
+        z-index: 1000;             /* Garante que o círculo fique acima de outros elementos */
+        transition: all 0.3s ease; /* Transição suave ao passar o mouse */
+      }
+
+      .fixed-circle:hover {
+        width: 180px;              /* Aumenta a largura do botão ao passar o mouse */
+        padding: 10px 20px;        /* Adiciona um espaçamento para o texto */
+        justify-content: space-between; /* Alinha o conteúdo à esquerda */
+        border-radius: 30px;       /* Torna o botão oval ao passar o mouse */
+        background-color: #0E0466; /* Mantém a cor de fundo */
+      }
+
+      .fixed-circle img {
+        width: 24px;               /* Largura da imagem ajustada */
+        height: 24px;              /* Altura da imagem para mantê-la proporcional */
+      }
+
+      .fixed-circle span {
+        color: #ffffff;            /* Cor do texto */
+        font-family: 'DM Mono', monospace; /* Fonte do texto */
+        font-weight: 500;          /* Peso da fonte */
+        font-size: 12px;           /* Tamanho do texto */
+        line-height: 15.62px;      /* Altura da linha */
+        text-align: center;        /* Centraliza o texto */
+        display: none;             /* Ocultar o texto inicialmente */
+        transition: opacity 0.3s ease; /* Transição suave para o texto */
+      }
+
+      .fixed-circle:hover span {
+        display: inline;           /* Exibir o texto ao passar o mouse */
+        opacity: 1;                /* Exibir suavemente */
+      }
+
+       /* Estilo da seção Bioplastic */
+      .bioplastic-section {
+        text-align: left;
+        padding: 50px;
+        position: relative;
+      }
+
+      .bioplastic-section .row {
+        width: 120%; /* Aumenta um pouco a largura */
+        max-width: none; /* Remove limite de largura padrão */
+        margin-left: -10%; /* Ajusta a posição para centralizar o conteúdo */
+      }
+
+      .bioplastic-section img {
+        width: 100%;
+        height: auto;
+      }
+
+      .bioplastic-section h1 {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+    /* Estilo do botão LERN MORE da seção Bioplastic */
+      .learn-more-button {
+        position: relative; /* ou absolute dependendo do contexto */
+        float: right; /* Alternativa: use position */
+        margin-right: 20px; /* Ajuste a margem conforme necessário */
+        padding: 10px 20px;
+        background-color: #ffffff; /* Cor do botão */
+        color: #000;
+        border: 1px solid #000; /* Borda preta */
+        border-radius: 40px; /* Arredondamento da borda */
+        cursor: pointer;
+        font-size: 16px;
+        width: 223px;
+        height: 54px;
+        font-family: 'DM Mono', monospace; /* Fonte DM Mono */
+        margin: 30px;
+      }
+
+      .learn-more-button:hover {
+        background-color: #d4d4d4; /* Efeito ao passar o mouse */
+        color: #fff; /* Alterar cor do texto no hover */
+        border-color: #ffffff; /* Alterar cor da borda no hover */
+      }
+
+      /* Estilo do - What We Do - da seção Bioplastic */
+      .what-we-do {
+        font-family: 'DM Mono', monospace;
+        margin-bottom: 0;
+      }
+
+      /* Estilo de - 1, 2 - da seção Bioplastic e biotech */
+      .number-style {
+        font-family: 'DM Mono', monospace;
+        font-size: 20px;
+      }
+
+      /* Seções Bioplastic e Biotech */
+        .bioplastic-section,
+        .biotech-section {
+          text-align: left;
+          padding: 30px 20px;
+        }
+
+      @media (min-width: 768px) {
+        .bioplastic-section,
+        .biotech-section {
+          padding: 50px;
+        }
+      }
+
+      /* Responsividade da imagem e do vídeo */
+      .bioplastic-section video,
+      .biotech-section video {
+        width: 100%;
+        height: auto;
+      }
+
+          /* Estilo da seção Biotech */
+      .biotech-section {
+        text-align: left;
+        padding: 50px;
+        position: relative;
+      }
+
+      .biotech-section .row {
+        width: 120%; /* Aumenta um pouco a largura */
+        max-width: none; /* Remove limite de largura padrão */
+        margin-left: -10%; /* Ajusta a posição para centralizar o conteúdo */
+      }
+
+      .biotech-section img {
+        width: 100%;
+        height: auto;
+      }
+
+      .biotech-section h1 {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+
+      /*Texto acima da imagem*/
+
+      .text-overlay {
+        position: absolute;
+        top: 50%; /* Ajuste conforme necessário */
+        left: 75%; /* Centraliza horizontalmente */
+        transform: translate(-75%, -50%); /* Ajusta para centralizar completamente */
+        color: white;
+        font-size: 24px; /* Ajuste conforme necessário */
+        font-weight: bold;
+        background-color: #0E0466;
+        padding: 40px;
+        border-radius: 5px;
+        border-radius: 60px;
+        font-family: 'DM Sans', sans-serif;
+        max-width: 90%;
+      }
+
+      @media (min-width: 768px) {
+        .text-overlay {
+          max-width: 50%;
+          padding: 40px;
+        }
+      }
+
+      .text-overlay h2{
+        width: 372px;
+        height: 231px;
+        font-size: 32px;
+        font-weight: 500;        
+      }
+
+      .text-overlay p{
+        width: 372px;
+        height: 150px;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 70px;
+      }
+
+      .text-overlay button{
+        width: 223px;
+        height: 54px;
+        font-size: 12px;
+        font-weight: 500;
+        border-radius: 50px;
+        background-color: #0E0466;
+        color: white;
+        font-family: 'DM Mono', monospace;
+        border-color: rgb(196, 196, 196);
+      }
+
+/* Ajuste da barra de navegação */
+.navbar {
+  padding: 1rem; /* Ajuste o padding para manter a barra compacta */
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem; /* Garante espaçamento lateral suficiente */
+}
+
+.navbar-brand {
+  margin-right: auto; /* Coloca o logotipo à esquerda */
+}
+
+.navbar-toggler {
+  margin-left: 0; /* Remova qualquer margem para o lado esquerdo */
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+}
+
+/* Ajuste do tamanho do logotipo e do botão em telas pequenas */
+@media (max-width: 767px) {
+  .navbar-brand img {
+    max-height: 50px; /* Ajuste o tamanho do logotipo para caber na navbar em dispositivos menores */
+  }
+
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem; /* Ajuste o espaçamento do botão para torná-lo visualmente consistente */
+    margin-right: 30px;
+  }
+
+  .navbar-toggler-icon {
+    height: 1.5rem; /* Ajuste o tamanho do ícone para combiná-lo ao tamanho do logo */
+
+  }
+}
+
+/* Navbar Collapse */
+.collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
     </style>
   </head>
   
@@ -26,7 +402,8 @@
   <div class="container d-flex justify-content-between align-items-center">
     <!-- Logo da empresa -->
     <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="../img/logo.png" alt="Flex Sea" class="logo">
+      <img src="pages/im" alt="Flex Sea" class="logo">
+      <img src="pages/" alt="">
     </a>
 
     <!-- Botão para colapsar o menu em dispositivos menores -->
@@ -46,7 +423,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Bioplastic</a>
+          <a class="nav-link" href="bioplastics.html">Bioplastic</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Biotech</a>
@@ -89,127 +466,98 @@
 
     <!-- Botão Fixo no Canto Direito -->
     <div class="fixed-circle">
-      <img src="../img/38.png" alt="Icon Image" /> <!-- Substituindo o ícone pela imagem fornecida -->
+      <img src="img/38.png" alt="Icon Image" /> <!-- Substituindo o ícone pela imagem fornecida -->
       <span>GET IN TOUCH</span> <!-- Texto que aparece ao passar o mouse -->
     </div>
 
-<!-- ============= Banner com imagem ===============-->
-<div class="banner-video">
-  <!-- Vídeo como fundo -->
-  <img src="../pages/imgpages/bioplastics.png" alt="Redefining Single Use Plastics Background">
-  
-  <!-- Texto "Redefining Single Use Plastics" posicionado -->
-  <div class="redefining-text">
-      <h1>Redefining <br> Single Use Plastics</h1>
-  </div>
-</div>
-
-<section class="banner-bottom-content">
-  <div class="discover-button">
-    <button class="btn-discover">DISCOVER ↓</button>
-  </div>
-
-  <div class="description-text">
-    <p>
-      Plastics have become an integral part of modern life and they can be
-      found everywhere. However, this prevalence, alongside their persistence
-      in the environment, has caused severe environmental consequences.
-      Furthermore, 95% of plastics produced are single-use, meaning they are
-      discarded after one use and left to linger in the environment for
-      centuries.
-    </p>
-  </div>
-</section>
-
-<section class="bioplastic-section">
-  <div class="bioplastic-content">
-    <div class="bioplastic-left">
-      <h1>Bioplastic</h1>
-      <p>
-        Bioplastics are plastics made from renewable resources and were created
-        to solve this problem. However, many bioplastics are derived from
-        land-based crops and require industrial composting – which many
-        countries do not have the infrastructure for. This is why FlexSea
-        places itself as an even more sustainable solution.
-      </p>
-    </div>
-    <div class="bioplastic-right">
-      <p>
-        FlexSea uses seaweed as its primary raw material, unlike most
-        bioplastics that rely on crops grown on arable land. Seaweed neither
-        competes with food crops, nor does it require fresh water, fertilizers,
-        or pesticides. Furthermore, seaweed is actually reported to have carbon
-        sequestering properties.
-      </p>
-      <p>
-        But what really sets FlexSea apart is what happens after use. FlexSea
-        can safely enter landfill and incineration breaking down into natural
-        components without creating microplastics. Unlike many other
-        well-known bioplastics, FlexSea is completely home compostable, meaning
-        it can decompose in food waste bins or compost heaps – faster than a
-        banana peel!
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="graph-section">
-  <!-- Gráfico -->
-  <div class="bioplastic-graphic">
-    <img src="imgpages/graphbioplastics.svg" alt="Gráfico bioplástico">
-  </div>
-
-  <!-- Texto e ícones -->
-  <div class="bioplastic-text">
-    <div class="bioplastic-icons">
-      <div class="icon-item"><img src="imgpages/1bioplastic.svg" alt="Icon 1">
-        Petroleum-based plastics
+    <!-- Banner com vídeo -->
+    <div
+      class="banner-video w-100 vh-100 d-flex justify-content-center align-items-center position-relative"
+    >
+      <!-- Vídeo como fundo -->
+      <video autoplay muted loop class="w-100 h-100 position-absolute" style="object-fit: cover;">
+        <source src="video/FlexSeaWebsiteAnimationH264.mp4" type="video/mp4">
+      </video>
+      
+      <!-- Texto "Make a request" posicionado -->
+      <div class="request-text position-absolute d-none d-md-block" style="bottom: 4%; left: 10%;">
+        <p class="text-white mb-2">Make a request:</p>
       </div>
-      <div class="icon-item"><img src="imgpages/2bioplastic.svg" alt="Icon 1">
-        Bio-based but behave like fossil fuels
-      </div>
-      <div class="icon-item"><img src="imgpages/3bioplastic.svg" alt="Icon 1">
-        Industrially degradable but petroleum-derived
-      </div>
-      <div class="icon-item"><img src="imgpages/4bioplastic.svg" alt="Icon 1">
-        Bio-based but only industrially compostable
-      </div>
-      <div class="icon-item">
-        <img src="imgpages/iconflexsea.svg" alt="iconflexsea">
-        FlexSeat: Home compostable
+      <!-- Linha horizontal abaixo do texto -->
+      <div class="line position-absolute" style="bottom: 12%;"></div>
+      <!-- Grupo de botões de ação -->
+      <div class="button-group position-absolute d-flex justify-content-center" style="bottom: 4%;">
+        <button class="btn btn-custom mx-2">I WANT INJECTION MODE</button>
+        <button class="btn btn-custom mx-2">I WANT 3D PRINT</button>
+        <button class="btn btn-custom mx-2">I WANT COSMETICS INGREDIENTS</button>
       </div>
     </div>
-  </div>
-</section>
 
-<section class="process-section">
-  <div class="process-item-left">
-    <h2>
-      <img src="imgpages/1process.svg" alt="Process"> Process
-    </h2>
-    <p>
-      Our solution is completely plug-and-play with current plastic processes and machinery – there is no requirement for expensive infrastructure change when implementing our bioplastics. The animation below demonstrates the production of our thermoplastic-like bioplastic pellets. These pellets can then be processed using injection moulding or 3D printing to produce a final product.
-    </p>
-  </div>
+        <!-- Seção Bioplastic -->
+        <section class="bioplastic-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <p class="what-we-do"><strong>WHAT WE DO</strong></p>
+                <h1><sup class="number-style">1 </sup><strong>Bioplastic</strong></h1>
+                <button class="learn-more-button">LEARN MORE</button>
+              </div>
+              <div class="col-12">
+                <video autoplay muted loop class="w-100" style="object-fit: cover;">
+                  <source src="video/FlexSeaWebsiteAnimationH264.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </section>
+    
+        <!-- Seção Biotech -->
+        <section class="biotech-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <p class="what-we-do"><strong>BUT THAT´S NOT ALL...</strong></p>
+                <h1><sup class="number-style">2 </sup><strong>Biotech</strong></h1>
+              </div>
+              <div class="col-12">
+                <video autoplay muted loop class="w-100" style="object-fit: cover;">
+                  <source src="video/FlexSeaWebsiteAnimationH264.mp4" type="video/mp4">
+                </video>
+                <div class="text-overlay">
+                  <h2>FlexSea is dedicated to creating sustainable processes that utilise the full biomass of the seaweed.</h2>
+                  <p>This passion for circularity has given rise to our Biotechnology vertical which sees us use natural practices such as bacterial fermentation to extract the full wealth of available material from our seaweed sources.</p>
+                  <button>LEARN MORE</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-  <div class="process-item-right orange-background"> 
-    <h2>
-      <img src="imgpages/2process.svg" alt="Future"> Future–Proofing <br> with FlexSea
-    </h2>
-    <p>
-      At FlexSea, we’re always looking forward. While our current bioplastics are perfect for injection moulding and 3D printing, we are actively working on new formulations to support other manufacturing processes such as blow moulding or film extrusion. This would allow us to displace single-use fossil fuel based plastics of all kinds and truly remove the Planet’s dependence on them.
-    </p>
-  </div>
-</section>
 
-  <!-- Image Section -->
-  <div class="process-image">
-    <img src="imgpages/FlexSeaBioplastic.png" alt="Bioplastic Visualization">
-  </div>
+    <!-- Área principal de conteúdo -->
+    <div class="container my-5 d-grid gap-5">
+      <!-- Conteúdo de exemplo com borda -->
+      <div class="p-5 border">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
+          natus iusto fugit id saepe neque rerum magni laudantium accusantium
+          dolorem numquam quasi.
+        </p>
+      </div>
+      <div class="p-5 border">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
+          natus iusto fugit id saepe neque rerum magni laudantium accusantium
+          dolorem numquam quasi.
+        </p>
+      </div>
+    </div>
 
     <section class="image5">
     
-    
+      <p>SUPPORTED BY</p>
       <img src="img/footer/image 5.png" alt="">
   
   </section>
@@ -305,7 +653,18 @@
     <!-- JavaScript do Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Script do Bootstrap -->
-    <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="../js/header.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+      // Script para adicionar classes à barra de navegação ao fazer scroll
+      var nav = document.querySelector('nav');
+
+      window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 100) {
+          nav.classList.add('bg-white', 'shadow', 'scrolled'); // Adiciona classes quando o usuário faz scroll
+        } else {
+          nav.classList.remove('bg-white', 'shadow', 'scrolled'); // Remove classes quando o usuário retorna ao topo
+        }
+      });
+    </script>
   </body>
 </html>
