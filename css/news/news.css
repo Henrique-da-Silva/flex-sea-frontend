@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=DM+Sans:opsz,wght@9..40,500&display=swap');
+
+/* Imagem de fundo*/
+body{
+    background-image: url('/img/news/Frame.png');
+    background-repeat: no-repeat;
+    background-position: 320px 293px;
+}
+
+main{
+    margin-left: 140px;
+}
+
+/* Estilos do H1 e Botão Linkedin*/
+
+.div-title{
+    margin-top: 60px;
+    display: flex;
+}
+
+.div-title h1{
+    font-family: 'DM Sans';
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 46px;
+}
+
+.div-title button{
+    margin-left: 596px;
+    width: 203px;
+    height: 43px;
+    border: 0.5px solid #000000;
+    border-radius: 40px;
+    background-color: transparent;
+    font-family: 'DM Mono';
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 15.62px;
+
+}
+
+.div-title a{
+    text-decoration: none;
+    color: #000000;
+}
+
+/* Cards */
+
+.cards-1{
+    display: flex;
+    margin-top: 50px;
+}
+
+.cards-2{
+    display: flex;
+}
+
+/* Botão Load More*/
+
+.load-more button{
+    width: 203px;
+    height: 43px;
+    border-radius: 40px;
+    border: 0.5px solid #000000;
+    background-color: transparent;
+    font-family: 'DM Mono';
+    font-size: 12px;
+
+}
+
+.load-more{
+  text-align: center;
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
+/* Section com formulário*/
+
+.section-form{
+  
+    background-color: #EFEDE5;
+    width: 100%;
+    height: 438px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.div-form h3{
+    width: 546px;
+    font-family: 'DM Sans';
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 500;
+    margin-top: 60px;
+    
+}
+
+.div-form{
+display: flex;
+flex-direction: column;
+align-items: center;
+ 
+}
+
+.news-input-name{
+    width: 479px;
+    height: 55px;
+    border: 0.5px solid #24242F;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 16px;
+    font-family: 'DM Sans';
+    font-weight: 400px;
+    color: #9A9998;
+    margin-top: 20px;
+}
+
+.news-input-email{
+    width: 479px;
+    height: 55px;
+    border: 0.5px solid #24242F;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 16px;
+    font-family: 'DM Sans';
+    font-weight: 400px;
+    color: #9A9998;
+    margin-top: 10px;
+}
+
+
+
