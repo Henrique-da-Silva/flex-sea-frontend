@@ -48,7 +48,7 @@
     }
 
 
-        .card {
+        .card-latest {
             
             display: flex;
             flex-direction: column;
@@ -66,7 +66,7 @@
         
         }
 
-        .card p {
+        .card-latest p {
             font-family: 'DM Mono';
             text-transform: uppercase;
             font-size: 12px;
@@ -74,7 +74,7 @@
             font-weight: 500;
         }
 
-        .card h3 {
+        .card-latest h3 {
             width: 100%;
             max-width: 311px;
             font-family: 'DM Sans';
@@ -88,7 +88,7 @@
             
         }
 
-        .card img {
+        .card-latest img {
             
             width: 100%;
             max-width: 311px;
@@ -97,7 +97,7 @@
             
         }
 
-        .card button {
+        .card-latest button {
             margin-top: 15px;
             width: 175px;
             height: 43px;
@@ -245,7 +245,7 @@
    /* Cards*/ 
 
 
-      .card {
+      .card-latest {
          
             width: 321px;
             height: 452px;
@@ -255,7 +255,7 @@
         
         }
 
-        .card h3 {
+        .card-latest h3 {
            
             font-size: 18px;
             min-height: 140px; /* Altura mínima para todos os títulos */
@@ -263,7 +263,7 @@
             
         }
 
-        .card img {
+        .card-latest img {
             
             width: 100%;
             min-width: 259;
