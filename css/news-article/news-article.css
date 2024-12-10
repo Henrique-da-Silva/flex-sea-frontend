@@ -280,6 +280,7 @@
   margin: 20px 0; /* Margem superior e inferior apenas */
   max-width: 1163px; /* Largura máxima */
   color: #FFFFFF; /* Cor do texto */
+  margin-top: 40vh; /* Margem superior responsiva */
 }
 
 /* Título no texto */
@@ -305,6 +306,7 @@
     margin-left: 5%; /* Alinha à esquerda */
     margin-right: auto; /* Mantém alinhamento à esquerda */
     padding: 15px; /* Reduz o padding */
+    margin-top: 8vh; /* Margem superior ajustável */
   }
 
   .sustainable-text h1 {
@@ -319,6 +321,7 @@
     margin-left: 5%; /* Margem alinhada à esquerda */
     margin-right: auto; /* Evita centralização horizontal */
     padding: 10px; /* Ajusta o padding */
+    margin-top: 6vh; /* Margem superior ajustável */
   }
 
   .sustainable-text h1 {
@@ -333,6 +336,7 @@
     margin-left: 5%; /* Margem alinhada à esquerda */
     margin-right: auto; /* Mantém alinhamento à esquerda */
     padding: 5px; /* Padding menor */
+    margin-top: 4vh; /* Margem superior ajustável */
   }
 
   .sustainable-text h1 {
