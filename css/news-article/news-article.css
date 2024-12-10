@@ -1,0 +1,344 @@
+/*====================  FUNDO =================*/
+  /* Para telas maiores */
+  @media (min-width: 768px) {
+    .content {
+      background-image: url('../../pages/imgpages/fundoFrame.png');
+ /* Caminho da imagem */
+
+      background-repeat: no-repeat; /* Evita repetição */
+      background-position: center; /* Centraliza a imagem */
+    }
+  }
+
+  /* Para telas menores */
+  @media (max-width: 767px) {
+    .content {
+      background-image: url('../../pages/imgpages/fundoFrame.png');
+/* Caminho da imagem */
+      background-size: cover; /* Ajusta a imagem para cobrir a área */
+      background-repeat: no-repeat; /* Evita repetição */
+      background-position: center; /* Centraliza a imagem */
+    }
+  }
+
+  /* Estilo geral (opcional, caso tenha sobreposição de textos e queira corrigir) */
+  .banner-bottom-content,
+  .bottom-content {
+    color: white; /* Altere a cor do texto se necessário */
+  }
+/*========================================================*/
+
+/* Estilo principal para o banner */
+.banner-video {
+  width: 100%;
+  height: 70vh; /* 70% da altura do viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Para garantir que a imagem não ultrapasse */
+}
+
+.banner-video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta a imagem para cobrir o container */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .banner-video {
+    height: 50vh; /* Ajusta a altura do banner em telas menores */
+  }
+
+  .banner-video img {
+    object-position: center; /* Mostra o centro da imagem em dispositivos móveis */
+  }
+}
+
+
+/* ====================== BUTTON BACK AND DATE ==================== */
+.banner-bottom-content {
+  display: flex;
+  justify-content: flex-start; /* Alinha os itens para começar pela esquerda */
+  align-items: center; /* Alinha verticalmente os itens */
+  padding: 30px 5%;
+  flex-wrap: wrap; /* Permite ajuste para telas menores */
+  gap: 510px; /* Espaçamento horizontal entre os itens */
+}
+
+/* Date Text */
+.date-text {
+  flex: 0 0 auto; /* Ajusta dinamicamente sem ocupar largura desnecessária */
+  max-width: 600px; /* Define uma largura máxima */
+  font-family: 'DM Sans', sans-serif;
+  color: #000000;
+  font-size: 16px;
+  line-height: 24px;
+  margin-right: 10px; /* Espaçamento extra se necessário */
+}
+
+/* Back Button */
+.back-button {
+  flex: 0 0 auto; /* Ajusta dinamicamente sem ocupar largura desnecessária */
+  max-width: 223px; /* Largura máxima do botão */
+  display: flex;
+  justify-content: flex-start; /* Alinha o botão à esquerda */
+}
+
+/* Botão de Voltar */
+.btn-back {
+  width: 100%;
+  height: 54px;
+  background: transparent;
+  color: #000000;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .banner-bottom-content {
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    gap: 5px; /* Reduz o espaçamento entre os itens */
+  }
+
+  .date-text {
+    margin-right: 0; /* Remove o espaçamento extra em telas menores */
+  }
+}
+
+/* ====================== BUTTON BACK AND DATE RESPONSIVE ==================== */
+/* Responsividade para telas médias */
+@media (max-width: 1024px) {
+  .banner-bottom-content {
+    flex-wrap: wrap; /* Permite quebra de linha */
+    gap: 20px; /* Reduz o espaçamento entre os itens */
+    justify-content: flex-start; /* Mantém o alinhamento à esquerda */
+  }
+
+  .date-text {
+    max-width: 100%; /* Ajusta para ocupar a largura disponível */
+    font-size: 14px; /* Reduz o tamanho do texto */
+    margin-right: 0; /* Remove margem à direita */
+  }
+
+  .btn-back {
+    height: 50px; /* Reduz a altura do botão */
+    font-size: 14px; /* Reduz o tamanho do texto do botão */
+  }
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .banner-bottom-content {
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    gap: 10px; /* Reduz o espaçamento entre os itens */
+    padding: 20px 5%; /* Reduz o padding geral */
+  }
+
+  .date-text {
+    max-width: 100%; /* Ajusta a largura */
+    text-align: left; /* Garante alinhamento à esquerda */
+    font-size: 13px; /* Ajusta o tamanho do texto */
+    line-height: 20px; /* Reduz a altura da linha */
+  }
+
+  .btn-back {
+    font-size: 13px; /* Reduz o tamanho do texto do botão */
+    height: 45px; /* Reduz a altura do botão */
+  }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+  .banner-bottom-content {
+    flex-direction: column; /* Empilha os itens */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    gap: 8px; /* Reduz ainda mais o espaçamento */
+    padding: 10px 5%; /* Reduz o padding geral */
+  }
+
+  .date-text {
+    font-size: 12px; /* Ajusta o tamanho do texto */
+    line-height: 18px; /* Ajusta a altura da linha */
+  }
+
+  .btn-back {
+    font-size: 12px; /* Ajusta o tamanho da fonte do botão */
+    height: 40px; /* Ajusta a altura do botão */
+  }
+}
+
+
+
+/* ============= Responsividade ================================ */
+@media (max-width: 1024px) {
+  /* Ajustes para a seção abaixo do vídeo */
+  .banner-bottom-content {
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .date-text {
+    flex: 1 1 100%; /* Ocupa toda a largura */
+    max-width: 100%; /* Remove a largura máxima */
+    margin-bottom: 20px; /* Espaçamento entre o texto e o botão */
+    text-align: center; /* Centraliza o texto (opcional) */
+  }
+
+  .back-button {
+    flex: 1 1 100%; /* Ocupa toda a largura */
+    justify-content: center; /* Centraliza o botão */
+    margin-top: 10px; /* Espaçamento acima do botão */
+  }
+
+  .btn-back {
+    width: 223px; /* Largura fixa do botão */
+    height: 54px;
+    font-size: 16px;
+    border: none;
+  }
+}
+
+/* ============= Responsividade ================================ */
+@media (max-width: 768px) {
+  /* Ajustes adicionais para telas pequenas */
+  .banner-bottom-content {
+    padding: 20px; /* Reduz o padding */
+  }
+
+  .date-text {
+    order: 1; /* Garante que o texto fique acima */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .back-button {
+    order: 2; /* Garante que o botão fique abaixo */
+    margin-top: 20px; /* Espaçamento entre o texto e o botão */
+    justify-content: center; /* Centraliza o botão */
+    width: 100%; /* Ocupa toda a largura disponível */
+  }
+
+  .btn-back {
+    width: 223px; /* Largura fixa do botão */
+    border: none;
+  }
+}
+
+
+/*====================== CONTENT =======================*/
+
+.content {
+  padding: 20px;
+  max-width: 586px; /* Mesma largura máxima que a imagem */
+  margin: 0 auto; /* Centraliza o conteúdo na tela */
+  box-sizing: border-box; /* Inclui padding na largura total */
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
+/* Responsividade CONTENT */
+@media (max-width: 1024px) {
+  .content {
+    max-width: 95%; /* Reduz a largura máxima */
+    padding: 15px; /* Ajusta o padding */
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    max-width: 90%; /* Ajusta ainda mais a largura */
+    padding: 10px; /* Ajusta o padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    max-width: 100%; /* Ocupa toda a largura da tela */
+    padding: 5px; /* Padding menor para telas pequenas */
+  }
+}
+
+
+/*================== SUSTAINABLE TEXT =================*/
+
+/* Sustainable Text */
+.sustainable-text {
+  position: relative; /* Posicionamento flexível */
+  text-align: left; /* Alinha o texto à esquerda */
+  padding: 20px; /* Espaçamento interno */
+  margin: 20px 0; /* Margem superior e inferior apenas */
+  max-width: 1163px; /* Largura máxima */
+  color: #FFFFFF; /* Cor do texto */
+}
+
+/* Título no texto */
+.sustainable-text h1 {
+  font-size: 42px;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ============= Responsividade para Sustainable Text =================*/
+@media (min-width: 1024px) {
+  .sustainable-text {
+    margin-left: 10%; /* Mantém alinhado à esquerda */
+    margin-right: auto; /* Evita centralização horizontal */
+  }
+}
+
+@media (max-width: 1024px) {
+  .sustainable-text {
+    max-width: 95%; /* Ajusta a largura em telas menores */
+    margin-left: 5%; /* Alinha à esquerda */
+    margin-right: auto; /* Mantém alinhamento à esquerda */
+    padding: 15px; /* Reduz o padding */
+  }
+
+  .sustainable-text h1 {
+    font-size: 36px; /* Reduz o tamanho da fonte */
+    line-height: 1.3; /* Ajusta o espaçamento entre linhas */
+  }
+}
+
+@media (max-width: 768px) {
+  .sustainable-text {
+    max-width: 90%; /* Ajusta ainda mais a largura */
+    margin-left: 5%; /* Margem alinhada à esquerda */
+    margin-right: auto; /* Evita centralização horizontal */
+    padding: 10px; /* Ajusta o padding */
+  }
+
+  .sustainable-text h1 {
+    font-size: 30px; /* Reduz ainda mais o tamanho da fonte */
+    line-height: 1.2; /* Ajusta o espaçamento entre linhas */
+  }
+}
+
+@media (max-width: 480px) {
+  .sustainable-text {
+    max-width: 100%; /* Ocupa toda a largura da tela */
+    margin-left: 5%; /* Margem alinhada à esquerda */
+    margin-right: auto; /* Mantém alinhamento à esquerda */
+    padding: 5px; /* Padding menor */
+  }
+
+  .sustainable-text h1 {
+    font-size: 24px; /* Reduz ainda mais o tamanho da fonte */
+    line-height: 1.1; /* Ajusta o espaçamento entre linhas */
+  }
+}
+
+
