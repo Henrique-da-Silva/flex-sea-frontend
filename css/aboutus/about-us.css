@@ -1,0 +1,461 @@
+/* Container principal */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite ajustar os elementos em telas menores */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Conteúdo à esquerda */
+  .left-content {
+    flex: 2 1 60%; /* Ocupar 60% no layout */
+    padding: 20px;
+    font-size: 1rem;
+    color: #000000;
+    font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
+  }
+  
+  
+  
+  /* Conteúdo à direita */
+  .right-content {
+    flex: 1 1 35%; /* Ocupar 35% no layout */
+    background-color: #d97e3f;
+    color: #000000;
+    padding: 20px;
+    border-radius: 50px;
+    font-size: 1rem;
+  }
+  
+  .right-content h2 {
+    margin-bottom: 20px;
+    font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
+
+  }
+
+  .right-content p {
+    font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
+  }
+  
+  .right-content ul {
+    list-style-type: disc; /* Estilo padrão dos pontos */
+    margin-left: 20px; /* Espaçamento à esquerda */
+    padding-left: 0;
+  }
+  
+  .right-content ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
+  }
+  
+  /* Botão */
+  .button-container {
+    width: 100%; /* Largura total */
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 10px;
+  }
+  
+  .more-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 1px solid #333;
+    background-color: transparent;
+    color: #333;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 223px;
+    height: 54px;
+  }
+  
+  .more-button:hover {
+    background-color: #333;
+    color: #fff;
+
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Empilha as divisões verticalmente */
+    }
+  
+    .left-content, .right-content, .button-container {
+      flex: 1 1 100%; /* Cada divisão ocupa 100% da largura */
+    }
+  
+    .right-content {
+      margin-top: 20px;
+    }
+  }
+
+  /*======================= OUR ============================*/
+
+  /* Container principal */
+.our {
+    display: flex;
+    flex-wrap: wrap; /* Ajuste em telas menores */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+  
+  /* Informação à esquerda */
+  .left-our {
+    flex: 1 1 20%; /* Ocupar 20% do layout */
+    background-color: #fff;
+    font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
+  }
+  
+  .left-our ul {
+    list-style-type: none;
+    font-size: 1rem;
+    padding-left: 10px;
+  }
+  
+  .left-our ul li {
+    margin-bottom: 15px;
+    color: #aaa;
+    cursor: pointer;
+  }
+  
+  .left-our ul li.active {
+    font-weight: bold;
+    color: #000;
+  }
+  
+  /* Informação à direita */
+  .right-our {
+    flex: 1 1 33%; /* Alterar para 50% da largura */
+    padding: 20px;
+    background-color: #fff;
+    font-size: 22px;
+    color: #333;
+    font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
+    font-weight: 500;
+  }
+  
+  .our-story-p {
+    font-size: 12px;
+    font-weight: 500;
+    width: 110px;
+    height: 13px;
+    font-family: 'DM Mono', monospace; /* Fonte principal */
+    color: #000000;
+    margin-bottom: 15px;
+    }
+
+  .right-our h3 {
+    font-size: 22px;
+    font-weight: 400;
+    font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .our {
+      flex-direction: column; /* Empilha as divisões verticalmente */
+    }
+  
+    .left-our, .right-our {
+      flex: 1 1 100%; /* Ambos ocupam 100% da largura */
+    }
+  }
+
+
+  /*======================= layout-wrapper ============================*/
+
+/* Container geral */
+.layout-container {
+  display: flex;
+  flex-direction: row; /* Organiza em linha (espaço e conteúdo) */
+  width: 100%; /* O fundo ocupa toda a largura da tela */
+  max-width: 100%; /* Remove restrição de largura máxima */
+  margin: 0; /* Remove margem externa */
+  padding: 20px;
+  height: auto; /* Ajusta a altura com base no conteúdo interno */
+  background-color: #F9F6EC; /* Fundo aplicado */
+  box-sizing: border-box; /* Inclui padding dentro da largura */
+}
+
+/* Espaço vazio à esquerda */
+.empty-space {
+  flex: 2; /* Define o espaço vazio */
+}
+
+/* Seção de conteúdo */
+.layout-content {
+  flex: 1.5; /* O conteúdo ocupa maior parte */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-right: 310px; /* Padding maior para telas maiores */
+  margin: 0; /* Remove possíveis margens acumuladas */
+  padding-bottom: 0; /* Certifique-se de que não há padding na parte inferior */
+  box-sizing: border-box; /* Inclui padding na largura e altura calculadas */
+  font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
+}
+
+/* Ajusta margens dos elementos internos */
+.layout-content > * {
+  margin-bottom: 20px; /* Mantém espaçamento uniforme entre os elementos */
+}
+
+/* Texto e links */
+.layout-content h2 {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #000;
+  font-family: 'DM Mono', monospace; /* Fonte principal */
+}
+
+.our-approach-p{
+ margin-top: 30px;
+ font-size: 12px;
+ font-weight: 500;
+ width: 110px;
+ height: 13px;
+ font-family: 'DM Mono', monospace; /* Fonte principal */
+ color: #000000;
+ margin-bottom: 15px;
+}
+
+.layout-content h3{
+  font-size: 22px;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
+}
+
+.content-paragraph {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
+  font-weight: 400;
+}
+
+.content-paragraph a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.content-paragraph a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .layout-container {
+    flex-direction: column; /* Empilha o layout em telas menores */
+    padding: 10px; /* Reduz o padding geral */
+  }
+
+  .empty-space {
+    display: none; /* Remove o espaço vazio em telas pequenas */
+  }
+
+  .layout-content {
+    padding-right: 01px; /* Reduz o padding para telas menores */
+  }
+}
+
+
+/*====================== Our Team====================*/
+
+/*======================= TEAM ============================*/
+
+/* Container principal */
+.team-container {
+  display: flex;
+  flex-wrap: wrap; /* Ajuste em telas menores */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+/* Informação à esquerda */
+.left-team {
+  flex: 1 1 20%; /* Ocupar 20% do layout */
+  background-color: #fff;
+  font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
+}
+
+.left-team ul {
+  list-style-type: none;
+  font-size: 1rem;
+  padding-left: 10px;
+}
+
+.left-team ul li {
+  margin-bottom: 15px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.left-team ul li.active {
+  font-weight: bold;
+  color: #000;
+}
+
+/* Informação à direita */
+.right-team {
+  flex: 1 1 33%; /* Alterar para 50% da largura */
+  padding: 20px;
+  background-color: #fff;
+  font-size: 22px;
+  color: #333;
+  font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
+  font-weight: 500;
+  transform: translateX(250px); /* Mover para a direita */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .team-container {
+      flex-direction: column; /* Empilha as divisões verticalmente */
+  }
+
+  .left-team, .right-team {
+      flex: 1 1 100%; /* Ambos ocupam 100% da largura */
+  }
+
+  .right-team {
+      transform: translateX(0); /* Remove deslocamento em telas menores */
+  }
+}
+
+.team-story-p {
+  font-size: 12px;
+  font-weight: 500;
+  width: 110px;
+  height: 13px;
+  font-family: 'DM Mono', monospace; /* Fonte principal */
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+
+.right-team h3 {
+  font-size: 22px;
+  font-weight: 400;
+  font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
+}
+
+
+
+/*====================TEAM  C - SUITE ===========================*/
+
+/* Container principal */
+.container-team {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+/* Add Font Awesome styling */
+.team-member .fa-linkedin {
+  color: #858585; /* LinkedIn brand color */
+  font-size: 16px; /* Adjust size as needed */
+  margin-top: 5px; /* Spacing between text and icon */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Hover effect for LinkedIn icon */
+.team-member .fa-linkedin:hover {
+  color: #005582; /* Darker LinkedIn color on hover */
+}
+
+/* Seção de cada grupo */
+.team-section {
+  margin: 40px 0;
+}
+
+/* Grid para a equipe */
+.team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Exatamente 3 colunas */
+  gap: 20px; /* Espaçamento entre os membros */
+  justify-items: center; /* Centraliza os membros */
+}
+
+/* Estilo de cada membro */
+.team-member {
+  text-align: center;
+}
+
+.team-member img {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  background-color: #eaeaea;
+}
+
+.team-member p {
+  margin: 5px 0;
+  font-size: 16px;
+  font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
+}
+
+.team-member p.name {
+  font-weight: 700; /* Deixa o nome mais carregado (negrito) */
+  color: #000; /* Cor preta */
+}
+
+.team-member p.role {
+  font-weight: 400; /* Deixa o cargo menos carregado */
+  color: #000; /* Cor preta */
+}
+
+.team-section h3 {
+  font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
+  color: #000000; /* Cor preta */
+  text-align: left; /* Alinha à esquerda */
+  margin-left: 0; /* Remove margem da esquerda, se houver */
+  padding-left: 0; /* Remove padding da esquerda, se houver */
+  margin-bottom: 60px;
+  position: relative; /* Necessário para o deslocamento */
+  left: -100px; /* Ajuste conforme necessário para mover mais para a esquerda */
+}
+
+
+.full-width-hr {
+  position: relative; /* Permite que o hr seja reposicionado */
+  width: 100vw; /* Define a largura como 100% da viewport */
+  border: none; /* Remove a borda padrão */
+  border-top: 1px solid #000; /* Adiciona a borda superior */
+  margin: 0; /* Remove margens */
+  left: 50%; /* Alinha no centro da tela */
+  transform: translateX(-50%); /* Centraliza a linha completamente */
+  z-index: 1; /* Garante que a linha esteja visível acima do conteúdo */
+}
+
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .team {
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .team {
+    grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+  }
+}
