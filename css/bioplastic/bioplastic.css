@@ -1,0 +1,456 @@
+/*====================  FUNDO =================*/
+  /* Para telas maiores */
+  @media (min-width: 768px) {
+    .banner-bottom-content,
+    .bioplastic-section,
+    .bioplastic-right,
+    .process-section {
+      background-image: url('../../pages/imgpages/fundoFrame.png');
+ /* Caminho da imagem */
+
+      background-repeat: no-repeat; /* Evita repetição */
+      background-position: center; /* Centraliza a imagem */
+    }
+  }
+
+  /* Para telas menores */
+  @media (max-width: 767px) {
+    .bottom-content,
+    .bioplastic-section {
+      background-image: url('../../pages/imgpages/fundoFrame.png');
+/* Caminho da imagem */
+      background-size: cover; /* Ajusta a imagem para cobrir a área */
+      background-repeat: no-repeat; /* Evita repetição */
+      background-position: center; /* Centraliza a imagem */
+    }
+  }
+
+  /* Estilo geral (opcional, caso tenha sobreposição de textos e queira corrigir) */
+  .banner-bottom-content,
+  .bioplastic-section,
+  .bioplastic-right,
+  .process-section,
+  .bottom-content {
+    color: white; /* Altere a cor do texto se necessário */
+  }
+/*========================================================*/
+
+/* Estilo principal para o banner */
+.banner-video {
+  width: 100%;
+  height: 70vh; /* 70% da altura do viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Para garantir que a imagem não ultrapasse */
+}
+
+.banner-video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta a imagem para cobrir o container */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Texto "Redefining Single Use Plastics" */
+.redefining-text {
+  position: absolute;
+  top: 20%; /* Posição superior do texto */
+  left: 10%; /* Posição esquerda do texto */
+  z-index: 1; /* Mantém o texto acima da imagem */
+  color: #FFFFFF; /* Garante que o texto seja legível sobre a imagem */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.redefining-text h1 {
+  font-size: 42px;
+  font-weight: 500; /* Correção do valor do peso da fonte */
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .banner-video {
+    height: 50vh; /* Ajusta a altura do banner em telas menores */
+  }
+
+  .banner-video img {
+    object-position: center; /* Mostra o centro da imagem em dispositivos móveis */
+  }
+
+  .redefining-text {
+    top: 120px; /* Ajusta a posição vertical para próximo do topo */
+    left: 20px; /* Ajusta a posição horizontal para próximo do canto esquerdo */
+    text-align: left; /* Mantém o texto alinhado à esquerda */
+    font-weight: 500;
+  }
+
+  .redefining-text h1 {
+    font-size: 36px; /* Reduz o tamanho da fonte no mobile */
+    line-height: 1.3; /* Ajusta o espaçamento entre as linhas */
+  }
+}
+
+
+/* Conteúdo abaixo do vídeo (Texto Descritivo e Botão) */
+.banner-bottom-content {
+  display: flex;
+  justify-content: space-between; /* Alinha os itens horizontalmente */
+  align-items: center; /* Alinha os itens verticalmente */
+  padding: 30px 5%;
+  flex-wrap: wrap; /* Permite ajuste para telas menores */
+}
+
+.description-text {
+  flex: 1 1 60%; /* Ocupa 60% da largura disponível */
+  max-width: 600px; /* Define uma largura máxima */
+  font-family: 'DM Sans', sans-serif;
+  color: #000000;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.discover-button {
+  flex: 1 1 auto; /* Ajusta dinamicamente a largura */
+  max-width: 223px;
+  display: flex;
+  justify-content: flex-end; /* Alinha o botão à direita */
+}
+
+.btn-discover {
+  width: 100%;
+  height: 54px;
+  background: transparent;
+  border-radius: 50px;
+  color: #000000;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Seção principal */
+.bioplastic-section {
+  background-color: #ffffff;
+  padding: 50px 5%; /* Espaçamento da seção */
+}
+
+.bioplastic-content {
+  display: flex;
+  justify-content: space-between; /* Alinha os itens horizontalmente */
+  align-items: flex-start;
+  flex-wrap: wrap; /* Permite quebra em telas menores */
+}
+
+.bioplastic-left,
+.bioplastic-right {
+  flex: 1 1 45%; /* Ocupa até 45% da largura disponível */
+  max-width: 600px; /* Define uma largura máxima */
+}
+
+.bioplastic-left {
+  font-family: 'DM Sans', sans-serif;
+  color: #000000;
+}
+
+.bioplastic-left h1 {
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.bioplastic-left p,
+.bioplastic-right p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.bioplastic-right {
+  font-family: 'DM Sans', sans-serif;
+  color: #000000;
+}
+
+/* ============= Responsividade ================================ */
+@media (max-width: 1024px) {
+  /* Ajustes para a seção abaixo do vídeo */
+  .banner-bottom-content {
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .description-text {
+    flex: 1 1 100%; /* Ocupa toda a largura */
+    max-width: 100%; /* Remove a largura máxima */
+    margin-bottom: 20px; /* Espaçamento entre o texto e o botão */
+    text-align: center; /* Centraliza o texto (opcional) */
+  }
+
+  .discover-button {
+    flex: 1 1 100%; /* Ocupa toda a largura */
+    justify-content: center; /* Centraliza o botão */
+    margin-top: 10px; /* Espaçamento acima do botão */
+  }
+
+  .btn-discover {
+    width: 223px; /* Largura fixa do botão */
+    height: 54px;
+    font-size: 16px;
+  }
+
+  /* Ajustes para a seção bioplastic */
+  .bioplastic-content {
+    flex-direction: column; /* Organiza os itens em colunas */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+  }
+
+  .bioplastic-left,
+  .bioplastic-right {
+    flex: 1 1 100%; /* Ocupa 100% da largura */
+    max-width: 100%; /* Remove a largura máxima */
+    margin-bottom: 20px; /* Espaçamento entre as colunas */
+  }
+
+  .bioplastic-left h1 {
+    text-align: center; /* Centraliza o título */
+  }
+
+  .bioplastic-left p,
+  .bioplastic-right p {
+    text-align: justify; /* Justifica os textos para uma melhor leitura */
+  }
+}
+
+/* ============= Responsividade ================================ */
+@media (max-width: 768px) {
+  /* Ajustes adicionais para telas pequenas */
+  .banner-bottom-content {
+    padding: 20px; /* Reduz o padding */
+  }
+
+  .description-text {
+    order: 1; /* Garante que o texto fique acima */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .discover-button {
+    order: 2; /* Garante que o botão fique abaixo */
+    margin-top: 20px; /* Espaçamento entre o texto e o botão */
+    justify-content: center; /* Centraliza o botão */
+    width: 100%; /* Ocupa toda a largura disponível */
+  }
+
+  .btn-discover {
+    width: 223px; /* Largura fixa do botão */
+  }
+
+  .bioplastic-content {
+    flex-direction: column; /* Organiza os itens em colunas */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+  }
+
+  .bioplastic-left,
+  .bioplastic-right {
+    text-align: justify; /* Ajusta a leitura do texto */
+    margin-bottom: 20px; /* Espaçamento entre as colunas */
+  }
+}
+
+
+/* ============= GRAPH SECTION=============================== */
+
+.graph-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px 5%;
+  background-color: #EFEDE5;
+}
+
+.bioplastic-graphic {
+  flex: 1 1 45%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bioplastic-graphic img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.bioplastic-text {
+  flex: 1 1 45%;
+  max-width: 600px;
+  margin-top: 100px; /* Ajusta a altura adicionando margem superior */
+}
+
+.bioplastic-text h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+.bioplastic-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+.bioplastic-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #333333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .graph-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bioplastic-graphic,
+  .bioplastic-text {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .bioplastic-text {
+      margin-top: 30px; /* Ajusta a margem superior em telas menores */
+    }
+  }
+
+  .bioplastic-text h1 {
+    text-align: center;
+  }
+
+  .bioplastic-text p {
+    text-align: justify;
+  }
+}
+
+/*=========================== PROCESS SECTION =======================*/
+/* Process Section */
+.process-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  padding: 50px 5%;
+  background-color: #ffffff; /* Background color */
+  justify-content: center; /* Center elements horizontally */
+}
+
+.process-item-left,
+.process-item-right {
+  flex: 1 1 45%; /* Lado a lado em telas maiores */
+  max-width: 564px;
+  background-color: #EFEDE5; /* Default background color */
+  border-radius: 50px;
+  padding: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.orange-background {
+  background-color: #FF9F5E; /* Orange background for the second item */
+}
+
+.process-item-left h2,
+.process-item-right h2 {
+  display: flex;
+  align-items: center;
+  font-size: 36px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.process-item-left h2 {
+  margin-bottom: 100px; /* Espaçamento entre h2 e p */
+}
+
+.process-item-right h2 {
+  margin-bottom: 50px; /* Espaçamento entre h2 e p */
+}
+
+.process-item-left h2 img,
+.process-item-right h2 img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.process-item-left p,
+.process-item-right p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000000;
+  font-weight: 400;
+  margin-top: 0; /* Remove margem superior extra no parágrafo */
+}
+
+/* Image Section */
+.process-image {
+  flex: 1 1 100%; /* Garante que a imagem ocupe a largura total */
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Espaçamento entre os itens de texto e a imagem */
+}
+
+.process-image img {
+  width: 100%;
+  max-width: 1163px; /* Limita a largura da imagem ao total dos process items */
+  height: auto; /* Mantém as proporções da imagem */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .process-section {
+    flex-direction: column; /* Itens empilhados em telas menores */
+    gap: 30px; /* Ajusta o espaçamento entre os itens */
+    padding: 30px 5%; /* Reduz o padding geral */
+  }
+
+  .process-item-left,
+  .process-item-right {
+    flex: 1 1 100%; /* Ocupa 100% da largura */
+    max-width: 100%;
+    padding: 20px; /* Reduz o padding interno em telas menores */
+  }
+
+  .process-item-left h2,
+  .process-item-right h2 {
+    font-size: 28px; /* Reduz tamanho do título */
+    margin-bottom: 50px; /* Ajusta o espaçamento entre título e parágrafo no mobile */
+  }
+
+  .process-item-left p,
+  .process-item-right p {
+    font-size: 14px; /* Reduz tamanho do texto */
+    line-height: 1.4; /* Ajusta o espaçamento entre linhas */
+  }
+
+  .process-image img {
+    max-width: 100%; /* A imagem se ajusta ao container no mobile */
+  }
+}
+
+
