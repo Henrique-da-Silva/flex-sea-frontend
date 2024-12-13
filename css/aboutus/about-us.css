@@ -1,8 +1,8 @@
 .team-background {
   background-image: url('/pages/imgpages/frameteam.png'); /* Caminho da imagem */
   background-repeat: no-repeat; /* Não repete a imagem */
-  background-position: center center; /* Centraliza a imagem horizontal e verticalmente */
-  background-size: 80%; /* Mantém o tamanho original da imagem */
+  background-position: center 105%; /* Centraliza horizontalmente e desloca 80% para baixo */
+  background-size: 810px 1455px; /* Define largura e altura exatas da imagem */
   padding: 20px 0; /* Espaçamento interno opcional */
 }
 
@@ -468,4 +468,8 @@ h2 {
   .team {
     grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
   }
+}
+
+.about-hr{
+  margin: 0;
 }
