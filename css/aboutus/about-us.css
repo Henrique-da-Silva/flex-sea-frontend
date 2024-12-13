@@ -108,7 +108,7 @@
   /* Informação à esquerda */
   .left-our {
     flex: 1 1 20%; /* Ocupar 20% do layout */
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.10);
     font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
   }
   
@@ -133,7 +133,7 @@
   .right-our {
     flex: 1 1 33%; /* Alterar para 50% da largura */
     padding: 20px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.10);
     font-size: 22px;
     color: #333;
     font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
