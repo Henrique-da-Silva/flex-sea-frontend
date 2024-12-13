@@ -1,10 +1,12 @@
-.background {
-  background-image: url('/pages/imgpages/');
-  background-repeat: no-repeat;
-  background-position: 268px center; /* Alinha a posição à esquerda */
-  background-size: 800px 900px; /* Reduz o tamanho para largura e altura específicas */
-  padding: 20px 0;
+.team-background {
+  background-image: url('/pages/imgpages/frameteam.png'); /* Caminho da imagem */
+  background-repeat: no-repeat; /* Não repete a imagem */
+  background-position: center center; /* Centraliza a imagem horizontal e verticalmente */
+  background-size: 80%; /* Mantém o tamanho original da imagem */
+  padding: 20px 0; /* Espaçamento interno opcional */
 }
+
+
 
 /* Container principal */
 .container {
