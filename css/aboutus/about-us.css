@@ -283,7 +283,7 @@
 
 /* Informação à esquerda */
 .left-team {
-  flex: 1 1 20%; /* Ocupar 20% do layout */
+  flex: 1 1 50%; /* Ocupar 20% do layout */
   background-color: #fff;
   font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
 }
@@ -306,7 +306,7 @@
 }
 
 /* Informação à direita */
-.right-team {
+.right-our-team {
   flex: 1 1 33%; /* Alterar para 50% da largura */
   padding: 20px;
   background-color: #fff;
@@ -314,7 +314,7 @@
   color: #333;
   font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
   font-weight: 500;
-  transform: translateX(250px); /* Mover para a direita */
+  transform: translateX(-170px); /* Mover para a direita */
 }
 
 /* Responsividade */
@@ -323,11 +323,11 @@
       flex-direction: column; /* Empilha as divisões verticalmente */
   }
 
-  .left-team, .right-team {
+  .left-team, .right-our-team {
       flex: 1 1 100%; /* Ambos ocupam 100% da largura */
   }
 
-  .right-team {
+  .right-our-team {
       transform: translateX(0); /* Remove deslocamento em telas menores */
   }
 }
@@ -343,7 +343,7 @@
 }
 
 
-.right-team h3 {
+.right-our-team h3 {
   font-size: 22px;
   font-weight: 400;
   font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
