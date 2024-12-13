@@ -1,0 +1,288 @@
+.background {
+    background-image: url('/pages/imgpages/Frame.png');
+    background-repeat: no-repeat;
+    background-position: 268px center; /* Alinha a posição à esquerda */
+    background-size: 800px 900px; /* Reduz o tamanho para largura e altura específicas */
+    padding: 20px 0;
+}
+
+
+.container-faq {
+    width: 50%;
+    margin-left: 146px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.10);
+    border-radius: 10px;
+}
+
+.faq {
+    margin-bottom: 20px;
+}
+
+.h1-faqs{
+    width: 185px;
+    height: 50px;
+    font-size: 42px;
+    font-family: 'DM Sans', sans-serif; /* Aplicar la fuente */
+    color: #000000;
+    font-weight: 500;
+    margin-bottom: 60px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.p-info{
+    font-weight: 500;
+    font-size: 12px;
+    font-family: 'DM Mono', monospace; /* Fonte aplicada */
+    color: #000000;
+}
+
+.h2-info {
+    font-weight: 500;
+    font-size: 36px;
+    width: 312px;
+    font-family: 'DM Sans', sans-serif; /* Aplicar la fuente */
+    height: auto;
+    color: #000000;
+}
+
+.faq-item button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 0;
+    font-family: 'DM Sans', sans-serif; /* Fonte aplicada */
+    font-weight: 500; /* Peso da fonte */
+    color: #000000; /* Cor da fonte */
+}
+
+.container-btn-faqs {
+    position: relative; /* Necessário para usar position absoluta dentro do contêiner */
+}
+
+.btn-faqs {
+    position: absolute;
+    top: 130px; /* Ajuste conforme necessário */
+    left: 0; /* Alinha à esquerda */
+    width: 197px;
+    height: 43px;
+    background-color:#F9F6EC;
+    border: 1px solid #333;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'DM Mono', monospace; /* Fonte aplicada */
+
+}
+
+.faq-item button:focus {
+    outline: none;
+}
+
+.faq-item button:hover {
+    color: #007BFF;
+}
+
+.faq-item .content-faq {
+    display: none;
+    font-size: 16px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.faq-item .content-faq p {
+    width: 100%; /* Largura especificada */
+    font-family: 'DM Sans', sans-serif; /* Fonte aplicada */
+    font-weight: 400; /* Peso da fonte */
+    font-size: 16px; /* Tamanho da fonte */
+    color: #000000; /* Cor da fonte */
+    margin-top: 10px;
+}
+
+.info-links {
+    background-color: rgba(255, 255, 255, 0.10);
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.info-links .link-box {
+    margin: 10px;
+    width: 90%;
+    max-width: 377px;
+    height: 320px;
+    background-color: #F9F6EC;
+    border-radius: 50px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left; /* Alinha os elementos filhos à esquerda */
+}
+
+.info-links .p-info {
+    margin-bottom: 10px; /* Ajusta o espaço entre os elementos */
+    text-align: left;
+}
+
+.info-links .h2-info {
+    text-align: left;
+    margin-bottom: 20px; /* Ajusta o espaço entre os elementos */
+}
+
+
+.info-links .link-box a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.info-links .link-box button:hover {
+    background-color: #f2f2f2;
+}
+
+.hr-faqs {
+    margin: 0;
+}
+
+/* Estilos para telas muito pequenas (até 480px) */
+@media screen and (max-width: 480px) {
+    .background {
+        background-position: center center;
+        background-size: cover; /* Ajusta para cobrir a tela */
+        padding: 10px 0;
+    }
+
+    .container-faq {
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .h1-faqs {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .faq-item button {
+        font-size: 18px;
+        padding: 5px 0;
+    }
+
+    .info-links .link-box {
+        width: 100%;
+        height: auto;
+    }
+
+    .info-links .h2-info {
+        font-size: 20px;
+    }
+
+    .btn-faqs {
+        top: 100px; /* Ajusta posição do botão */
+        width: 150px;
+        height: 35px;
+        font-size: 12px;
+    }
+}
+
+/* Estilos para tablets (481px a 768px) */
+@media screen and (max-width: 768px) {
+    .background {
+        background-position: center center;
+        background-size: 600px auto;
+        padding: 15px 0;
+    }
+
+    .container-faq {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .h1-faqs {
+        font-size: 32px;
+    }
+
+    .faq-item button {
+        font-size: 20px;
+    }
+
+    .info-links .link-box {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .btn-faqs {
+        top: 120px;
+        width: 180px;
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
+/* Estilos para laptops (769px a 1024px) */
+@media screen and (max-width: 1024px) {
+    .background {
+        background-position: center center;
+        background-size: 700px auto;
+        padding: 20px 0;
+    }
+
+    .container-faq {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .h1-faqs {
+        font-size: 36px;
+    }
+
+    .info-links .link-box {
+        width: 45%;
+        height: auto;
+    }
+
+    .btn-faqs {
+        top: 125px;
+        width: 190px;
+        height: 42px;
+        font-size: 14px;
+    }
+}
+
+/* Estilos para telas maiores (acima de 1024px) */
+@media screen and (min-width: 1025px) {
+    .background {
+        background-position: 268px center;
+        background-size: 800px 900px;
+    }
+
+    .container-faq {
+        width: 50%;
+    }
+
+    .h1-faqs {
+        font-size: 42px;
+    }
+
+    .info-links .link-box {
+        width: 377px;
+        height: 320px;
+    }
+}
