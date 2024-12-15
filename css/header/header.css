@@ -22,7 +22,7 @@
       }
 
       .navbar.scrolled .nav-link {
-        color: #000000 !important; /* Cor branca quando a barra de navegação faz scroll */
+        color: #000000 !important; /* Cor preta quando a barra de navegação faz scroll */
       }
 
       /* Responsividade da barra de navegação */
@@ -45,50 +45,38 @@
 
       /*================= HEADER MOBILE =====================*/
 
-      /* Ajuste da barra de navegação */
-.navbar {
-    padding: 1rem; /* Ajuste o padding para manter a barra compacta */
-  }
-  
-  .container-fluid {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1rem; /* Garante espaçamento lateral suficiente */
-  }
-  
-  .navbar-brand {
-    margin-right: auto; /* Coloca o logotipo à esquerda */
-  }
-  
+ /*========================= NAV TOGGLER =====================*/
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Alinha todos os itens verticalmente na mesma linha */
+}
+
+.navbar-toggler {
+  margin-left: auto; /* Empurra o botão para o lado direito */
+  display: flex; /* Garante alinhamento interno no botão */
+  align-items: center;
+  transform: translateY(-40px); /* Sobe o botão em 5px */
+}
+
+.navbar-brand {
+  display: flex; /* Garante que o logo esteja alinhado corretamente */
+  align-items: center;
+  margin-right: auto; /* Empurra o logo para o lado esquerdo */
+}
+
+.collapse {
+  display: flex; /* Garante alinhamento do menu em dispositivos maiores */
+  justify-content: flex-end; /* Alinha o menu à direita */
+  flex-grow: 1; /* Preenche o espaço disponível */
+}
+
+@media (min-width: 992px) {
   .navbar-toggler {
-    margin-left: 0; /* Remova qualquer margem para o lado esquerdo */
-    display: flex;
-    align-items: center; /* Alinha verticalmente */
+    display: none; /* Oculta o botão em telas maiores */
   }
-  
-  /* Ajuste do tamanho do logotipo e do botão em telas pequenas */
-  @media (max-width: 767px) {
-    .navbar-brand img {
-      max-height: 50px; /* Ajuste o tamanho do logotipo para caber na navbar em dispositivos menores */
-    }
-  
-    .navbar-toggler {
-      padding: 0.25rem 0.5rem; /* Ajuste o espaçamento do botão para torná-lo visualmente consistente */
-      margin-right: 30px;
-    }
-  
-    .navbar-toggler-icon {
-      height: 1.5rem; /* Ajuste o tamanho do ícone para combiná-lo ao tamanho do logo */
-  
-    }
-  }
-  
-  /* Navbar Collapse */
-  .collapse {
-    flex-basis: 100%;
-    flex-grow: 1;
-    justify-content: flex-end;
-  }
-  
+}
+
+/*===========================================================*/
 
