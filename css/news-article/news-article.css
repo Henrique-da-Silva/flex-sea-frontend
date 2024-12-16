@@ -1,25 +1,12 @@
 /*====================  FUNDO =================*/
   /* Para telas maiores */
-  @media (min-width: 768px) {
-    .content {
-      background-image: url('../../pages/imgpages/fundoFrame.png');
- /* Caminho da imagem */
-
-      background-repeat: no-repeat; /* Evita repetição */
-      background-position: center; /* Centraliza a imagem */
-    }
-  }
-
-  /* Para telas menores */
-  @media (max-width: 767px) {
-    .content {
-      background-image: url('../../pages/imgpages/fundoFrame.png');
-/* Caminho da imagem */
-      background-size: cover; /* Ajusta a imagem para cobrir a área */
-      background-repeat: no-repeat; /* Evita repetição */
-      background-position: center; /* Centraliza a imagem */
-    }
-  }
+  .newsarticle-background {
+    background-image: url('/pages/imgpages/fundoFrame.png');
+    background-repeat: no-repeat;
+    background-position: 470px center; /* Alinha a posição à esquerda */
+    background-size: 800px 1210px; /* Reduz o tamanho para largura e altura específicas */
+    padding: 20px 0;
+}
 
   /* Estilo geral (opcional, caso tenha sobreposição de textos e queira corrigir) */
   .banner-bottom-content,
@@ -101,6 +88,9 @@
   border: none;
 }
 
+.hr-news-article{
+  margin: 0;
+}
 /* Responsividade */
 @media (max-width: 768px) {
   .banner-bottom-content {
