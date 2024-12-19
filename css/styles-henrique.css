@@ -313,6 +313,7 @@
 
 .main-news{
     margin-left: 140px;
+    
 }
 
 /* Estilos do H1 e Botão Linkedin*/
@@ -354,10 +355,12 @@
 .cards-1{
     display: flex;
     margin-top: 50px;
+    flex-wrap: wrap;
 }
 
 .cards-2{
     display: flex;
+    flex-wrap: wrap;
 }
 
 /* Botão Load More*/
@@ -375,8 +378,8 @@
 
 .load-more{
   text-align: center;
-    margin-top: 40px;
-    margin-bottom: 70px;
+  margin-top: 40px;
+  margin-bottom: 70px;
 }
 
 /* Section com formulário*/
@@ -447,6 +450,64 @@ align-items: center;
     font-size: 12px;
     cursor: pointer;
 }
+
+                                        /* Responsividade News*/
+@media (max-width: 1042px){
+
+    .div-title button{
+        display: none;
+    }
+    .body-news{
+    background-image: none;
+  
+}
+
+
+}
+@media (max-width: 550px){
+    .main-news{
+    margin-left: 0px;
+    padding: 30px;
+    align-items: center;
+    
+    }
+    .div-title h1{
+        font-size: 36px;
+        line-height: none;
+
+    }
+    .cards-1{
+    margin-top: 25px;
+    }
+    .div-form h3{
+    width: 358px;  
+    
+    }
+    .news-input-name{
+    width: 348px;
+
+    }
+
+.news-input-email{
+    width: 348px;
+ 
+}
+.section-form{
+  
+    height: 501px;
+}
+.button-news{
+ 
+    margin-top: 40px;
+  
+}
+   
+
+}
+
+
+
+
                                         /* Estilos da página Biotech*/
 
 .main-biotech{
