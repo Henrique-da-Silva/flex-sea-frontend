@@ -309,6 +309,8 @@
     background-image: url('/img/news/Frame.png');
     background-repeat: no-repeat;
     background-position: 320px 293px;
+    background-attachment: fixed;
+
 }
 
 .main-news{
@@ -505,9 +507,6 @@ align-items: center;
 
 }
 
-
-
-
                                         /* Estilos da página Biotech*/
 
 .main-biotech{
@@ -520,6 +519,7 @@ align-items: center;
     background-image: url('/img/biotech/Frame.svg');
     background-repeat: no-repeat;
     background-position: 250px 323px;
+    background-attachment: fixed;
 }
 
 .title h1{
@@ -687,7 +687,6 @@ align-items: center;
 
     .card-content ul{
         font-family: 'DM Sans';
-        font-weight: 700;
         font-size: 16px;
         margin-left: 10px;
         color: #000000;
@@ -747,13 +746,16 @@ align-items: center;
         margin-bottom: 205px;
     }
 
-                                  /* Responsividade Biotech*/
+                                      /* Responsividade Biotech*/
 
     @media (max-width: 522px){
 
         .body-biotech{
         background-image: none;
    
+        }
+        #fixed-mobile{
+        display: none; /* Botão oculto em dispositivos móveis */
         }
 
         .main-biotech{
@@ -870,7 +872,11 @@ align-items: center;
 
      }
 
-                                          /* Estilos do Footer*/
+                                            /* Estilos do Footer*/
+ /* Div do botao do mobile para nao aparecer no Desktop*/
+    .getintouch-mobile{
+        display: none;
+  }
 
 .mobile{
 
@@ -1157,10 +1163,14 @@ label span {
         display: none;
     } 
 
+    #fixed-mobile{
+        display: none; /* Botão oculto em dispositivos móveis */
+        }
+
     .mobile{
         display: flex;
         flex-direction: column;
-        margin-left: 30px;
+        margin-left: 20px;
     }
 
 
@@ -1216,7 +1226,7 @@ label span {
         margin-left: 30px;
     }
 
-  .privacy-policy, a{
+  .privacy-policy a{
 
     font-family: 'DM Mono';
     font-size: 12px;
@@ -1230,14 +1240,36 @@ label span {
   .rodape{
     display: flex;
   }
+
+  .getintouch-mobile{
+    width: 100%;
+    height: 70px;
+    background-color: #0E0466;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+  
+  }
    
 }
 
-                                /* Estilos da Página Material Request / Contact Us*/
-.body-enquiries{
+                                        /* Estilos da Página Material Request / Contact Us*/
+.body-enquiries-request{
     background-image: url('/img/biotech/Frame.svg');
     background-repeat: no-repeat;
     background-position: 338px 45px;
+    background-attachment: fixed;
+    
+    
+}
+.body-enquiries-contact{
+    background-image: url('/img/biotech/Frame.svg');
+    background-repeat: no-repeat;
+    background-size: 787px 1400px;
+    background-position: 338px 45px;
+    background-attachment: fixed;
     
     
 }
@@ -1249,6 +1281,7 @@ label span {
 
 .section-radio-form{
     display: flex;
+    flex-wrap: wrap;
 }
 
 
@@ -1316,8 +1349,8 @@ label span {
         width: 447px;
         height: 140px;
         font-family: 'DM Sans';
-        font-weight: 400;
         font-size: 16px;
+        margin-bottom: 30px;
     }
 
     /* Estilos formulário Enquiries*/
@@ -1408,6 +1441,7 @@ textarea::placeholder{
 
  .cards-container-enquiries {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
 }
@@ -1454,4 +1488,114 @@ textarea::placeholder{
 
 
 }
+                                /* Responsividade Material request e Contact us*/
 
+@media (max-width: 1300px){
+
+    .div-form-enquiries{
+        margin-left: 30px;
+    }
+}
+@media (max-width: 1096px){
+
+    .div-form-enquiries{
+        margin-left: 0px;
+    }    
+
+}
+@media (max-width: 619px ){
+
+    .body-enquiries-request{
+    background-image: none;
+   
+    }
+    .body-enquiries-contact{
+    background-image: none;
+   
+    }
+
+    .main-material-request{
+        margin-left: 0px;
+        padding: 20px;
+    }
+    .title-enquiries h1{
+        font-size: 36px;
+    }
+    .radio-container{
+        flex-direction: column;
+    }
+    .radio-container label{
+        margin-bottom: 15px;
+    }
+    .contact-contentp{
+        width: 355px;
+    }
+    .div-form-enquiries{
+        margin-top: 40px;
+        
+    }
+    .form-enquiries input{
+        width: 360px;
+    }
+    .button-enquiries{
+        margin-left: 70px;
+    }
+    .cards-container-enquiries{
+        padding: 20px;
+    }
+
+
+}
+                                            /* Estilos do botao lateral fixo - Albino */
+
+    /* Estilo para o botão azul fixo à direita */
+      .fixed-circle {
+        position: fixed;           /* Mantém o elemento fixo na tela mesmo com scroll */
+        right: 20px;               /* Ajusta a distância da borda direita da tela */
+        top: 50%;                  /* Ajusta a posição para ficar alinhado ao centro da tela verticalmente */
+        transform: translateY(-50%); /* Centraliza verticalmente */
+        width: 53px;               /* Largura do círculo */
+        height: 53px;              /* Altura do círculo */
+        background-color: #0E0466; /* Cor azul escura */
+        border-radius: 50%;        /* Deixa o elemento circular inicialmente */
+        display: flex;             /* Para centralizar a imagem dentro do círculo */
+        align-items: center;       /* Alinha verticalmente a imagem no centro */
+        justify-content: center;   /* Alinha horizontalmente a imagem no centro */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra suave ao círculo */
+        cursor: pointer;           /* Define o ponteiro do mouse como 'pointer' */
+        z-index: 1000;             /* Garante que o círculo fique acima de outros elementos */
+        transition: all 0.3s ease; /* Transição suave ao passar o mouse */
+      }
+
+      .fixed-circle a{
+        text-decoration: none;
+      }
+
+      .fixed-circle:hover {
+        width: 176px;              /* Aumenta a largura do botão ao passar o mouse */
+        padding: 10px 20px;        /* Adiciona um espaçamento para o texto */
+        justify-content: space-between; /* Alinha o conteúdo à esquerda */
+        border-radius: 30px;       /* Torna o botão oval ao passar o mouse */
+        background-color: #0E0466; /* Mantém a cor de fundo */
+      }
+
+      .fixed-circle img {
+        width: 24px;               /* Largura da imagem ajustada */
+        height: 24px;              /* Altura da imagem para mantê-la proporcional */
+      }
+
+   .fixed-circle span {
+        color: #ffffff;            /* Cor do texto */
+        font-family: 'DM Mono', monospace; /* Fonte do texto */
+        font-weight: 500;          /* Peso da fonte */
+        font-size: 12px;           /* Tamanho do texto */
+        line-height: 15.62px;      /* Altura da linha */
+        text-align: center;        /* Centraliza o texto */
+        display: none;             /* Ocultar o texto inicialmente */
+        transition: opacity 0.3s ease; /* Transição suave para o texto */
+      }
+
+      .fixed-circle:hover span {
+        display: inline;           /* Exibir o texto ao passar o mouse */
+        opacity: 1;                /* Exibir suavemente */
+      }
