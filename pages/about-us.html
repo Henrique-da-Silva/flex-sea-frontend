@@ -3,404 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="../https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-<link rel="stylesheet" type="text/css" href="../https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-    <!-- Inclui estilos Bootstrap -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <!-- Fonte Google DM Mono e DM Sans -->
-    <link href="../https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=DM+Sans:wght@400&display=swap" rel="stylesheet" />
-    <!-- Inclui ícones do Font Awesome -->
-    <link rel="stylesheet" href="../https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- CSS do Bootstrap -->
-    <link href="../https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/aboutus/about-us.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles-henrique.css">
+      <link rel="stylesheet" href="/css/bootstrap.min.css" /> <!-- Inclui estilos Bootstrap -->
+      <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=DM+Sans:wght@400&display=swap"
+        rel="stylesheet" /> <!-- Fonte Google DM Mono e DM Sans -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <!-- Inclui ícones do Font Awesome -->
+      <link rel="stylesheet" href="../css/goncalves-style/goncalves-style.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- CSS do Bootstrap -->
+      <link rel="stylesheet" href="/css/styles-henrique.css">
 
 
 
    
     <title>Flex Sea</title>
     <!-- Estilos customizados -->
-    <style>
-      .banner-image {
-        background-image: url('img/1.png'); /* Define a imagem de fundo do banner */
-        background-size: cover; /* Imagem de fundo cobre toda a área */
-      }
-
-      .request-text p {
-        font-size: 1.2rem;
-        font-family: 'DM Sans', sans-serif; /* Fonte DM Sans aplicada */
-      }
-
-
-      .btn-custom {
-        background-color: #F9F6EC; /* Cor de fundo do botão */
-        border: none; /* Sem borda */
-        padding: 10px 30px; /* Preenchimento interno do botão */
-        font-size: 0.75rem; /* Tamanho do texto */
-        color: #000; /* Cor do texto do botão */
-        transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
-        font-family: 'DM Mono', monospace; /* Fonte DM Mono aplicada */
-        margin-bottom: 10px;
-        width: 90%;
-        max-width: 244px;
-      }
-
-      @media (min-width: 768px) {
-        .btn-custom {
-          width: auto; /* Ajusta o tamanho dos botões em telas maiores */
-        }
-      }
-
-      .button-group {
-        flex-direction: column; /* Botões em coluna por padrão */
-      }
-
-      @media (min-width: 768px) {
-        .button-group {
-          flex-direction: row; /* Botões lado a lado em telas maiores */
-        }
-      }
-
-      .btn-custom:hover {
-        background-color: #e0e0e0; /* Cor de fundo do botão ao passar o mouse */
-      }
-
-      .button-group button {
-        width: 244px; /* Largura dos botões */
-        height: 54px; /* Altura dos botões */
-        border-radius: 40px; /* Bordas arredondadas */
-        margin-right: 10px; /* Espaço entre os botões */
-      }
-
-      .line {
-        width: 100%; /* Linha ocupa toda a largura */
-        height: 2px; /* Espessura da linha */
-        background-color: #ffffff; /* Cor da linha, branca como o texto */
-        margin-bottom: 20px; /* Espaço entre a linha e os botões */
-      }
-
-      @media (max-width: 768px) {
-        .line {
-          display: none; /* Esconde a linha em telas menores */
-        }
-      }
-
-      .navbar-nav .nav-link {
-        color: #000 !important; /* Cor preta para os links de navegação */
-        font-family: 'DM Sans', sans-serif; /* Fonte DM Sans */
-        font-weight: 500; /* Peso da fonte */
-        font-size: 18px; /* Tamanho da fonte */
-        line-height: 28px; /* Altura da linha */
-        letter-spacing: -0.02em; /* Espaçamento entre letras (-2%) */
-        margin-bottom: 25px; /* Espaçamento inferior entre parágrafos */
-      }
-
-      .navbar {
-        background-color: transparent;
-      }
-
-      .navbar .nav-link {
-        color: #000000 !important;
-      }
-
-      .navbar.scrolled {
-        background-color: #fff;
-      }
-
-      .navbar.scrolled .nav-link {
-        color: #000000 !important; /* Cor branca quando a barra de navegação faz scroll */
-      }
-
-      /* Responsividade da barra de navegação */
-      @media (max-width: 768px) {
-      .navbar-nav .nav-link {
-        font-size: 16px;
-        margin-bottom: 15px;
-        }
-      }
-
-      .bg-white {
-        background-color: #fff !important;
-      }
-
-      /* Remove o caret do About us e Enquiries */
-      #aboutDropdown::after,
-      #enquiriesDropdown::after {
-        display: none; /* Esconde a seta */
-      }
-
-      /* Estilo para o ícone circular no menu */
-      .icon-circle {
-        width: 20px;               /* Ajuste a largura do círculo */
-        height: 20px;              /* Ajuste a altura do círculo */
-        background-color: #ffffff; /* Cor de fundo do círculo: branca */
-        border-radius: 50%;        /* Deixa o elemento circular */
-        display: inline-flex;      /* Exibe em linha com o link */
-        align-items: center;       /* Centraliza verticalmente o ícone */
-        justify-content: center;   /* Centraliza horizontalmente o ícone */
-        margin-left: 8px;          /* Espaço entre o texto e o ícone */
-      }
-
-      .icon-circle i {
-        font-size: 14px;           /* Tamanho do ícone */
-        color: #000;               /* Cor do ícone preta */
-      }
-
-      /* Estilo para o botão azul fixo à direita */
-      .fixed-circle {
-        position: fixed;           /* Mantém o elemento fixo na tela mesmo com scroll */
-        right: 40px;               /* Ajusta a distância da borda direita da tela */
-        top: 50%;                  /* Ajusta a posição para ficar alinhado ao centro da tela verticalmente */
-        transform: translateY(-50%); /* Centraliza verticalmente */
-        width: 60px;               /* Largura do círculo */
-        height: 60px;              /* Altura do círculo */
-        background-color: #0E0466; /* Cor azul escura */
-        border-radius: 50%;        /* Deixa o elemento circular inicialmente */
-        display: flex;             /* Para centralizar a imagem dentro do círculo */
-        align-items: center;       /* Alinha verticalmente a imagem no centro */
-        justify-content: center;   /* Alinha horizontalmente a imagem no centro */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra suave ao círculo */
-        cursor: pointer;           /* Define o ponteiro do mouse como 'pointer' */
-        z-index: 1000;             /* Garante que o círculo fique acima de outros elementos */
-        transition: all 0.3s ease; /* Transição suave ao passar o mouse */
-      }
-
-      .fixed-circle:hover {
-        width: 180px;              /* Aumenta a largura do botão ao passar o mouse */
-        padding: 10px 20px;        /* Adiciona um espaçamento para o texto */
-        justify-content: space-between; /* Alinha o conteúdo à esquerda */
-        border-radius: 30px;       /* Torna o botão oval ao passar o mouse */
-        background-color: #0E0466; /* Mantém a cor de fundo */
-      }
-
-      .fixed-circle img {
-        width: 24px;               /* Largura da imagem ajustada */
-        height: 24px;              /* Altura da imagem para mantê-la proporcional */
-      }
-
-      .fixed-circle span {
-        color: #ffffff;            /* Cor do texto */
-        font-family: 'DM Mono', monospace; /* Fonte do texto */
-        font-weight: 500;          /* Peso da fonte */
-        font-size: 12px;           /* Tamanho do texto */
-        line-height: 15.62px;      /* Altura da linha */
-        text-align: center;        /* Centraliza o texto */
-        display: none;             /* Ocultar o texto inicialmente */
-        transition: opacity 0.3s ease; /* Transição suave para o texto */
-      }
-
-      .fixed-circle:hover span {
-        display: inline;           /* Exibir o texto ao passar o mouse */
-        opacity: 1;                /* Exibir suavemente */
-      }
-
-       /* Estilo da seção Bioplastic */
-      .bioplastic-section {
-        text-align: left;
-        padding: 50px;
-        position: relative;
-      }
-
-      .bioplastic-section .row {
-        width: 120%; /* Aumenta um pouco a largura */
-        max-width: none; /* Remove limite de largura padrão */
-        margin-left: -10%; /* Ajusta a posição para centralizar o conteúdo */
-      }
-
-      .bioplastic-section img {
-        width: 100%;
-        height: auto;
-      }
-
-      .bioplastic-section h1 {
-        font-family: 'DM Sans', sans-serif;
-        font-size: 2.5rem;
-        font-weight: bold;
-      }
-    /* Estilo do botão LERN MORE da seção Bioplastic */
-      .learn-more-button {
-        position: relative; /* ou absolute dependendo do contexto */
-        float: right; /* Alternativa: use position */
-        margin-right: 20px; /* Ajuste a margem conforme necessário */
-        padding: 10px 20px;
-        background-color: #ffffff; /* Cor do botão */
-        color: #000;
-        border: 1px solid #000; /* Borda preta */
-        border-radius: 40px; /* Arredondamento da borda */
-        cursor: pointer;
-        font-size: 16px;
-        width: 223px;
-        height: 54px;
-        font-family: 'DM Mono', monospace; /* Fonte DM Mono */
-        margin: 30px;
-      }
-
-      .learn-more-button:hover {
-        background-color: #d4d4d4; /* Efeito ao passar o mouse */
-        color: #fff; /* Alterar cor do texto no hover */
-        border-color: #ffffff; /* Alterar cor da borda no hover */
-      }
-
-      /* Estilo do - What We Do - da seção Bioplastic */
-      .what-we-do {
-        font-family: 'DM Mono', monospace;
-        margin-bottom: 0;
-      }
-
-      /* Estilo de - 1, 2 - da seção Bioplastic e biotech */
-      .number-style {
-        font-family: 'DM Mono', monospace;
-        font-size: 20px;
-      }
-
-      /* Seções Bioplastic e Biotech */
-        .bioplastic-section,
-        .biotech-section {
-          text-align: left;
-          padding: 30px 20px;
-        }
-
-      @media (min-width: 768px) {
-        .bioplastic-section,
-        .biotech-section {
-          padding: 50px;
-        }
-      }
-
-      /* Responsividade da imagem e do vídeo */
-      .bioplastic-section video,
-      .biotech-section video {
-        width: 100%;
-        height: auto;
-      }
-
-          /* Estilo da seção Biotech */
-      .biotech-section {
-        text-align: left;
-        padding: 50px;
-        position: relative;
-      }
-
-      .biotech-section .row {
-        width: 120%; /* Aumenta um pouco a largura */
-        max-width: none; /* Remove limite de largura padrão */
-        margin-left: -10%; /* Ajusta a posição para centralizar o conteúdo */
-      }
-
-      .biotech-section img {
-        width: 100%;
-        height: auto;
-      }
-
-      .biotech-section h1 {
-        font-family: 'DM Sans', sans-serif;
-        font-size: 2.5rem;
-        font-weight: bold;
-      }
-
-      /*Texto acima da imagem*/
-
-      .text-overlay {
-        position: absolute;
-        top: 50%; /* Ajuste conforme necessário */
-        left: 75%; /* Centraliza horizontalmente */
-        transform: translate(-75%, -50%); /* Ajusta para centralizar completamente */
-        color: white;
-        font-size: 24px; /* Ajuste conforme necessário */
-        font-weight: bold;
-        background-color: #0E0466;
-        padding: 40px;
-        border-radius: 5px;
-        border-radius: 60px;
-        font-family: 'DM Sans', sans-serif;
-        max-width: 90%;
-      }
-
-      @media (min-width: 768px) {
-        .text-overlay {
-          max-width: 50%;
-          padding: 40px;
-        }
-      }
-
-      .text-overlay h2{
-        width: 372px;
-        height: 231px;
-        font-size: 32px;
-        font-weight: 500;        
-      }
-
-      .text-overlay p{
-        width: 372px;
-        height: 150px;
-        font-size: 16px;
-        font-weight: 400;
-        margin-top: 70px;
-      }
-
-      .text-overlay button{
-        width: 223px;
-        height: 54px;
-        font-size: 12px;
-        font-weight: 500;
-        border-radius: 50px;
-        background-color: #0E0466;
-        color: white;
-        font-family: 'DM Mono', monospace;
-        border-color: rgb(196, 196, 196);
-      }
-
-/* Ajuste da barra de navegação */
-.navbar {
-  padding: 1rem; /* Ajuste o padding para manter a barra compacta */
-}
-
-.container-fluid {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem; /* Garante espaçamento lateral suficiente */
-}
-
-.navbar-brand {
-  margin-right: auto; /* Coloca o logotipo à esquerda */
-}
-
-.navbar-toggler {
-  margin-left: 0; /* Remova qualquer margem para o lado esquerdo */
-  display: flex;
-  align-items: center; /* Alinha verticalmente */
-}
-
-/* Ajuste do tamanho do logotipo e do botão em telas pequenas */
-@media (max-width: 767px) {
-  .navbar-brand img {
-    max-height: 50px; /* Ajuste o tamanho do logotipo para caber na navbar em dispositivos menores */
-  }
-
-  .navbar-toggler {
-    padding: 0.25rem 0.5rem; /* Ajuste o espaçamento do botão para torná-lo visualmente consistente */
-    margin-right: 30px;
-  }
-
-  .navbar-toggler-icon {
-    height: 1.5rem; /* Ajuste o tamanho do ícone para combiná-lo ao tamanho do logo */
-
-  }
-}
-
-/* Navbar Collapse */
-.collapse {
-  flex-basis: 100%;
-  flex-grow: 1;
-  justify-content: flex-end;
-}
-
-    </style>
   </head>
   
   <body>
@@ -429,13 +46,13 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="../bioplastics.html">Bioplastic</a>
+          <a class="nav-link" href="../pages/bioplastics.html">Bioplastic</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../pages/biotech.html">Biotech</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../news-article.html">News & Media</a>
+          <a class="nav-link" href="../pages/news.html">News & Media</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -458,10 +75,10 @@
             </div>
           </a>
           <ul class="dropdown-menu" aria-labelledby="enquiriesDropdown">
-            <li><a class="dropdown-item" href="#">Material request</a></li>
-            <li><a class="dropdown-item" href="#">FAQs</a></li>
+            <li><a class="dropdown-item" href="/pages/enquiries-material-request.html">Material request</a></li>
+            <li><a class="dropdown-item" href="/pages/faqs.html">FAQs</a></li>
             <li><a class="dropdown-item" href="#">Careers</a></li>
-            <li><a class="dropdown-item" href="#">Contact us</a></li>
+            <li><a class="dropdown-item" href="/pages/enquiries-contactus.html">Contact us</a></li>
           </ul>
         </li>
       </ul>
@@ -471,13 +88,14 @@
 
 
     <!-- Botão Fixo no Canto Direito -->
-    <div class="fixed-circle" id="fixed-mobile">
+    <div class="fixed-circle">
       <img src="../img/38.png" alt="Icon Image" /> <!-- Substituindo o ícone pela imagem fornecida -->
       <span>GET IN TOUCH</span> <!-- Texto que aparece ao passar o mouse -->
     </div>
     <br><br><br><br>
 
-      <div class="container">
+<div class="background-about-us-um">
+      <div class="container-principal">
         <!-- Div para os parágrafos à esquerda -->
         <div class="left-content">
           <h3 class="h3-left-content">FlexSea is a biomaterials company based in Wolverhampton, UK.
@@ -494,14 +112,16 @@
     
         <!-- Div para o parágrafo à direita -->
         <div class="right-content">
-          <h2>About us</h2>
-          <p>FLEXSEA</p>
-          <hr>
-          <ul>
-            <li>1 ton per shift production capacity in our Wolverhampton facility</li>
-            <li>Selling pellets for injection moulding and 3D printing</li>
-            <li>Selling biopolymers for a diverse range of applications including cosmetics, wastewater treatment</li>
-          </ul>
+          <div class="right-about-us-laranja">
+            <h2>About us</h2>
+            <p class="p-right-about-us-laranja">FLEXSEA</p>
+            <hr style="margin-top: 0;">
+            <ul>
+              <li>1 ton per shift production capacity in our Wolverhampton facility</li>
+              <li>Selling pellets for injection moulding and 3D printing</li>
+              <li>Selling biopolymers for a diverse range of applications including cosmetics, wastewater treatment</li>
+            </ul>
+          </div>
         </div>
     
         <!-- Div para o botão -->
@@ -514,17 +134,36 @@
       <div class="our">
         <!-- Informação à esquerda -->
         <div class="left-our">
-          <ul>
-            <li class="active">Our story</li>
-            <li>Our approach</li>
-            <li>Our team</li>
-          </ul>
+          <div id="sticky-menu" class="sticky-menu">
+            <ul>
+              <li id="story" class="menu-item">Our story</li>
+              <li id="approach" class="menu-item">Our approach</li>
+              <li id="team" class="menu-item">Our team</li>
+            </ul>
+          </div>
         </div>
+        
+        <!-- Seções correspondentes -->
+        <div id="story-section">
+          <h2>Our Story</h2>
+          <!-- Conteúdo da seção "Our story" -->
+        </div>
+        
+        <div id="approach-section">
+          <h2>Our Approach</h2>
+          <!-- Conteúdo da seção "Our approach" -->
+        </div>
+        
+        <div id="team-section">
+          <h2>Our Team</h2>
+          <!-- Conteúdo da seção "Our team" -->
+        </div>
+        
     
         <!-- Informação à direita -->
         <div class="right-our">
           <p class="our-story-p">OUR STORY</p>
-          <h3>
+          <h3 class="right-our-h3">
             FlexSea was born from an idea by founder and CEO, Carlo Fedeli, in April 2020 and has since
             blossomed into a bioplastics and biotechnology company. The company is working towards the
             dual goals of redefining bioplastics with our home compostable, seaweed-based formulations
@@ -532,7 +171,7 @@
             biotechnology vertical.
           </h3>
           <br>
-          <p>
+          <p class="our-story-p2">
             In FlexSea’s first four years, we have moved from a London flat kitchen to 1 ton per shift
             production capacity in our Wolverhampton facility. We are proud to show that we have raised
             £4 million through a combination of private investment and grant funding so far.
@@ -548,60 +187,66 @@
         <!-- Seção do Conteúdo -->
         <div class="layout-content">
           <p class="our-approach-p">OUR APPROACH</p>
-          <h3>
-            We do not want to demonise plastic. Plastic is a fantastic material used in diverse applications that require its very unique specifications.
+          <h3 class="layout-content-h3">
+            We do not want to demonise plastic. Plastic is a fantastic material used in diverse applications that require its very unique specifications. Plastic helps us save lives in hospitals and deliver goods all over the world, we use it to store our food and get to work. Plastic is ingrained in modern life.
           </h3>
-          <h3>
-            But how plastic is currently made is deeply unsustainable.
+          <h3 class="layout-content-h3">
+            But how plastic is currently made is deeply unsustainable. 
           </h3>
           <p class="content-paragraph">
-            Oil-based plastics rely on the continued extraction of finite resources with widely documented negative effects on the climate caused by global warming. The majority of plastic and packaging is single-use, designed to be used once and then discarded, often ending up in the oceans and water systems of the world. This generates a series of questions: Why would a product, which only serves its purpose in one specific moment, need to last forever? Why should the packaging of a product last hundreds if not thousands of years more than the product itself? After all, plastic is made of oil and, with oil such a scarce resource, why waste it in such a futile way? Plastic’s greatest strength is therefore also its greatest weakness: its durability.
+            Oil-based plastics rely on the continued extraction of finite resources with widely documented negative Oil-based plastics rely on the continued extraction of finite resources with widely documented negative effects on the climate caused by global warming. The majority of plastic and packaging is single-use, designed to be used once and then discarded, often ending up in the oceans and water systems of the world. This generates a series of questions: Why would a product, which only serves its purpose in one specific moment, need to last forever? Why should the packaging of a product last hundreds if not thousands of years more than the product itself? After all, plastic is made of oil and, with oil such a scarce resource, why waste it in such a futile way? Plastic’s greatest strength is therefore also its greatest weakness: its durability. also its greatest weakness: its durability.
           </p>
           <p class="content-paragraph">
-            Meanwhile, land crop-derived bioplastics present multiple further hurdles. Firstly, by being cultivated on land, these crops are in direct competition with conventional farming for food production. Even those derived from the by-products and waste streams of human food crops are removing resources used in animal feeds. Land crops require high levels of ecologically harmful, energy-intensive fertilisers and pesticides. They also place huge demands on freshwater supplies, depleting rivers and aquifers across the world with knock-on ecological, environmental, social and political consequences. Finally, industrially degradable bioplastics are reliant on significant investment into dedicated collection and processing infrastructure – economically expensive to build and maintain and environmentally costly to operate – which is yet to be delivered on a global scale.
+            Meanwhile, land crop-derived bioplastics present multiple further hurdles. Firstly, by being cultivated on land, these crops are in direct competition with conventional farming for food production. Even those derived from the by-products and waste streams of human food crops are removing resources used in animal feeds. Land crops require high levels of ecologically harmful, energy intensive fertilisers and pesticides. They also place huge demands on freshwater supplies, depleting rivers and aquifers across the world with knock-on ecological, environmental, social and political consequences. Finally, industrially degradable bioplastics are reliant on significant investment into dedicated collection and processing infrastructure - economically expensive to build and maintain and environmentally costly to operate - which is yet to be delivered on a global scale.
           </p>
           <p class="content-paragraph">
-            FlexSea are addressing these problems with truly home-compostable biomaterials produced from a non-competing feedstock, seaweed. We utilise red seaweeds, which are sustainably and reliably cultivated year-round, at scale, to deliver the next generation of sustainable packaging solutions.
+            FlexSea are addressing these problems with truly home compostable biomaterials produced from a non-competing feedstock, seaweed. We utilise red seaweeds, which are sustainably and reliably cultivated year round, at scale, to deliver the next generation of sustainable packaging solutions. 
           </p>
           <p class="content-paragraph">
             Our Biotechnology vertical has been developed to consolidate our circular approach, producing valuable materials derived from 100% of the seaweed we receive. Discover more about our <strong><u>Bioplastics</u></strong> and <strong><u>Biopolymers</u></strong>.
           </p>
         </div>
       </div>
-
-    <div class="team-background">
+</div>
       <div class="team-container">
         <!-- Informação à esquerda -->
         <div class="left-team">
         </div>
     
         <!-- Informação à direita -->
-        <div class="right-our-team">
+        <div class="right-team">
             <p class="team-story-p">OUR TEAM</p>
             <h3 class="team-story-h3">At FlexSea we have put together an ambitious team from a diverse range of backgrounds, combining innovative researchers, experienced engineers and passionate business strategists. The product is a well-balanced, interdisciplinary team united by the desire to make a difference on a global scale.
             </h3>
             <br>
         </div>
     </div>
-    
+  
+<div class="background-about-us-dois">
     <div class="container-team">
       <div class="team-section">
         <h3>C-suite</h3>
+        <h3 class="team-section-mobile">C-suite</h3>
         <div class="team">
           <div class="team-member">
-            <img src="imgpages/group14.png" alt="Carlo Fedeli">
+            <img src="imgpages/Group141.svg" alt="Carlo Fedeli">
             <p class="name">Carlo Fedeli</p>
             <p class="role">CEO <br><i class="fa-brands fa-linkedin"></i></p>
           </div>
           <div class="team-member">
-            <img src="imgpages/group14.png" alt="Olivia Simpson">
+            <img src="imgpages/Group141.svg" alt="Olivia Simpson">
             <p class="name">Olivia Simpson</p>
             <p class="role">COO <br><i class="fa-brands fa-linkedin"></i></p>
           </div>
           <div class="team-member">
             <img src="imgpages/MattiaParati.jpg" alt="Mattia Parati">
             <p class="name">Mattia Parati</p>
-            <p class="role">CSO <br><i class="fa-brands fa-linkedin"></i></p>
+            <p class="role">
+              <a href="//www.linkedin.com/in/mattia-parati-phd-bb267b152/">
+                CSO <br>
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </p>
           </div>
         </div>
       </div>
@@ -610,58 +255,95 @@
     
       <div class="team-section">
         <h3>Team</h3>
+        <h3 class="team-section-mobile">Team</h3>
         <div class="team">
           <div class="team-member">
             <img src="imgpages/AfifaAnis.jpg" alt="Afifa Anis">
             <p class="name">Afifa Anis</p>
-            <p class="role">Senior Biotechnologist <br><i class="fa-brands fa-linkedin"></i></p>
+            <p class="role">
+              <a href="https://www.linkedin.com/in/afifa-anis-988aa1b9/">
+                Senior Biotechnologist <br>
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </p>
           </div>
           <div class="team-member">
             <img src="imgpages/AmirGhasemi.jpg" alt="Amir Ghasemi">
             <p class="name">Amir Ghasemi</p>
-            <p class="role">Polymer Processing Engineer <br><i class="fa-brands fa-linkedin"></i></p>
+            <p class="role">
+                <a href="https://www.linkedin.com/in/amir-ghasemi-4663aa47/">
+                Polymer Processing Engineer <br>
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </p>
           </div>
           <div class="team-member">
             <img src="imgpages/AndrewBarrass.jpg" alt="Andrew Barrass">
             <p class="name">Andrew Barrass</p>
-            <p class="role">Injection Moulding Engineer <br><i class="fa-brands fa-linkedin"></i></p>
+            <p class="role">
+              <a href="//www.linkedin.com/in/andrew-barrass-3b373164/">
+                Injection Moulding Engineer <br>
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </p>
           </div>
           <div class="team-member">
-            <img src="imgpages/group14.png" alt="Andrew Manetta">
+            <img src="imgpages/Group141.svg" alt="Andrew Manetta">
             <p class="name">Andrew Manetta</p>
             <p class="role">Formulation Chemist <br><i class="fa-brands fa-linkedin"></i></p>
           </div>
           <div class="team-member">
-            <img src="imgpages/group14.png" alt="Bianca Alma Gilardi Quadro Curzio">
+            <img src="imgpages/Group141.svg" alt="Bianca Alma Gilardi Quadro Curzio">
             <p class="name">Bianca Alma Gilardi Quadro Curzio</p>
             <p class="role">Business Development & Regulations <br><i class="fa-brands fa-linkedin"></i></p>
           </div>
           <div class="team-member">
             <img src="imgpages/FreddieBrosnahan.jpg" alt="Freddie Brosnahan">
             <p class="name">Freddie Brosnahan</p>
-            <p class="role">Biotechnology Intern <br><i class="fa-brands fa-linkedin"></i></p>
+            <p class="role">
+              <a href="//www.linkedin.com/in/freddie-brosnahan-32a838293/">
+                Biotechnology Intern <br>
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </p>
           </div>
           <div class="team-member">
             <img src="imgpages/KatieFord.jpg" alt="Katie Ford">
             <p class="name">Katie Ford</p>
-            <p class="role">Biotechnologist & Scale-Up Engineer <br><i class="fa-brands fa-linkedin"></i></p>
+            <p class="role">
+              <a href="//www.linkedin.com/in/katie-ford-b606a8206/">
+                Biotechnologist & Scale-Up Engineer <br>
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </p>
           </div>
           <div class="team-member">
             <img src="imgpages/SevvenSmith.jpg" alt="Sevven Smith">
             <p class="name">Sevven Smith</p>
-            <p class="role">Applied Chemist <br><i class="fa-brands fa-linkedin"></i></p>
+            <p class="role">
+              <a href="//www.linkedin.com/in/sevven-smith-97724b250/">
+                Applied Chemist <br>
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </p>
           </div>
           <div class="team-member">
             <img src="imgpages/TomBrine.jpg" alt="Tom Brine">
             <p class="name">Tom Brine</p>
-            <p class="role">Biotechnology Coordinator <br><i class="fa-brands fa-linkedin"></i></p>
+            <p class="role">
+              <a href="https://www.linkedin.com/in/tom-brine/">
+                Biotechnology Coordinator <br>
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
+</div>
     
-    <hr class="about-hr"><br>
+
+    <hr class="hr-about-us-background-dois">
     
     <footer class="desktop">
     
@@ -827,14 +509,10 @@
             </div>
             
     </footer>
-    <div class="getintouch-mobile">
-    
-      <a href=""><img src="../img/footer/quote.svg" alt="GET IN TOUCH"></a>
-    
-    </div>
 
     <!-- Script do Bootstrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="/js/about-us.js"></script>
     <script type="text/javascript">
       // Script para adicionar classes à barra de navegação ao fazer scroll
       var nav = document.querySelector('nav');

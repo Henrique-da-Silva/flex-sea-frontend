@@ -3,404 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="../https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-<link rel="stylesheet" type="text/css" href="../https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-    <!-- Inclui estilos Bootstrap -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <!-- Fonte Google DM Mono e DM Sans -->
-    <link href="../https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=DM+Sans:wght@400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" /> <!-- Inclui estilos Bootstrap -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=DM+Sans:wght@400&display=swap"
+      rel="stylesheet" /> <!-- Fonte Google DM Mono e DM Sans -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Inclui ícones do Font Awesome -->
-    <link rel="stylesheet" href="../https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/goncalves-style/goncalves-style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- CSS do Bootstrap -->
-    <link href="../https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/aboutus/about-us.css">
-    <link rel="stylesheet" href="/css/faqs/faqs.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles-henrique.css">
+    <link rel="stylesheet" href="/css/styles-henrique.css">
 
 
-   
     <title>Flex Sea</title>
     <!-- Estilos customizados -->
-    <style>
-      .banner-image {
-        background-image: url('img/1.png'); /* Define a imagem de fundo do banner */
-        background-size: cover; /* Imagem de fundo cobre toda a área */
-      }
-
-      .request-text p {
-        font-size: 1.2rem;
-        font-family: 'DM Sans', sans-serif; /* Fonte DM Sans aplicada */
-      }
-
-
-      .btn-custom {
-        background-color: #F9F6EC; /* Cor de fundo do botão */
-        border: none; /* Sem borda */
-        padding: 10px 30px; /* Preenchimento interno do botão */
-        font-size: 0.75rem; /* Tamanho do texto */
-        color: #000; /* Cor do texto do botão */
-        transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
-        font-family: 'DM Mono', monospace; /* Fonte DM Mono aplicada */
-        margin-bottom: 10px;
-        width: 90%;
-        max-width: 244px;
-      }
-
-      @media (min-width: 768px) {
-        .btn-custom {
-          width: auto; /* Ajusta o tamanho dos botões em telas maiores */
-        }
-      }
-
-      .button-group {
-        flex-direction: column; /* Botões em coluna por padrão */
-      }
-
-      @media (min-width: 768px) {
-        .button-group {
-          flex-direction: row; /* Botões lado a lado em telas maiores */
-        }
-      }
-
-      .btn-custom:hover {
-        background-color: #e0e0e0; /* Cor de fundo do botão ao passar o mouse */
-      }
-
-      .button-group button {
-        width: 244px; /* Largura dos botões */
-        height: 54px; /* Altura dos botões */
-        border-radius: 40px; /* Bordas arredondadas */
-        margin-right: 10px; /* Espaço entre os botões */
-      }
-
-      .line {
-        width: 100%; /* Linha ocupa toda a largura */
-        height: 2px; /* Espessura da linha */
-        background-color: #ffffff; /* Cor da linha, branca como o texto */
-        margin-bottom: 20px; /* Espaço entre a linha e os botões */
-      }
-
-      @media (max-width: 768px) {
-        .line {
-          display: none; /* Esconde a linha em telas menores */
-        }
-      }
-
-      .navbar-nav .nav-link {
-        color: #000 !important; /* Cor preta para os links de navegação */
-        font-family: 'DM Sans', sans-serif; /* Fonte DM Sans */
-        font-weight: 500; /* Peso da fonte */
-        font-size: 18px; /* Tamanho da fonte */
-        line-height: 28px; /* Altura da linha */
-        letter-spacing: -0.02em; /* Espaçamento entre letras (-2%) */
-        margin-bottom: 25px; /* Espaçamento inferior entre parágrafos */
-      }
-
-      .navbar {
-        background-color: transparent;
-      }
-
-      .navbar .nav-link {
-        color: #000000 !important;
-      }
-
-      .navbar.scrolled {
-        background-color: #fff;
-      }
-
-      .navbar.scrolled .nav-link {
-        color: #000000 !important; /* Cor branca quando a barra de navegação faz scroll */
-      }
-
-      /* Responsividade da barra de navegação */
-      @media (max-width: 768px) {
-      .navbar-nav .nav-link {
-        font-size: 16px;
-        margin-bottom: 15px;
-        }
-      }
-
-      .bg-white {
-        background-color: #fff !important;
-      }
-
-      /* Remove o caret do About us e Enquiries */
-      #aboutDropdown::after,
-      #enquiriesDropdown::after {
-        display: none; /* Esconde a seta */
-      }
-
-      /* Estilo para o ícone circular no menu */
-      .icon-circle {
-        width: 20px;               /* Ajuste a largura do círculo */
-        height: 20px;              /* Ajuste a altura do círculo */
-        background-color: #ffffff; /* Cor de fundo do círculo: branca */
-        border-radius: 50%;        /* Deixa o elemento circular */
-        display: inline-flex;      /* Exibe em linha com o link */
-        align-items: center;       /* Centraliza verticalmente o ícone */
-        justify-content: center;   /* Centraliza horizontalmente o ícone */
-        margin-left: 8px;          /* Espaço entre o texto e o ícone */
-      }
-
-      .icon-circle i {
-        font-size: 14px;           /* Tamanho do ícone */
-        color: #000;               /* Cor do ícone preta */
-      }
-
-      /* Estilo para o botão azul fixo à direita */
-      .fixed-circle {
-        position: fixed;           /* Mantém o elemento fixo na tela mesmo com scroll */
-        right: 40px;               /* Ajusta a distância da borda direita da tela */
-        top: 50%;                  /* Ajusta a posição para ficar alinhado ao centro da tela verticalmente */
-        transform: translateY(-50%); /* Centraliza verticalmente */
-        width: 60px;               /* Largura do círculo */
-        height: 60px;              /* Altura do círculo */
-        background-color: #0E0466; /* Cor azul escura */
-        border-radius: 50%;        /* Deixa o elemento circular inicialmente */
-        display: flex;             /* Para centralizar a imagem dentro do círculo */
-        align-items: center;       /* Alinha verticalmente a imagem no centro */
-        justify-content: center;   /* Alinha horizontalmente a imagem no centro */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra suave ao círculo */
-        cursor: pointer;           /* Define o ponteiro do mouse como 'pointer' */
-        z-index: 1000;             /* Garante que o círculo fique acima de outros elementos */
-        transition: all 0.3s ease; /* Transição suave ao passar o mouse */
-      }
-
-      .fixed-circle:hover {
-        width: 180px;              /* Aumenta a largura do botão ao passar o mouse */
-        padding: 10px 20px;        /* Adiciona um espaçamento para o texto */
-        justify-content: space-between; /* Alinha o conteúdo à esquerda */
-        border-radius: 30px;       /* Torna o botão oval ao passar o mouse */
-        background-color: #0E0466; /* Mantém a cor de fundo */
-      }
-
-      .fixed-circle img {
-        width: 24px;               /* Largura da imagem ajustada */
-        height: 24px;              /* Altura da imagem para mantê-la proporcional */
-      }
-
-      .fixed-circle span {
-        color: #ffffff;            /* Cor do texto */
-        font-family: 'DM Mono', monospace; /* Fonte do texto */
-        font-weight: 500;          /* Peso da fonte */
-        font-size: 12px;           /* Tamanho do texto */
-        line-height: 15.62px;      /* Altura da linha */
-        text-align: center;        /* Centraliza o texto */
-        display: none;             /* Ocultar o texto inicialmente */
-        transition: opacity 0.3s ease; /* Transição suave para o texto */
-      }
-
-      .fixed-circle:hover span {
-        display: inline;           /* Exibir o texto ao passar o mouse */
-        opacity: 1;                /* Exibir suavemente */
-      }
-
-       /* Estilo da seção Bioplastic */
-      .bioplastic-section {
-        text-align: left;
-        padding: 50px;
-        position: relative;
-      }
-
-      .bioplastic-section .row {
-        width: 120%; /* Aumenta um pouco a largura */
-        max-width: none; /* Remove limite de largura padrão */
-        margin-left: -10%; /* Ajusta a posição para centralizar o conteúdo */
-      }
-
-      .bioplastic-section img {
-        width: 100%;
-        height: auto;
-      }
-
-      .bioplastic-section h1 {
-        font-family: 'DM Sans', sans-serif;
-        font-size: 2.5rem;
-        font-weight: bold;
-      }
-    /* Estilo do botão LERN MORE da seção Bioplastic */
-      .learn-more-button {
-        position: relative; /* ou absolute dependendo do contexto */
-        float: right; /* Alternativa: use position */
-        margin-right: 20px; /* Ajuste a margem conforme necessário */
-        padding: 10px 20px;
-        background-color: #ffffff; /* Cor do botão */
-        color: #000;
-        border: 1px solid #000; /* Borda preta */
-        border-radius: 40px; /* Arredondamento da borda */
-        cursor: pointer;
-        font-size: 16px;
-        width: 223px;
-        height: 54px;
-        font-family: 'DM Mono', monospace; /* Fonte DM Mono */
-        margin: 30px;
-      }
-
-      .learn-more-button:hover {
-        background-color: #d4d4d4; /* Efeito ao passar o mouse */
-        color: #fff; /* Alterar cor do texto no hover */
-        border-color: #ffffff; /* Alterar cor da borda no hover */
-      }
-
-      /* Estilo do - What We Do - da seção Bioplastic */
-      .what-we-do {
-        font-family: 'DM Mono', monospace;
-        margin-bottom: 0;
-      }
-
-      /* Estilo de - 1, 2 - da seção Bioplastic e biotech */
-      .number-style {
-        font-family: 'DM Mono', monospace;
-        font-size: 20px;
-      }
-
-      /* Seções Bioplastic e Biotech */
-        .bioplastic-section,
-        .biotech-section {
-          text-align: left;
-          padding: 30px 20px;
-        }
-
-      @media (min-width: 768px) {
-        .bioplastic-section,
-        .biotech-section {
-          padding: 50px;
-        }
-      }
-
-      /* Responsividade da imagem e do vídeo */
-      .bioplastic-section video,
-      .biotech-section video {
-        width: 100%;
-        height: auto;
-      }
-
-          /* Estilo da seção Biotech */
-      .biotech-section {
-        text-align: left;
-        padding: 50px;
-        position: relative;
-      }
-
-      .biotech-section .row {
-        width: 120%; /* Aumenta um pouco a largura */
-        max-width: none; /* Remove limite de largura padrão */
-        margin-left: -10%; /* Ajusta a posição para centralizar o conteúdo */
-      }
-
-      .biotech-section img {
-        width: 100%;
-        height: auto;
-      }
-
-      .biotech-section h1 {
-        font-family: 'DM Sans', sans-serif;
-        font-size: 2.5rem;
-        font-weight: bold;
-      }
-
-      /*Texto acima da imagem*/
-
-      .text-overlay {
-        position: absolute;
-        top: 50%; /* Ajuste conforme necessário */
-        left: 75%; /* Centraliza horizontalmente */
-        transform: translate(-75%, -50%); /* Ajusta para centralizar completamente */
-        color: white;
-        font-size: 24px; /* Ajuste conforme necessário */
-        font-weight: bold;
-        background-color: #0E0466;
-        padding: 40px;
-        border-radius: 5px;
-        border-radius: 60px;
-        font-family: 'DM Sans', sans-serif;
-        max-width: 90%;
-      }
-
-      @media (min-width: 768px) {
-        .text-overlay {
-          max-width: 50%;
-          padding: 40px;
-        }
-      }
-
-      .text-overlay h2{
-        width: 372px;
-        height: 231px;
-        font-size: 32px;
-        font-weight: 500;        
-      }
-
-      .text-overlay p{
-        width: 372px;
-        height: 150px;
-        font-size: 16px;
-        font-weight: 400;
-        margin-top: 70px;
-      }
-
-      .text-overlay button{
-        width: 223px;
-        height: 54px;
-        font-size: 12px;
-        font-weight: 500;
-        border-radius: 50px;
-        background-color: #0E0466;
-        color: white;
-        font-family: 'DM Mono', monospace;
-        border-color: rgb(196, 196, 196);
-      }
-
-/* Ajuste da barra de navegação */
-.navbar {
-  padding: 1rem; /* Ajuste o padding para manter a barra compacta */
-}
-
-.container-fluid {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem; /* Garante espaçamento lateral suficiente */
-}
-
-.navbar-brand {
-  margin-right: auto; /* Coloca o logotipo à esquerda */
-}
-
-.navbar-toggler {
-  margin-left: 0; /* Remova qualquer margem para o lado esquerdo */
-  display: flex;
-  align-items: center; /* Alinha verticalmente */
-}
-
-/* Ajuste do tamanho do logotipo e do botão em telas pequenas */
-@media (max-width: 767px) {
-  .navbar-brand img {
-    max-height: 50px; /* Ajuste o tamanho do logotipo para caber na navbar em dispositivos menores */
-  }
-
-  .navbar-toggler {
-    padding: 0.25rem 0.5rem; /* Ajuste o espaçamento do botão para torná-lo visualmente consistente */
-    margin-right: 30px;
-  }
-
-  .navbar-toggler-icon {
-    height: 1.5rem; /* Ajuste o tamanho do ícone para combiná-lo ao tamanho do logo */
-
-  }
-}
-
-/* Navbar Collapse */
-.collapse {
-  flex-basis: 100%;
-  flex-grow: 1;
-  justify-content: flex-end;
-}
-
-    </style>
   </head>
   
   <body>
@@ -429,13 +44,13 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="../bioplastics.html">Bioplastic</a>
+          <a class="nav-link" href="../pages/bioplastics.html">Bioplastic</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../pages/biotech.html">Biotech</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../news-article.html">News & Media</a>
+          <a class="nav-link" href="../pages/news.html">News & Media</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -458,10 +73,10 @@
             </div>
           </a>
           <ul class="dropdown-menu" aria-labelledby="enquiriesDropdown">
-            <li><a class="dropdown-item" href="#">Material request</a></li>
+            <li><a class="dropdown-item" href="/pages/enquiries-material-request.html">Material request</a></li>
             <li><a class="dropdown-item" href="#">FAQs</a></li>
             <li><a class="dropdown-item" href="#">Careers</a></li>
-            <li><a class="dropdown-item" href="#">Contact us</a></li>
+            <li><a class="dropdown-item" href="/pages/enquiries-contactus.html">Contact us</a></li>
           </ul>
         </li>
       </ul>
@@ -469,53 +84,51 @@
   </div>
 </nav>
 
+
     <!-- Botão Fixo no Canto Direito -->
-    <div class="fixed-circle" id="fixed-mobile">
-      <img src="../img/imagemlateral.svg" alt="Icon Image" />
-      <a href=""><span>GET IN TOUCH</span></a>
+    <div class="fixed-circle">
+      <img src="../img/38.png" alt="Icon Image" /> <!-- Substituindo o ícone pela imagem fornecida -->
+      <span>GET IN TOUCH</span> <!-- Texto que aparece ao passar o mouse -->
     </div>
     <br><br><br><br>
 
       <br>
 
 
-      <div class="background">
+      <div class="background-container-faq">
         <div class="container-faq">
             <div class="faq">
                 <h1 class="h1-faqs">FAQs</h1>
 
                 <div class="faq-item">
-                  <button onclick="toggleContent(this)">
-                      If seaweed is so good, doesn’t harvesting it damage the environment?
-                      <img src="/pages/imgpages/setaCimaFaqs.png" alt="setaCima" class="setaCima" style="display: none;">
-                      <img src="/pages/imgpages/setaBaixoFaqs.png" alt="setaBaixo" class="setaBaixo">
-                  </button>
-                  <div class="content-faq" style="display: none;">
-                      <p>No, not at all! Seaweed is harvested from seaweed farms, which protects the local environment by creating ecosystems and slowing down costal erosion. Seaweed harvesting is rotated within the farm, with new seaweed constantly being planted, and growing so fast that any seaweed harvested will regrow within a couple of weeks.</p>
-                  </div>
-              </div>
-              
-              <div class="faq-item">
-                  <button onclick="toggleContent(this)">
-                      Should I recycle FlexSea?
-                      <img src="/pages/imgpages/setaCimaFaqs.png" alt="setaCima" class="setaCima" style="display: none;">
-                      <img src="/pages/imgpages/setaBaixoFaqs.png" alt="setaBaixo" class="setaBaixo">
-                  </button>
-                  <div class="content-faq" style="display: none;">
-                      <p>Details about recycling FlexSea will be available soon...</p>
-                  </div>
-              </div>
-              
-              <div class="faq-item">
-                  <button onclick="toggleContent(this)">
-                      How should I dispose of FlexSea?
-                      <img src="/pages/imgpages/setaCimaFaqs.png" alt="setaCima" class="setaCima" style="display: none;">
-                      <img src="/pages/imgpages/setaBaixoFaqs.png" alt="setaBaixo" class="setaBaixo">
-                  </button>
-                  <div class="content-faq" style="display: none;">
-                      <p>FlexSea can be composted under specific conditions...</p>
-                  </div>
-              </div>              
+                    <button onclick="toggleContent(this)">If seaweed is so good, doesn’t harvesting it damage the environment?
+                      <img class="seta-faq-item1" src="/pages/imgpages/setaCimaFaqs.png" alt="setaCima" class="setaCima" style="display: none;">
+                      <img class="seta-faq-item1" src="/pages/imgpages/setaBaixoFaqs.png" alt="setaBaixo" class="setaBaixo">
+                    </button>
+                    <div class="content-faq">
+                        <p>No, not at all! Seaweed is harvested from seaweed farms, which protects the local environment by creating ecosystems and slowing down coastal erosion. Seaweed harvesting is rotated within the farm, with new seaweed constantly being planted, and growing so fast that any seaweed harvested will regrow within a couple of weeks.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button onclick="toggleContent(this)">Should I recycle FlexSea?
+                      <img class="seta-faq-item2" src="/pages/imgpages/setaCimaFaqs.png" alt="setaCima" class="setaCima" style="display: none;">
+                      <img class="seta-faq-item2" src="/pages/imgpages/setaBaixoFaqs.png" alt="setaBaixo" class="setaBaixo">
+                    </button>
+                    <div class="content-faq">
+                        <p>FlexSea is home-compostable and designed to be a better alternative when recycling isn’t an option or is very unlikely.However, if it does end up in the recycling stream, the washing cycle of recycling facilities will be enough to degrade FlexSea and avoid any batch contamination.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button onclick="toggleContent(this)">How should I dispose of FlexSea?
+                      <img class="seta-faq-item3" src="/pages/imgpages/setaCimaFaqs.png" alt="setaCima" class="setaCima" style="display: none;">
+                      <img class="seta-faq-item3" src="/pages/imgpages/setaBaixoFaqs.png" alt="setaBaixo" class="setaBaixo">
+                    </button>
+                    <div class="content-faq">
+                        <p>FlexSea is home compostable, that means you can throw it away in your compost with your food waste, or, if you have it, add it to your local food waste collection bags! In case you do not have a home-compost or a food bin, you can either seek the local collection center for compostables or, in the worst case, throw it in your domestic trash. FlexSea is designed in such a way that even when disposed of in the bad waste streams, it will end up degrading and will not be a problem for the environment!</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -529,7 +142,7 @@
             </div>
             <div class="link-box">
                 <p class="p-info">GET FLEXSEA</p>
-                <H2 class="h2-info">Material request</H2>
+                <H2 class="h2-info" >Material request</H2>
                 <div class="container-btn-faqs">
                     <button class="btn-faqs">GO TO ENQUIRIES</button>
                 </div>
@@ -546,179 +159,181 @@
 
     <hr class="hr-faqs"><br>
     
-    <footer class="desktop">
-    
-        <div class="containerfooter">
-    
-            <!-- Coluna 1 -->
-            <div class="form">
-    
-                <p class="title">Sign up to our newsletter:</p>
-    
-                <form action="" method="">
-                    <!-- Campo de Nome -->
-                    <input class="input-name" type="text" id="nome" name="nome" required placeholder="Name">
-    
-                    <!-- Campo de E-mail -->
-                    <input class="input-email" type="email" id="email" name="email" required placeholder="E-mail">
-    
-                    <!-- Checkbox -->
-                    <div class="checkbox-container">
-                        <input type="checkbox" id="privacy-checkbox">
-                        <label class="dm-mono-medium" for="privacy-checkbox">I HAVE READ AND ACCEPT THE <span>PRIVACY
-                                POLICY</span></label>
-                    </div>
-    
-                    <!-- Botão de Envio -->
-                    <button class="button dm-mono-medium" type="submit">SIGN UP</button>
-                    <br><br><br><br>
-    
-                    <div class="group87">
-                        <img src="../img/footer/logo footer.svg" alt="">
-                        <ul>
-                            <li>contact@flex-sea.com</li>
-                            <li>+44 1234 12334345</li>
-                        </ul>
-    
-                    </div>
-    
-            </div>
-    
-            <!-- Coluna 2 -->
-            <div class="list">
-                <ul class="ul">
-                    <li><a href="../pages/bioplastics.html">Bioplastic</a></li>
-                    <li><a href="../pages/biotech.html">Biotech</a></li>
-                    <li><a href="../pages/news.html">News & Media</a></li>
-                </ul>
-    
-                <ul class="ul">
-                    <li><a href="../pages/about-us.html">Our story</a></li>
-                    <li><a href="">Our approach</a></li>
-                    <li><a href="">Our team</a></li>
-                </ul>
-    
-    
-                <ul class="ul">
-                    <li><a href="">Material request</a></li>
-                    <li><a href="../pages/faqs.html">FAQs</a></li>
-                    <li><a href="">Careers</a></li>
-                    <li><a href="">Contact us</a></li>
-                </ul>
-    
-                <a class="linkedin" href=""><img src="../img/footer/linkedinsvg.svg" alt=""></a>
-    
-            </div>
-    
-        </div>
-        <br><br>
-    
-        <!--Rodapé-->
-    
-        <div class="container-rodape">
-    
-            <div class="p">
-                <a href="../index.html">©2024 – FLEXSEA</a>
-            </div>
-            <div class="a">
-                <a href="">PRIVACY POLICY - TERMS & CONDITIONS</a>
-    
-            </div>
-            <div class="gridspace">
-                <a href=""><span style="color: #D2D2D2;">DEVELOPED BY </span>GRID SPACE</a>
-            </div>
-        </div>
-    
-    
-    </footer>
-   
-    <footer class="mobile">
+<footer class="desktop">
 
-        <div class="p-a">
+  <div class="containerfooter">
 
-            <h3>Sign up to our newsletter:<a href=""><img src="../img/footer/linkedinsvg.svg" alt=""></a></h3>
-            
-        </div>
-        <form class="form-mobile" action="" method="">
-            <!-- Campo de Nome -->
-            <input class="input-name" type="text" id="nome" name="nome" required placeholder="Name">
-        
-            <!-- Campo de E-mail -->
-            <input class="input-email" type="email" id="email" name="email" required placeholder="E-mail">
-        
-            <!-- Checkbox -->
-            <div class="checkbox-container">
-                <input type="checkbox" id="privacy-checkbox">
-                <label class="dm-mono-medium" for="privacy-checkbox">I HAVE READ AND ACCEPT THE <span>PRIVACY
-                        POLICY</span></label>
-            </div>
-        
-            <!-- Botão de Envio -->
-            <button class="button dm-mono-medium" type="submit">SIGN UP</button>
-        </form>
+    <!-- Coluna 1 -->
+    <div class="form">
 
-        <br><br>
+      <p class="title">Sign up to our newsletter:</p>
 
-        <div class="list-mobile">
+      <form action="" method="">
+        <!-- Campo de Nome -->
+        <input class="input-name" type="text" id="nome" name="nome" required placeholder="Name">
 
-            <ul class="ul" >
-                <li><a href="../pages/bioplastics.html">Bioplastic</a></li>
-                <li><a href="../pages/biotech.html">Biotech</a></li>
-                <li id="nm"><a href="../pages/news.html">News & Media</a></li>
-            </ul>
+        <!-- Campo de E-mail -->
+        <input class="input-email" type="email" id="email" name="email" required placeholder="E-mail">
 
-            <ul class="ul" id="list2">
-                <li><a href="">Material request</a></li>
-                <li><a href="../pages/faqs.html">FAQs</a></li>
-                <li><a href="">Careers</a></li>
-                <li><a href="">Contact us</a></li>
-            </ul>
+        <!-- Checkbox -->
+        <div class="checkbox-container">
+          <input type="checkbox" id="privacy-checkbox">
+          <label class="dm-mono-medium" for="privacy-checkbox">I HAVE READ AND ACCEPT THE <span>PRIVACY
+              POLICY</span></label>
         </div>
 
-             <img id="logo-footer" src="../img/footer/logo footer.svg" alt="">
+        <!-- Botão de Envio -->
+        <button class="button dm-mono-medium" type="submit">SIGN UP</button>
+        <br><br><br><br>
 
-            <div class="group87">
-                
-                <ul>
-                    <li>contact@flex-sea.com</li>
-                    <li>+44 1234 12334345</li>
-                </ul>
-                
-                <ul class="ul" id="cl4">
-                    <li><a href="../pages/about-us.html">Our story</a></li>
-                    <li><a href="">Our approach</a></li>
-                    <li><a href="">Our team</a></li>
-                </ul>
-            
-            </div>
+        <div class="group87">
+          <img src="../img/footer/logo footer.svg" alt="">
+          <ul>
+            <li>contact@flex-sea.com</li>
+            <li>+44 1234 12334345</li>
+          </ul>
 
-            <br><br>
+        </div>
 
-            <div class="privacy-policy">
+    </div>
 
-                <a href="">PRIVACY POLICY - TERMS & CONDITIONS</a>
-            
-            </div>
-            <br>
-            <div class="rodape">
-            <div class="privacy-policy">
-                <a href="index.html">©2024 – FLEXSEA</a>
-            </div>
-            <div class="privacy-policy">
-                <a href=""><span style="color: #D2D2D2 ; margin-left: 80px;">DEVELOPED BY </span><span style="color: #858585;">GRID SPACE</span></a>
-            </div>
-            </div>
-            
-    </footer>
-      <div class="getintouch-mobile">
-      
-        <a href=""><img src="../img/footer/quote.svg" alt="GET IN TOUCH"></a>
-      
-      </div>
+    <!-- Coluna 2 -->
+    <div class="list">
+      <ul class="ul">
+        <li><a href="pages/bioplastics.html">Bioplastic</a></li>
+        <li><a href="pages/biotech.html">Biotech</a></li>
+        <li><a href="pages/news.html">News & Media</a></li>
+      </ul>
+
+      <ul class="ul">
+        <li><a href="pages/about-us.html">Our story</a></li>
+        <li><a href="">Our approach</a></li>
+        <li><a href="">Our team</a></li>
+      </ul>
+
+
+      <ul class="ul">
+        <li><a href="pages/enquiries-material-request.html">Material request</a></li>
+        <li><a href="pages/faqs.html">FAQs</a></li>
+        <li><a href="">Careers</a></li>
+        <li><a href="pages/enquiries-contactus.html">Contact us</a></li>
+      </ul>
+
+      <a class="linkedin" href=""><img src="../img/footer/linkedinsvg.svg" alt=""></a>
+
+    </div>
+
+  </div>
+  <br><br>
+
+  <!--Rodapé-->
+
+  <div class="container-rodape">
+
+    <div class="p">
+      <a href="index.html">©2024 – FLEXSEA</a>
+    </div>
+    <div class="a">
+      <a href="">PRIVACY POLICY - TERMS & CONDITIONS</a>
+
+    </div>
+    <div class="gridspace">
+      <a href=""><span style="color: #D2D2D2;">DEVELOPED BY </span>GRID SPACE</a>
+    </div>
+  </div>
+
+
+</footer>
+
+<footer class="mobile">
+
+  <div class="p-a">
+
+    <h3>Sign up to our newsletter:<a href=""><img src="../img/footer/linkedinsvg.svg" alt=""></a></h3>
+
+  </div>
+  <form class="form-mobile" action="" method="">
+    <!-- Campo de Nome -->
+    <input class="input-name" type="text" id="nome" name="nome" required placeholder="Name">
+
+    <!-- Campo de E-mail -->
+    <input class="input-email" type="email" id="email" name="email" required placeholder="E-mail">
+
+    <!-- Checkbox -->
+    <div class="checkbox-container">
+      <input type="checkbox" id="privacy-checkbox">
+      <label class="dm-mono-medium" for="privacy-checkbox">I HAVE READ AND ACCEPT THE <span>PRIVACY
+          POLICY</span></label>
+    </div>
+
+    <!-- Botão de Envio -->
+    <button class="button dm-mono-medium" type="submit">SIGN UP</button>
+  </form>
+
+  <br><br>
+
+  <div class="list-mobile">
+
+    <ul class="ul">
+      <li><a href="pages/bioplastics.html">Bioplastic</a></li>
+      <li><a href="pages/biotech.html">Biotech</a></li>
+      <li id="nm"><a href="pages/news.html">News & Media</a></li>
+    </ul>
+
+    <ul class="ul" id="list2">
+      <li><a href="">Material request</a></li>
+      <li><a href="pages/faqs.html">FAQs</a></li>
+      <li><a href="">Careers</a></li>
+      <li><a href="">Contact us</a></li>
+    </ul>
+  </div>
+
+  <img id="logo-footer" src="../img/footer/logo footer.svg" alt="">
+
+  <div class="group87">
+
+    <ul>
+      <li>contact@flex-sea.com</li>
+      <li>+44 1234 12334345</li>
+    </ul>
+
+    <ul class="ul" id="cl4">
+      <li><a href="pages/about-us.html">Our story</a></li>
+      <li><a href="">Our approach</a></li>
+      <li><a href="">Our team</a></li>
+    </ul>
+
+  </div>
+
+  <br><br>
+
+  <div class="privacy-policy">
+
+    <a href="">PRIVACY POLICY - TERMS & CONDITIONS</a>
+
+  </div>
+  <br>
+  <div class="rodape">
+    <div class="privacy-policy">
+      <a href="index.html">©2024 – FLEXSEA</a>
+    </div>
+    <div class="privacy-policy">
+      <a href=""><span style="color: #D2D2D2 ; margin-left: 80px;">DEVELOPED BY </span><span
+          style="color: #858585;">GRID SPACE</span></a>
+    </div>
+  </div>
+
+</footer>
+
+<div class="getintouch-mobile">
+
+  <a href=""><img src="../img/footer/quote.svg" alt="GET IN TOUCH"></a>
+
+</div>
 
     <!-- Script do Bootstrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="../js/faqs.js"></script>
+    <script src="/js/faqs.js"></script>
     <script type="text/javascript">
       // Script para adicionar classes à barra de navegação ao fazer scroll
       var nav = document.querySelector('nav');
