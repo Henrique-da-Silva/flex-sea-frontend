@@ -39,6 +39,12 @@
 
    }
 
+   .latest-news button:hover{
+    background-color: #C45D16;
+    border: none;
+    color: #FFFFFF;
+   }
+
     /* Estilos para Carousel, Cards e Setas com Barra */
 
     .slick-carousel{
@@ -347,22 +353,41 @@
 
 }
 
+.div-title button:hover{
+    background-color: #C45D16;
+    border: none;
+    color: #FFFFFF;
+
+}
+
 .div-title a{
     text-decoration: none;
     color: #000000;
 }
 
 /* Cards */
-
+   
 .cards-1{
     display: flex;
     margin-top: 50px;
     flex-wrap: wrap;
 }
 
+.cards-1 button:hover{
+    background-color: #C45D16;
+    border: none;
+    color: #FFFFFF;
+}
+
 .cards-2{
     display: flex;
     flex-wrap: wrap;
+}
+
+.cards-2 button:hover{
+    background-color: #C45D16;
+    border: none;
+    color: #FFFFFF;
 }
 
 /* Botão Load More*/
@@ -376,6 +401,12 @@
     font-family: 'DM Mono';
     font-size: 12px;
 
+}
+
+.load-more button:hover{
+    background-color: #C45D16;
+    border: none;
+    color: #FFFFFF;
 }
 
 .load-more{
@@ -451,6 +482,13 @@ align-items: center;
     margin-top: 15px;
     font-size: 12px;
     cursor: pointer;
+}
+
+.button-news:hover{
+    background-color: #C45D16;
+    border: none;
+    color: #FFFFFF;
+
 }
 
                                         /* Responsividade News*/
@@ -982,6 +1020,12 @@ label span {
     cursor: pointer;
 }
 
+.button:hover{
+    background-color: #C45D16;
+    border: none;
+    color: #FFFFFF;
+}
+
 .group87{
 
     display: flex;
@@ -1431,6 +1475,12 @@ textarea::placeholder{
     font-size: 12px;
     text-transform: uppercase;
     background-color: transparent;
+}
+
+.button-enquiries:hover{
+    background-color: #C45D16;
+    border: none;
+    color: #FFFFFF;
 }
 
 .div-form-enquiries{
