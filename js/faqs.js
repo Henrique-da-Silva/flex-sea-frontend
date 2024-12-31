@@ -3,21 +3,29 @@ function toggleContent(button) {
     const isVisible = content.style.display === "block";
 
     // Fecha todos os outros conteúdos e reseta as setas
-    document.querySelectorAll('.faq-item .content-faq').forEach(c => {
-        c.style.display = 'none'; // Fecha o conteúdo
-        const btn = c.previousElementSibling; // Seleciona o botão anterior
-        btn.querySelector('.setaCima').style.display = 'none'; // Esconde seta cima
-        btn.querySelector('.setaBaixo').style.display = 'inline'; // Mostra seta baixo
+    document.querySelectorAll('.faq-item').forEach(item => {
+        const itemContent = item.querySelector('.content-faq'); // Conteúdo
+        const cima = item.querySelector('[class*="seta-faq-item"][alt="setaCima"]'); // Seta cima
+        const baixo = item.querySelector('[class*="seta-faq-item"][alt="setaBaixo"]'); // Seta baixo
+
+        if (itemContent && cima && baixo) {
+            itemContent.style.display = 'none'; // Fecha o conteúdo
+            cima.style.display = 'none'; // Esconde seta cima
+            baixo.style.display = 'inline'; // Mostra seta baixo
+        }
     });
 
     // Mostra ou oculta o conteúdo clicado e ajusta as setas
+    const cima = button.querySelector('[class*="seta-faq-item"][alt="setaCima"]'); // Seta cima do botão clicado
+    const baixo = button.querySelector('[class*="seta-faq-item"][alt="setaBaixo"]'); // Seta baixo do botão clicado
+
     if (!isVisible) {
         content.style.display = "block"; // Mostra conteúdo
-        button.querySelector('.setaCima').style.display = 'inline'; // Mostra seta cima
-        button.querySelector('.setaBaixo').style.display = 'none'; // Esconde seta baixo
+        if (cima) cima.style.display = 'inline'; // Mostra seta cima
+        if (baixo) baixo.style.display = 'none'; // Esconde seta baixo
     } else {
         content.style.display = "none"; // Oculta conteúdo
-        button.querySelector('.setaCima').style.display = 'none'; // Esconde seta cima
-        button.querySelector('.setaBaixo').style.display = 'inline'; // Mostra seta baixo
+        if (cima) cima.style.display = 'none'; // Esconde seta cima
+        if (baixo) baixo.style.display = 'inline'; // Mostra seta baixo
     }
 }
