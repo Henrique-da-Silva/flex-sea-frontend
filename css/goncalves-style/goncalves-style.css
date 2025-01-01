@@ -328,7 +328,7 @@
     .bioplastic-section,
     .biotech-section {
       text-align: left; /* Alinha o conteúdo à esquerda */
-      padding: 30px 20px; /* Adiciona 30px no topo/baixo e 20px nas laterais */
+      padding: 100px 20px; /* Adiciona 30px no topo/baixo e 20px nas laterais */
     }
 
 
@@ -1763,14 +1763,13 @@
     border-radius: 50px;
     border: 1px solid #000000; /* Define uma borda fina */
     color: #000000;
-    font-size: 16px;
-    cursor: pointer;
-    transition: color 0.3s ease, background 0.3s ease; /* Transições suaves */
+    font-size: 12px;
   }
   
   .btn-discover:hover {
     color: #FFFFFF; /* Cor do texto ao passar o mouse */
     background: #C45D16; /* Fundo ao passar o mouse */
+    border: none;
   }
   
   /* Estilos específicos para dispositivos móveis */
@@ -1821,23 +1820,25 @@
     flex: 1 1 45%; /* Ocupa até 45% da largura disponível */
     max-width: 600px; /* Define uma largura máxima */
   }
-  
+
+    .bioplastic-left-section {
+    font-family: 'DM Sans', sans-serif;
+    color: #000000;
+    transform: translateX(50px);
+  }
+
+    .bioplastic-left-section h1 {
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
   .bioplastic-left-section h3 {
     max-width: 460px;
     font-weight: 500;
     font-size: 22px;
   }
   
-  .bioplastic-left-section {
-    font-family: 'DM Sans', sans-serif;
-    color: #000000;
-  }
-  
-  .bioplastic-left-section h1 {
-    font-size: 42px;
-    font-weight: 500;
-    margin-bottom: 10px;
-  }
   
   .bioplastic-left-section p,
   .bioplastic-right-section p {
@@ -1855,7 +1856,7 @@
   /* ====== Aplicar transform apenas para telas maiores =======*/
   @media (min-width: 1024px) {
     .bioplastic-right-section p {
-      transform: translate(85px, 60px);
+      transform: translate(45px, 60px);
     }
   }
   
@@ -2017,18 +2018,19 @@
     height: 54px;
     color: #000000;
     border-radius: 50px; /* Adicione borda arredondada, se desejado */
-    font-size: 16px; /* Ajuste conforme necessário */
+    font-size: 12px; /* Ajuste conforme necessário */
     text-align: center; /* Centraliza o texto */
     display: flex; /* Garante que o botão funcione como flexbox */
     align-items: center; /* Centraliza o conteúdo verticalmente */
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     border: 1px solid black;
-    transition: color 0.3s ease, background 0.3s ease; /* Transições suaves */
+
   }
 
   .btn-discover-mobile:hover {
     color: #FFFFFF; /* Cor do texto ao passar o mouse */
     background: #C45D16; /* Fundo ao passar o mouse */
+    border: none;
   }
 
 
