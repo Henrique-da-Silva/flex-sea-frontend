@@ -355,6 +355,9 @@
     border: 1px solid #000; /* Borda do botão */
     font-family: 'DM Mono', monospace; /* Define a fonte como 'DM Mono' */
   }
+  .fixed-circle {
+    display: none; /* Botão oculto em dispositivos móveis */
+  }
 }
 
 /* Estilo para o novo botão (opcional, telas maiores) */
@@ -532,6 +535,9 @@
   
   .text-overlay {
     margin-bottom: 20px; /* Espaço interno adicional na área de texto */
+  }
+  .fixed-circle {
+    display: none; /* Botão oculto em dispositivos móveis */
   }
 }
 
@@ -857,7 +863,6 @@
       font-weight: 500; /* Preserve font weight */
       font-size: 18px; /* Update font size for mobile */
       max-width: 356px; /* Set width for mobile */
-      height: 238px; /* Set height for mobile */
       color: #000000; /* Preserve color */
       margin-left: 10px;
       line-height: 1.4;
@@ -994,6 +999,7 @@
       height: 459px;
       background-color: #DE7B36;
       border-radius: 50px; /* Add border radius for mobile */
+      text-align: left;
     }
     .right-about-us-laranja h2 {
       max-width: 244px;
@@ -1068,6 +1074,7 @@
       .more-button:hover {
         background-color: #C45D16;
         color: #fff;
+        border: none;
       }
 
       .button-container {
@@ -1275,6 +1282,7 @@
       font-size: 18px;
       font-weight: 500;
     }
+    
       
     }
    /*==================== FIM ALL RESPONSIV =====================*/
@@ -3033,5 +3041,6 @@ label span {
     display: flex;
   }   
 }
+
 
 /*============================================== FIM FOOTER STYELE ==================================================*/
