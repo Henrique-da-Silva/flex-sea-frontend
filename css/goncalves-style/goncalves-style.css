@@ -26,12 +26,76 @@
         color: #000000 !important; /* Cor preta quando a barra de navegação faz scroll */
       }
 
+      .dropdown-menu {
+        border: none;
+      }
+      
+
       /* Responsividade da barra de navegação */
       @media (max-width: 768px) {
       .navbar-nav .nav-link {
-        font-size: 16px;
+        font-size: 18px;
         margin-bottom: 15px;
+        color: #000000;
         }
+        .navbar-collapse {
+          position: fixed; /* Fixa o menu na tela */
+          top: 0;
+          left: 0; /* Fixa o menu à esquerda */
+          width: 341px; /* Largura do menu */
+          height: 100vh; /* Altura do menu igual à altura da tela */
+          background-color: #fff; /* Cor de fundo do menu */
+          z-index: 1050; /* Garante que o menu fique acima dos outros conteúdos */
+          transform: none; /* Sem animação de transição */
+        }
+      
+        .navbar-nav {
+          display: flex;
+          flex-direction: column; /* Organiza os itens verticalmente */
+          transform: translate(-200px, -40px);
+          width: 100px;
+        }
+      
+        .navbar-toggler {
+          display: block; /* Garante que o botão do menu esteja visível no mobile */
+          z-index: 1060; /* Mantém o botão acima do menu */
+        }
+      
+        /* Ajusta o botão de toggler para não ter margens desnecessárias */
+        .navbar-toggler-icon {
+          background-color: #000; /* Cor da linha do botão */
+        }
+      
+        .navbar-collapse.show {
+          transform: none; /* Evita qualquer transição desnecessária */
+        }
+
+        .menu-hamburguer {
+          display: flex; /* Define o menu-hamburguer como um container flexível para facilitar o alinhamento dos elementos. */
+          flex-direction: column; /* Organiza os itens (barras) do menu-hamburguer em uma coluna. */
+          justify-content: space-between; /* Distribui o espaço uniformemente entre as barras. */
+          width: 30px; /* Define a largura do menu-hamburguer como 30px. */
+          height: 20px; /* Define a altura do menu-hamburguer como 25px. */
+          cursor: pointer; /* Altera o cursor para indicar que o elemento é clicável. */
+          transition: 0.3s ease-in-out; /* Adiciona uma transição suave para as mudanças no menu-hamburguer. */
+          z-index: 1060; /* Mantém o botão acima do menu */
+      }
+      
+      .bar-hamburguer {
+          width: 100%; /* Define a largura de cada barra como igual à largura do menu-hamburguer. */
+          height: 5px; /* Define a altura de cada barra como 5px. */
+          background-color: #333; /* Define a cor de fundo das barras como um cinza escuro (#333). */
+          border-radius: 5px; /* Adiciona bordas arredondadas às barras. */
+          transition: 0.3s ease-in-out; /* Adiciona uma transição suave para mudanças nas propriedades das barras. */
+      }
+      
+      .menu-hamburguer.active .bar-hamburguer:nth-child(1) {
+          transform: rotate(45deg) translateY(10px); /* Rotaciona a primeira barra em 45 graus e a move para baixo. */
+      }
+      
+      .menu-hamburguer.active .bar-hamburguer:nth-child(2) {
+          transform: rotate(-45deg) translateY(-10px); /* Rotaciona a segunda barra em -45 graus e a move para cima. */
+      }
       }
 
       .bg-white {
@@ -54,12 +118,21 @@
   align-items: center; /* Alinha todos os itens verticalmente na mesma linha */
 }
 
-.navbar-toggler {
-  margin-left: auto; /* Empurra o botão para o lado direito */
-  display: flex; /* Garante alinhamento interno no botão */
-  align-items: center;
-  transform: translateY(-40px); /* Sobe o botão em 5px */
+/* Adiciona o modo mobile */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Muda a direção dos itens para coluna em telas menores */
+    align-items: flex-start; /* Alinha os itens no início da linha */
+  }
+  .navbar-toggler {
+    margin-left: auto; /* Empurra o botão para o lado direito */
+    display: flex; /* Garante alinhamento interno no botão */
+    align-items: center;
+    transform: translate(-52px, -41px); /* Sobe o botão em 5px */
+  }
 }
+
+
 
 .navbar-brand {
   display: flex; /* Garante que o logo esteja alinhado corretamente */
@@ -80,6 +153,7 @@
 }
 
 /*===========================================================*/
+
 
 /*============================================== FIM HEADER STYELE ==================================================*/
 
@@ -155,6 +229,11 @@
     .button-group {
       flex-direction: row; /* Botões lado a lado em telas maiores */
     }
+
+    .button-group button:hover {
+      color: #FFFFFF; /* Cor do texto ao passar o mouse */
+      background: #C45D16; /* Fundo ao passar o mouse */
+    }
   }
 
   .btn-custom:hover {
@@ -168,6 +247,10 @@
     margin-right: 10px; /* Espaço entre os botões */
   }
 
+  .button-group button:hover {
+    color: #FFFFFF; /* Cor do texto ao passar o mouse */
+    background: #C45D16; /* Fundo ao passar o mouse */
+  }
   /*=====================================================================*/
 
 
@@ -257,291 +340,402 @@
   /*=====================================================================*/
 
 
-   /* =============== Estilo da seção Bioplastic =================== */
-  .bioplastic-section {
-    text-align: left; /* Alinha o conteúdo da seção à esquerda */
-    padding: 50px; /* Adiciona 50px de espaçamento interno em todos os lados */
-    position: relative; /* Define posição relativa para que elementos filhos possam ser posicionados */
-  }
 
-  /* Estilo da .row dentro de .bioplastic-section */
-  .bioplastic-section .row {
-    width: 120%; /* Aumenta a largura para além do tamanho padrão */
-    max-width: none; /* Remove qualquer limite de largura padrão */
-    margin-left: -10%; /* Move o conteúdo ligeiramente para a esquerda para centralizá-lo */
-  }
+/*======================================================== BIOPLASTIC SECTION ===================================================*/
 
+/* Estilos para Desktop */
+.bioplastic-section-home {
+  width: 90%;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  display: flex;
+  flex-direction: column; /* Mantém a disposição vertical para os elementos */
+  margin-top: 5%;
+  font-family: 'DM Mono', monospace; /* Fonte do texto */
+}
 
-  /* Estilo de imagens dentro da .bioplastic-section */
-  .bioplastic-section img {
-    width: 100%; /* Garante que a imagem ocupe 100% da largura do elemento pai */
-    height: auto; /* Mantém a proporção original da imagem */
-  }
+.bioplastic-section-home .bioplastic-and-botton {
+  display: flex;
+  justify-content: space-between; /* Garante que os itens fiquem nas extremidades */
+  align-items: center;
+  width: 90%;
+  margin: 0 auto; /* Centraliza o container */
+}
 
-  /* Estilo do título (h1) na .bioplastic-section */
+.bioplastic-and-botton .bioplastic-and-elements {
+  text-align: left; /* Alinha o texto à esquerda */
+}
 
-  .bioplastic-section h1 {
-    font-family: 'DM Sans', sans-serif; /* Define a fonte como 'DM Sans' */
-    font-size: 2.5rem; /* Define o tamanho da fonte como 2.5rem (40px por padrão) */
-    font-weight: bold; /* Aplica peso de fonte forte ao título */
-  }
+.bioplastic-and-elements .what-we-do-bioplastic{
+  max-width: 138px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15.62px;
+  color: #000000;
+  margin: 0;
+}
 
-/* =========== Estilo do botão LERN MORE da seção Bioplastic ===============*/
-  .learn-more-button {
-    position: relative; /* Posiciona o botão em relação ao elemento pai */
-    float: right; /* Alinha o botão à direita */
-    margin-right: 20px; /* Adiciona um espaçamento de 20px à direita */
-    padding: 10px 20px; /* Adiciona espaçamento interno (10px acima/abaixo, 20px esquerda/direita) */
-    background-color: #ffffff; /* Define a cor de fundo como branco */
-    color: #000; /* Define a cor do texto como preto */
-    border: 1px solid #000; /* Adiciona uma borda preta de 1px */
-    border-radius: 40px; /* Define bordas arredondadas com raio de 40px */
-    cursor: pointer; /* Exibe o ponteiro ao passar o mouse */
-    font-size: 16px; /* Define o tamanho da fonte como 16px */
-    width: 223px; /* Define a largura do botão como 223px */
-    height: 54px; /* Define a altura do botão como 54px */
-    font-family: 'DM Mono', monospace; /* Define a fonte como 'DM Mono' */
-    margin: 30px; /* Adiciona margem de 30px em todos os lados */
-  }
+.bioplastic-and-elements .number-one-bioplastic {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15.62px;
+  color: #000000;
+}
 
-  /*====================== LEARN MORE ======================*/
-  /* Estilo do botão ao passar o mouse (hover) */
-  .learn-more-button:hover {
-    background-color: #d4d4d4; /* Muda a cor de fundo para cinza claro ao passar o mouse */
-    color: #fff; /* Muda a cor do texto para branco */
-    border-color: #ffffff; /* Muda a cor da borda para branco */
-  }
+.bioplastic-and-elements .h1-bioplastic-bioplastic {
+  max-width: 175px;
+  font-family: 'DM Sans', sans-serif; /* Estilo da fonte */
+  font-weight: 500;
+  font-size: 42px;
+  color: #000000;
+}
 
-  /* =============== Estilo do - What We Do - da seção Bioplastic ============ */
-  .what-we-do {
-    font-family: 'DM Mono', monospace; /* Define a fonte como 'DM Mono' */
-    margin-bottom: 0; /* Remove a margem inferior padrão */
-  }
+.bioplastic-and-botton .container-learn-more-button-bioplastic {
+  text-align: right; /* Alinha o botão à direita */
+}
 
-  /* Estilo de - 1, 2 - da seção Bioplastic e biotech */
-  .number-style {
-    font-family: 'DM Mono', monospace; /* Define a fonte como 'DM Mono' */
-    font-size: 20px; /* Define o tamanho da fonte como 20px */
-  }
+.bioplastic-and-botton .learn-more-button-bioplastic {
+  width: 223px;
+  height: 54px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15.62px;
+  align-items: center;
+  border-radius: 40px;
+  background-color: #ffffff;
+  border: solid black 0.5px;
+}
 
-  /* =============== Seções Bioplastic e Biotech ================== */
-    .bioplastic-section,
-    .biotech-section {
-      text-align: left; /* Alinha o conteúdo à esquerda */
-      padding: 100px 20px; /* Adiciona 30px no topo/baixo e 20px nas laterais */
-    }
+.bioplastic-and-botton .learn-more-button-bioplastic:hover {
+  background-color: #C45D16;
+  color: #FFFFFF;
+  border: none;
+}
 
+.bioplastic-section-home .video-bioplastic-section {
+  width: 90%;
+  margin: 0px auto; /* Adiciona espaço superior e centraliza */
+}
 
-/* ============ Estilo responsivo para o botão learn-more-button na seção bioplastic ======= */
+.bioplastic-section-home .video-bioplastic-section video {
+  width: 100%;
+  height: auto; /* Mantém a proporção do vídeo */
+}
+
+.container-learn-more-button-bioplastic-mobile, .learn-more-button-bioplastic-mobile {
+  display: none;
+}
+
+/* Estilos para Mobile */
 @media (max-width: 768px) {
-  /* Ocultar o botão original em telas menores */
-  .bioplastic-section .learn-more-button {
-    display: none; /* Esconde o botão original */
+  /* Ajusta o layout geral */
+  .bioplastic-section-home {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Mantém os elementos empilhados */
   }
 
-  /* Exibir o novo botão apenas em telas menores */
-  .bioplastic-section .learn-more-button-mobile {
-    display: block; /* Exibe o botão */
-    position: relative; /* Posicionamento padrão */
-    margin: 20px auto; /* Centraliza o botão horizontalmente */
-    width: 223px; /* Largura específica */
-    height: 54px; /* Altura específica */
-    border-radius: 40px; /* Bordas arredondadas */
-    font-size: 16px; /* Tamanho do texto */
-    font-weight: 500; /* Peso do texto */
-    text-align: center; /* Centraliza o texto */
-    background-color: #ffffff; /* Cor de fundo */
-    color: #000; /* Cor do texto */
-    border: 1px solid #000; /* Borda do botão */
-    font-family: 'DM Mono', monospace; /* Define a fonte como 'DM Mono' */
+  /* Ocultar o botão de learn more na versão desktop */
+  .container-learn-more-button-bioplastic,
+  .learn-more-button-bioplastic {
+    display: none; /* Esconde no modo mobile */
   }
-  .fixed-circle {
-    display: none; /* Botão oculto em dispositivos móveis */
+
+  /* Ajusta o alinhamento do pai e dos filhos no mobile */
+  .bioplastic-section-home .bioplastic-and-botton {
+    flex-direction: column; /* Empilha os elementos */
+    align-items: flex-start; /* Alinha os elementos à esquerda */
+    width: 100%; /* Ocupa toda a largura */
+    margin-left: 35px; /* Adiciona um espaçamento à direita */
+    margin-top: 35px; /* Adiciona um espaçamento à direita */
+    text-align: left; /* Alinha textos à esquerda */
+  }
+
+  .bioplastic-and-botton .bioplastic-and-elements {
+    text-align: left; /* Alinha o texto do conteúdo à esquerda */
+  }
+
+  .what-we-do-bioplastic,
+  .number-one-bioplastic,
+  .h1-bioplastic-bioplastic {
+    text-align: left; /* Alinha textos individuais à esquerda */
+    margin-left: 0; /* Remove margens adicionais */
+  }
+
+  .what-we-do-bioplastic {
+    margin: 0;
+  }
+
+  .bioplastic-and-botton .container-learn-more-button-bioplastic-mobile {
+    display: flex; /* Torna visível no mobile */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin-top: 10px; /* Espaçamento superior */
+    width: 100%; /* Ocupa toda a largura do pai */
+  }
+
+  .bioplastic-section-home .learn-more-button-bioplastic-mobile {
+    display: block; /* Torna visível no mobile */
+    width: 223px; /* Ajusta o tamanho automaticamente */
+    height: 54px;
+    padding: 10px 20px; /* Adiciona espaçamento interno para um botão mais visível */
+    text-align: center; /* Centraliza o texto do botão */
+    background-color:#ffffff; /* Fundo do botão */
+    color:#000000; /* Cor do texto */
+    border-radius: 40px; /* Botão arredondado */
+    border: solid #000000 0.5px; /* Borda do botão */
+    font-size: 12px; /* Tamanho da fonte */
+    font-family: 'DM Mono', monospace; /* Fonte */
+    font-weight: 500;
+    line-height: 15.62px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+
+  .bioplastic-section-home .learn-more-button-bioplastic-mobile:hover {
+    background-color: #C45D16;
+    color: #EFEDE5;
+    border: none;
+  }
+
+  .bioplastic-section-home .video-bioplastic-section {
+    width: 100%; /* Ocupa toda a largura */
+    margin: 10px 0; /* Adiciona espaço superior e inferior */
+  }
+
+  .bioplastic-section-home .video-bioplastic-section video {
+    width: 100%;
+    height: auto; /* Mantém a proporção do vídeo */
   }
 }
 
-/* Estilo para o novo botão (opcional, telas maiores) */
-@media (min-width: 769px) {
-  .bioplastic-section .learn-more-button-mobile {
-    display: none; /* Oculta o botão novo em telas maiores */
-  }
+/*================================================================================================================================*/
+
+
+/*================================================== BIOTECH SECTION ============================================================*/
+
+/* Estilos para Desktop */
+.biotech-section-Home {
+  width: 80%;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  display: flex;
+  flex-direction: column; /* Mantém a organização vertical */
+  margin-top: 5%;
+  position: relative; /* Define um contexto de alinhamento para os filhos */
 }
 
-  /*====================================================================*/
+.biotech-section-Home .biotech-and-elements {
+  text-align: left; /* Alinha o conteúdo à esquerda */
+  margin-bottom: 20px; /* Espaçamento inferior para separação dos elementos */
+  margin-left: -6px; /* Remove qualquer espaçamento adicional para que respeite o limite do pai */
+  width: 100%; /* Garante que o conteúdo ocupe 100% da largura do pai */
+  max-width: 90%; /* Mantém uma margem em relação às bordas do pai */
+}
 
-      /* ========== Estilo da seção Biotech =============*/
-  .biotech-section {
-    text-align: left; /* Alinha o conteúdo à esquerda */
-    padding: 50px; /* Adiciona 50px de espaçamento interno em todos os lados */
-    position: relative; /* Define posição relativa para que elementos filhos possam ser posicionados */
+.biotech-and-elements .but-thats-biotech{
+  max-width: 343px;
+  font-family: 'DM Mono', monospace; /* Fonte do texto */
+  font-weight: 500px;
+  font-size: 12px;
+  line-height: 15.62px;
+  color: #000000;
+  margin: 0;
+}
+
+.biotech-and-elements .number-two-biotech {
+  max-width: 12px;
+  max-height: 16px;
+  font-family: 'DM Mono', monospace; /* Fonte do texto */
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15.62px;
+  color: #000000;
+}
+
+.biotech-and-elements .h1-biotech-biotech{
+  max-width: 137px;
+  font-family: 'DM Sans', sans-serif; /* Estilo da fonte */
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 46px;
+  color: #000000;
+}
+
+.biotech-section-Home .container-img-and-element-biotech {
+  width: 70%;
+  height: auto;
+  margin: 0 auto; /* Centraliza o container horizontalmente */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente os elementos internos */
+  align-items: center; /* Alinha verticalmente os elementos internos */
+  gap: 20px; /* Espaçamento entre os elementos */
+}
+
+.container-img-biotech,
+.container-element-biotech {
+  width: 70%;
+  height: 100%; /* Ocupa toda a altura do container */
+}
+
+.container-img-and-element-biotech .container-img-biotech {
+  width: 456px;
+  height: 594px;
+}
+
+.container-element-biotech .element-biotech-section {
+  width: 456px;
+  height: 594px;
+  background-color: #0E0466;
+  border-radius: 50px;
+  padding: 40px;
+}
+
+.element-biotech-section .h2-element-biotech {
+  max-width: 372px;
+  font-family: 'DM Sans', sans-serif; /* Estilo da fonte*/
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+  color: #EFEDE5;
+}
+
+.element-biotech-section .p-element-biotech {
+  font-family: 'DM Sans', sans-serif; /* Estilo da fonte*/
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #EFEDE5;
+  margin-top: 150px;
+}
+
+.element-biotech-section .button-element-biotech {
+  width: 223px;
+  height: 54px;
+  font-family: 'DM Mono', monospace; /* Fonte do texto */
+  font-weight: 500;
+  line-height: 15.62px;
+  align-items: center;
+  color: #EFEDE5;
+  background-color: #0E0466;
+  border-radius: 40px;
+  border: solid #EFEDE5 0.5px;
+  font-size: 12px;
+}
+
+.element-biotech-section .button-element-biotech:hover {
+  color: #0E0466;
+  background-color: #EFEDE5;
+  border: none;
+}
+
+/* Estilos para Mobile */
+@media (max-width: 768px) {
+  .biotech-section-Home {
+    width: 100%; /* Ocupa toda a largura */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Mantém os elementos empilhados */
   }
 
-  /* Estilo da .row dentro de .biotech-section */
-  .biotech-section .row {
-    width: 120%; /* Aumenta um pouco a largura */
-    max-width: none; /* Remove limite de largura padrão */
-    margin-left: -10%; /* Ajusta a posição para centralizar o conteúdo */
+  .biotech-section-Home .biotech-and-elements {
+    text-align: left; /* Permanece alinhado à esquerda */
+    margin-bottom: 10px; /* Reduz o espaçamento para telas menores */
+    margin-bottom: 35px;
+    margin-left: 35px;
   }
 
-
-  /* Estilo de imagens dentro da .biotech-section */
-  .biotech-section img {
-    width: 100%; /* Garante que a imagem ocupe 100% da largura do elemento pai */
-    height: auto; /* Mantém a proporção original da imagem */
+  .biotech-and-elements .but-thats-biotech {
+    margin: 0;
   }
 
-
-  /* Estilo do título (h1) na .biotech-section */
-  .biotech-section h1 {
-    font-family: 'DM Sans', sans-serif; /* Define a fonte como 'DM Sans' */
-    font-size: 2.5rem; /* Define o tamanho da fonte como 2.5rem (40px por padrão) */
-    font-weight: bold; /* Aplica peso de fonte forte ao título */
+  .biotech-section-Home .container-img-and-element-biotech {
+    width: 100%;
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em forma de coluna */
+    align-items: center; /* Centraliza os elementos dentro da coluna */
+    gap: 20px; /* Espaçamento entre os elementos */
   }
 
-  /*Texto acima da imagem*/
+  .container-img-biotech,
+  .container-element-biotech {
+    width: 95%; /* Ocupa 95% da largura */
+    height: auto; /* Ajusta automaticamente a altura */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+  }
 
-  /*================ Estilo Geral para .text-overlay ===============*/
-
-  .text-overlay{
-    font-size: 36px;
+  .container-img-and-element-biotech .container-img-biotech {
+    width: 342px;
+    height: 590px;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+  }
+  
+  .container-element-biotech .element-biotech-section {
+    width: 100%;
+    height: 500px;
+    background-color: #0E0466;
+    border-radius: 50px;
+    padding: 30px;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+  }
+  
+  .element-biotech-section .h2-element-biotech {
+    max-width: 283px;
+    font-family: 'DM Sans', sans-serif; /* Estilo da fonte*/
     font-weight: 500;
-    font-family: 'DM Sans', sans-serif;
-  }
-
-  .h2-overlay{
-    font-size: 36px;
-    font-weight: 500;
-    font-family: 'DM Sans', sans-serif;
+    font-size: 22px;
+    line-height: 26px;
     color: #EFEDE5;
   }
-
-  /* Estilo para Parágrafos (p) Dentro de .text-overlay */
-  .p-overlay{
-    font-size: 16px;
+  
+  .element-biotech-section .p-element-biotech {
+    max-width: 295px;
+    font-family: 'DM Sans', sans-serif; /* Estilo da fonte*/
     font-weight: 400;
-    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
     color: #EFEDE5;
-    width: 372px; /* Define a largura do parágrafo em 372px. */
-    height: 150px; /* Define a altura do parágrafo em 150px. */
-    font-size: 16px; /* Define o tamanho da fonte do parágrafo como 16px. */
-    margin-top: 70px; /* Adiciona um espaçamento superior de 70px entre o parágrafo e o elemento acima. */
-  }
-  .text-overlay {
-    width: 456px; /* Largura do texto */
-    height: 594px; /* Altura do texto */
-    background-color: #0E0466; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    font-size: 24px; /* Tamanho da fonte */
-    font-weight: bold; /* Peso da fonte */
-    padding: 40px; /* Espaçamento interno */
-    border-radius: 50px; /* Bordas arredondadas */
-    display: flex; /* Flexbox interno para centralizar */
-    flex-direction: column; /* Direção da flexbox */
-    justify-content: center; /* Centralizar verticalmente */
-    align-items: flex-start; /* Alinhar itens à esquerda */
-    text-align: left; /* Alinhar texto à esquerda */
-    font-family: 'DM Sans', sans-serif; /* Fonte principal */
-}
-
-
-  /* Estilo para Títulos (h2) Dentro de .text-overlay */
-  .text-overlay h2{
-    width: 372px; /* Define a largura do título em 372px. */
-    height: 231px; /* Define a altura do título em 231px. */
-    font-size: 32px; /* Define o tamanho da fonte do título como 32px. */
-    font-weight: 500;  /* Aplica um peso médio (500) ao título. */      
-  }
-
-  
-
-  /* Estilo para Botões (button) Dentro de .text-overlay */
-  .text-overlay button{
-    width: 223px; /* Define a largura do botão em 223px. */
-    height: 54px; /* Define a altura do botão em 54px. */
-    font-size: 12px; /* Define o tamanho da fonte no botão como 12px. */
-    font-weight: 500; /* Aplica peso médio (500) ao texto do botão. */
-    border-radius: 50px; /* Define bordas arredondadas no botão (cantos completamente arredondados). */
-    background-color: #0E0466; /* Define a cor de fundo do botão como azul escuro (#0E0466). */
-    color: white; /* Define a cor do texto do botão como branco. */
-    font-family: 'DM Mono', monospace; /* Define a fonte do botão como "DM Mono" ou uma fonte monoespaçada. */
-    border-color: rgb(196, 196, 196); /* Define a cor da borda do botão como cinza claro. */
-  }
-
-  /* ========== Responsividade para biotech-section em telas pequenas ================ */
-@media (max-width: 768px) {
-  .biotech-section .d-flex {
-    flex-direction: column; /* Alinha itens verticalmente */
-    width: 100%; /* Largura total */
-    height: auto; /* Altura adaptável */
-    padding: 10px; /* Espaçamento interno */
-  }
-
-  .biotech-section .image-left {
-    width: 100%; /* Imagem ocupa toda a largura disponível */
-    height: auto; /* Mantém a proporção */
-    margin-bottom: 20px; /* Espaçamento entre a imagem e o texto */
-  }
-
-  .biotech-section .text-overlay {
-    width: 342px; /* Largura específica */
-    height: 500px; /* Altura específica */
-    border-radius: 50px; /* Bordas arredondadas */
-    background-color: #0E0466; /* Cor de fundo */
-    color: #EFEDE5; /* Cor do texto */
-    padding: 20px; /* Espaçamento interno */
-    display: flex; /* Flexbox interno */
-    flex-direction: column; /* Direção dos elementos */
-    justify-content: flex-start; /* Alinhamento vertical ao topo */
-    align-items: flex-start; /* Alinhamento horizontal à esquerda */
-    margin: 0 auto; /* Centraliza horizontalmente na tela */
-    text-align: left; /* Alinha texto à esquerda */
-  }
-
-  .text-overlay .h2-overlay {
-    width: 283px; /* Largura específica */
-    height: 173px; /* Altura específica */
-    font-size: 22px; /* Tamanho da fonte */
-    font-weight: 500; /* Peso da fonte */
-    margin-bottom: 20px; /* Espaçamento inferior */
-    line-height: 1.3; /* Altura da linha */
-  }
-
-  .text-overlay .p-overlay {
-    width: 295px; /* Largura específica */
-    height: 155px; /* Altura específica */
-    font-family: 'DM Sans', sans-serif; /* Fonte DM Sans */
-    font-size: 16px; /* Tamanho da fonte */
-    font-weight: 400; /* Peso da fonte */
-    line-height: 1.5; /* Altura da linha */
-    color: #EFEDE5; /* Cor do texto */
-    margin-bottom: 20px; /* Espaçamento inferior */
-  }
-
-  .text-overlay button {
-    width: 223px; /* Largura específica */
-    height: 54px; /* Altura específica */
-    font-size: 14px; /* Tamanho do texto do botão */
-    font-weight: 500; /* Peso do texto */
-    border-radius: 50px; /* Bordas arredondadas */
-    background-color: #0E0466; /* Cor de fundo */
-    color: #FFFFFF; /* Cor do texto */
-    border: 1px solid rgb(196, 196, 196); /* Cor da borda */
-    margin-top: auto; /* Espaço entre o conteúdo acima e o botão */
-  }
-
-  .biotech-section {
-    margin-bottom: 500px; /* Espaço entre a seção e o footer */
+    margin-top: 80px;
   }
   
-  .text-overlay {
-    margin-bottom: 20px; /* Espaço interno adicional na área de texto */
+  .element-biotech-section .button-element-biotech {
+    width: 205px;
+    height: 54px;
+    font-family: 'DM Mono', monospace; /* Fonte do texto */
+    font-weight: 500;
+    line-height: 15.62px;
+    align-items: center;
+    color: #EFEDE5;
+    background-color: #0E0466;
+    border-radius: 40px;
+    border: solid #EFEDE5 0.5px;
+    font-size: 12px;
+  }
+  
+  .element-biotech-section .button-element-biotech:hover {
+    color: #0E0466;
+    background-color: #EFEDE5;
+    border: none;
+  }
+
+  .element-biotech-section .button-element-biotech:active {
+    background-color:#0E0466; /* Nova cor ao clicar */
+    color: #EFEDE5; /* Cor do texto ao clicar */
+    border: solid #EFEDE5 0.5px;
   }
   .fixed-circle {
     display: none; /* Botão oculto em dispositivos móveis */
   }
 }
 
-/*=============================================================================*/
+/*==============================================================================================================================*/
+
+ 
+
+ 
 
 /*============================================== FIM INDEX STYELE ==================================================*/
 
