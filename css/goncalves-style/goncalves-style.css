@@ -2623,7 +2623,7 @@
 /* Ajuste para telas maiores (desktop) */
 @media screen and (min-width: 769px) {
     .faq-item button .seta-faq-item1 {
-        transform: translate(437px, -35px); /* Ajuste o valor conforme necessário */
+        transform: translate(420px, -35px); /* Ajuste o valor conforme necessário */
     }
 
     .faq-item button .seta-faq-item2 {
