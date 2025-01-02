@@ -3,8 +3,8 @@
 
       window.addEventListener('scroll', function () {
         if (window.pageYOffset > 100) {
-          nav.classList.add('bg-white', 'shadow', 'scrolled'); // Adiciona classes quando o usuário faz scroll
+          nav.classList.add('bg-white', 'scrolled'); // Adiciona classes quando o usuário faz scroll
         } else {
-          nav.classList.remove('bg-white', 'shadow', 'scrolled'); // Remove classes quando o usuário retorna ao topo
+          nav.classList.remove('bg-white', 'scrolled'); // Remove classes quando o usuário retorna ao topo
         }
       });

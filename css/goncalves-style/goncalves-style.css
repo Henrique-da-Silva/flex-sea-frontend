@@ -302,7 +302,7 @@
     display: flex;             /* Para centralizar a imagem dentro do círculo */
     align-items: center;       /* Alinha verticalmente a imagem no centro */
     justify-content: center;   /* Alinha horizontalmente a imagem no centro */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra suave ao círculo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /*Adiciona uma sombra suave ao círculo */
     cursor: pointer;           /* Define o ponteiro do mouse como 'pointer' */
     z-index: 1000;             /* Garante que o círculo fique acima de outros elementos */
     transition: all 0.3s ease; /* Transição suave ao passar o mouse */
