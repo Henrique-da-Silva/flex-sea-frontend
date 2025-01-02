@@ -3,7 +3,7 @@
       .navbar-nav .nav-link {
         color: #000 !important; /* Cor preta para os links de navegação */
         font-family: 'DM Sans', sans-serif; /* Fonte DM Sans */
-        font-weight: 500; /* Peso da fonte */
+        font-weight: 500; /* Peso da fonte*/
         font-size: 18px; /* Tamanho da fonte */
         line-height: 28px; /* Altura da linha */
         letter-spacing: -0.02em; /* Espaçamento entre letras (-2%) */
@@ -605,7 +605,7 @@
   font-size: 16px;
   line-height: 24px;
   color: #EFEDE5;
-  margin-top: 150px;
+  margin-top: 125px;
 }
 
 .element-biotech-section .button-element-biotech {
@@ -698,7 +698,7 @@
     font-size: 16px;
     line-height: 24px;
     color: #EFEDE5;
-    margin-top: 80px;
+    margin-top: 50px;
   }
   
   .element-biotech-section .button-element-biotech {
