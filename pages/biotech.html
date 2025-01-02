@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/goncalves-style/goncalves-style.css">
     <link rel="stylesheet" href="../css/styles-henrique.css">
     
  
@@ -12,6 +13,63 @@
   
 </head>
 <body class="body-biotech">
+<!-- Navbar fixa no topo -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3 bg-white shadow">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+            <img src="../img/logo.png" alt="Flex Sea" class="logo">
+        </a>
+
+        <!-- Botão do menu -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- Botão do menu hamburguer -->
+            <div class="menu-hamburguer" onclick="toggleMenu()">
+                <div class="bar-hamburguer"></div>
+                <div class="bar-hamburguer"></div>
+            </div>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Bioplastic</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Biotech</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">News & Media</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        About us <img src="../pages/imgpages/setaNavbar.png" alt="seta">
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                        <li><a class="dropdown-item" href="#">Our story</a></li>
+                        <li><a class="dropdown-item" href="#">Our approach</a></li>
+                        <li><a class="dropdown-item" href="#">Our team</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="enquiriesDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Enquiries <img src="../pages/imgpages/setaNavbar.png" alt="seta">
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="enquiriesDropdown">
+                        <li><a class="dropdown-item" href="#">Material request</a></li>
+                        <li><a class="dropdown-item" href="#">FAQs</a></li>
+                        <li><a class="dropdown-item" href="#">Careers</a></li>
+                        <li><a class="dropdown-item" href="#">Contact us</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
     
 <!-- Botão fixo na lateral-->
 <div class="fixed-circle" id="fixed-mobile">

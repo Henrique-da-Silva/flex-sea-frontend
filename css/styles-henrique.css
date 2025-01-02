@@ -327,7 +327,7 @@
 /* Estilos do H1 e Botão Linkedin*/
 
 .div-title{
-    margin-top: 60px;
+    margin-top: 160px;
     display: flex;
 }
 
@@ -1303,7 +1303,7 @@ label span {
 .body-enquiries-request{
     background-image: url('/img/biotech/Frame.svg');
     background-repeat: no-repeat;
-    background-position: 338px 45px;
+    background-position: 338px 175px;
     background-attachment: fixed;
     
     
@@ -1312,7 +1312,7 @@ label span {
     background-image: url('/img/biotech/Frame.svg');
     background-repeat: no-repeat;
     background-size: 787px 1400px;
-    background-position: 338px 45px;
+    background-position: 338px 175px;
     background-attachment: fixed;
     
     
@@ -1320,7 +1320,7 @@ label span {
 
 .main-material-request{
     margin-left: 140px;
-    margin-top: 66px;
+    margin-top: 160px;
 }
 
 .section-radio-form{
