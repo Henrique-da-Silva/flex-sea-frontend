@@ -274,68 +274,68 @@
 
   /* ============== Estilo para o ícone circular no menu ======== */
   .icon-circle {
-    width: 20px;               /* Ajuste a largura do círculo */
-    height: 20px;              /* Ajuste a altura do círculo */
-    background-color: #ffffff; /* Cor de fundo do círculo: branca */
-    border-radius: 50%;        /* Deixa o elemento circular */
-    display: inline-flex;      /* Exibe em linha com o link */
-    align-items: center;       /* Centraliza verticalmente o ícone */
-    justify-content: center;   /* Centraliza horizontalmente o ícone */
-    margin-left: 8px;          /* Espaço entre o texto e o ícone */
+    width: 20px !important;               /* Ajuste a largura do círculo */
+    height: 20px !important;              /* Ajuste a altura do círculo */
+    background-color: #ffffff!important; /* Cor de fundo do círculo: branca */
+    border-radius: 50% !important;        /* Deixa o elemento circular */
+    display: inline-flex !important;      /* Exibe em linha com o link */
+    align-items: center !important;       /* Centraliza verticalmente o ícone */
+    justify-content: center !important;   /* Centraliza horizontalmente o ícone */
+    margin-left: 8px !important;          /* Espaço entre o texto e o ícone */
   }
 
   .icon-circle i {
-    font-size: 14px;           /* Tamanho do ícone */
-    color: #000;               /* Cor do ícone preta */
+    font-size: 14px !important;           /* Tamanho do ícone */
+    color: #000 !important;               /* Cor do ícone preta */
   }
 
   /* Estilo para o botão azul fixo à direita */
   .fixed-circle {
-    position: fixed;           /* Mantém o elemento fixo na tela mesmo com scroll */
-    right: 40px;               /* Ajusta a distância da borda direita da tela */
-    top: 50%;                  /* Ajusta a posição para ficar alinhado ao centro da tela verticalmente */
-    transform: translateY(-50%); /* Centraliza verticalmente */
-    width: 60px;               /* Largura do círculo */
-    height: 60px;              /* Altura do círculo */
-    background-color: #0E0466; /* Cor azul escura */
-    border-radius: 50%;        /* Deixa o elemento circular inicialmente */
-    display: flex;             /* Para centralizar a imagem dentro do círculo */
-    align-items: center;       /* Alinha verticalmente a imagem no centro */
-    justify-content: center;   /* Alinha horizontalmente a imagem no centro */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /*Adiciona uma sombra suave ao círculo */
-    cursor: pointer;           /* Define o ponteiro do mouse como 'pointer' */
-    z-index: 1000;             /* Garante que o círculo fique acima de outros elementos */
-    transition: all 0.3s ease; /* Transição suave ao passar o mouse */
+    position: fixed !important;           /* Mantém o elemento fixo na tela mesmo com scroll */
+    right: 40px !important;               /* Ajusta a distância da borda direita da tela */
+    top: 50% !important;                  /* Ajusta a posição para ficar alinhado ao centro da tela verticalmente */
+    transform: translateY(-50%) !important; /* Centraliza verticalmente */
+    width: 60px !important;               /* Largura do círculo */
+    height: 60px !important;              /* Altura do círculo */
+    background-color: #0E0466 !important; /* Cor azul escura */
+    border-radius: 50% !important;        /* Deixa o elemento circular inicialmente */
+    display: flex !important;             /* Para centralizar a imagem dentro do círculo */
+    align-items: center !important;       /* Alinha verticalmente a imagem no centro */
+    justify-content: center !important;   /* Alinha horizontalmente a imagem no centro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;  /*Adiciona uma sombra suave ao círculo */
+    cursor: pointer !important;           /* Define o ponteiro do mouse como 'pointer' */
+    z-index: 1000 !important;             /* Garante que o círculo fique acima de outros elementos */
+    transition: all 0.3s ease !important; /* Transição suave ao passar o mouse */
   }
 
   .fixed-circle:hover {
-    width: 180px;              /* Aumenta a largura do botão ao passar o mouse */
-    padding: 10px 20px;        /* Adiciona um espaçamento para o texto */
-    justify-content: space-between; /* Alinha o conteúdo à esquerda */
-    border-radius: 30px;       /* Torna o botão oval ao passar o mouse */
-    background-color: #0E0466; /* Mantém a cor de fundo */
+    width: 180px !important;              /* Aumenta a largura do botão ao passar o mouse */
+    padding: 10px 20px !important;        /* Adiciona um espaçamento para o texto */
+    justify-content: space-between !important; /* Alinha o conteúdo à esquerda */
+    border-radius: 30px !important;       /* Torna o botão oval ao passar o mouse */
+    background-color: #0E0466 !important; /* Mantém a cor de fundo */
   }
 
   .fixed-circle img {
-    width: 24px;               /* Largura da imagem ajustada */
-    height: 24px;              /* Altura da imagem para mantê-la proporcional */
+    width: 24px !important;               /* Largura da imagem ajustada */
+    height: 24px !important;              /* Altura da imagem para mantê-la proporcional */
   }
 
   .fixed-circle span {
-    color: #ffffff;            /* Cor do texto */
-    font-family: 'DM Mono', monospace; /* Fonte do texto */
-    font-weight: 500;          /* Peso da fonte */
-    font-size: 12px;           /* Tamanho do texto */
-    line-height: 15.62px;      /* Altura da linha */
-    text-align: center;        /* Centraliza o texto */
-    display: none;             /* Ocultar o texto inicialmente */
-    transition: opacity 0.3s ease; /* Transição suave para o texto */
+    color: #ffffff !important;            /* Cor do texto */
+    font-family: 'DM Mono', monospace !important; /* Fonte do texto */
+    font-weight: 500 !important;          /* Peso da fonte */
+    font-size: 12px !important;           /* Tamanho do texto */
+    line-height: 15.62px !important;      /* Altura da linha */
+    text-align: center !important;        /* Centraliza o texto */
+    display: none !important;             /* Ocultar o texto inicialmente */
+    transition: opacity 0.3s ease!important; /* Transição suave para o texto */
   }
 
   /* Estilo do .fixed-circle:hover span */
   .fixed-circle:hover span {
-    display: inline; /* Exibir o texto (span) quando o mouse estiver sobre o elemento .fixed-circle */
-    opacity: 1; /* Torna o texto visível com uma transição suave */
+    display: inline !important; /* Exibir o texto (span) quando o mouse estiver sobre o elemento .fixed-circle */
+    opacity: 1 !important; /* Torna o texto visível com uma transição suave */
   }
   /*=====================================================================*/
 
@@ -726,9 +726,6 @@
     color: #EFEDE5; /* Cor do texto ao clicar */
     border: solid #EFEDE5 0.5px;
   }
-  .fixed-circle {
-    display: none; /* Botão oculto em dispositivos móveis */
-  }
 }
 
 /*==============================================================================================================================*/
@@ -963,9 +960,6 @@
     font-weight: 500;
     font-size: 22px;
     color: #000000;
-  }
-  .fixed-circle {
-    display: none; /* Botão oculto em dispositivos móveis */
   }
 }
 
@@ -1594,9 +1588,6 @@
   
     .layout-content {
       padding-right: 01px; /* Reduz o padding para telas menores */
-    }
-    .fixed-circle {
-      display: none; /* Botão oculto em dispositivos móveis */
     }
   }
   
@@ -2513,9 +2504,6 @@
     .process-image img {
       max-width: 100%; /* A imagem se ajusta ao container no mobile */
     }
-    .fixed-circle {
-      display: none; /* Botão oculto em dispositivos móveis */
-    }
   }
   
 
@@ -2572,9 +2560,6 @@
 @media (max-width: 768px) {
     .h1-faqs {
         margin-bottom: 20px;
-    }
-    .fixed-circle {
-      display: none; /* Botão oculto em dispositivos móveis */
     }
 }
 
