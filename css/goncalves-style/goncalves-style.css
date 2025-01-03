@@ -1999,6 +1999,8 @@
   .bioplastic-section {
     background-color: rgba(225, 255, 225, 0.10); /* Cor com opacidade */
     padding: -3px 10%; /* Espaçamento da seção */
+    margin-bottom: 100px;
+    margin-top: 40px;
   }
   
   .bioplastic-content {
@@ -2017,7 +2019,7 @@
     .bioplastic-left-section {
     font-family: 'DM Sans', sans-serif;
     color: #000000;
-    transform: translateX(50px);
+    transform: translateX(67px);
   }
 
     .bioplastic-left-section h1 {
@@ -2049,7 +2051,7 @@
   /* ====== Aplicar transform apenas para telas maiores =======*/
   @media (min-width: 1024px) {
     .bioplastic-right-section p {
-      transform: translate(45px, 60px);
+      transform: translate(35px, 60px) !important;
     }
   }
   
