@@ -10,13 +10,12 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css" /> <!-- Inclui estilos Bootstrap -->
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=DM+Sans:wght@400&display=swap" rel="stylesheet" /> <!-- Fonte Google DM Mono e DM Sans -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Inclui ícones do Font Awesome -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- CSS do Bootstrap -->
     <link rel="stylesheet" href="../css/goncalves-style/goncalves-style.css">
-    <link rel="stylesheet" href="../css/styles-henrique.css">
+    <link rel="stylesheet" href="/css/styles-henrique.css">
+   
 
-
-    <style>
-    </style>
   </head>
   
   <body>
@@ -24,7 +23,7 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3 bg-white">
   <div class="container d-flex justify-content-between align-items-center">
     <!-- Logo da empresa -->
-    <a class="navbar-brand d-flex align-items-center" href="#">
+    <a class="navbar-brand d-flex align-items-center" href="/index.html">
       <img src="../img/logo.png" alt="Flex Sea" class="logo">
     </a>
 
@@ -38,7 +37,11 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <span class="navbar-toggler-icon"></span>
+      <!-- Botão do menu hamburguer -->
+      <div class="menu-hamburguer" onclick="toggleMenu()">
+        <div class="bar-hamburguer"></div>
+        <div class="bar-hamburguer"></div>
+      </div>
     </button>
 
     <!-- Menu de navegação colapsável -->
@@ -61,13 +64,13 @@
             </div>
           </a>
           <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-            <li><a class="dropdown-item" href="#">Our story</a></li>
-            <li><a class="dropdown-item" href="#">Our approach</a></li>
-            <li><a class="dropdown-item" href="#">Our team</a></li>
+            <li><a class="dropdown-item" href="/pages/about-us.html#story">Our story</a></li>
+            <li><a class="dropdown-item" href="/pages/about-us.html#APPROACH">Our approach</a></li>
+            <li><a class="dropdown-item" href="/pages/about-us.html#TEAM">Our team</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="enquiriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="/pages/enquiries-contactus.html" id="enquiriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Enquiries
             <div class="icon-circle">
               <i class="fa fa-arrow-down"></i>
@@ -75,7 +78,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="enquiriesDropdown">
             <li><a class="dropdown-item" href="/pages/enquiries-material-request.html">Material request</a></li>
-            <li><a class="dropdown-item" href="#">FAQs</a></li>
+            <li><a class="dropdown-item" href="/pages/faqs.html">FAQs</a></li>
             <li><a class="dropdown-item" href="#">Careers</a></li>
             <li><a class="dropdown-item" href="/pages/enquiries-contactus.html">Contact us</a></li>
           </ul>
@@ -84,7 +87,6 @@
     </div>
   </div>
 </nav>
-
 
     <!-- Botão Fixo no Canto Direito -->
     <div class="fixed-circle">
@@ -325,9 +327,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Script do Bootstrap -->
     <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="../js/header.js"></script>
-    <script src="/js/menu-hamburguer.js"></script>
     <script src="/js/datafaqs.js"></script>
-    <script src="/js/fixedCircle.js"></script>
+    <script src="../js/menu-hamburguer.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/fixedCircle.js"></script>
   </body>
 </html>
