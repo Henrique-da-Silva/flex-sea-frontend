@@ -42,7 +42,7 @@
           position: fixed; /* Fixa o menu na tela */
           top: 0;
           left: 0; /* Fixa o menu à esquerda */
-          width: 341px; /* Largura do menu */
+          width: 100%; /* Largura do menu */
           height: 100vh; /* Altura do menu igual à altura da tela */
           background-color: #fff; /* Cor de fundo do menu */
           z-index: 1050; /* Garante que o menu fique acima dos outros conteúdos */
@@ -961,6 +961,10 @@
     font-size: 22px;
     color: #000000;
   }
+  .fixed-circle {
+    display: none !important; /* Botão oculto em dispositivos móveis */
+  }
+
 }
 
 /*============================================== FIM NEWS ARTICLE STYELE ==============================================*/
@@ -1178,6 +1182,15 @@
     font-size: 1.1rem;
   }
   
+  .right-content .link-clean-right-about-us-laranja {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit;        /* Herda a cor do elemento pai */
+  }
+  
+  .right-content .link-clean-right-about-us-laranja:hover {
+    color: inherit;        /* Garante que não haja mudança de cor ao passar o mouse */
+    text-decoration: none; /* Garante que o sublinhado não volte no hover */
+  }
   /* =================== CONTEUDO A DIREITA ================ */
    
     /* Mobile Styles */
@@ -2646,17 +2659,17 @@
       font-size: 18px;
     }
     .faq-item button .seta-faq-item1 {
-      transform: translate(97px, -3px);
+      transform: translate(120px, -3px) !important;
     }
     .faq-item button .seta-faq-item2 {
-      transform: translate(114px, 0px);
+      transform: translate(135px, 0px) !important;
     }
     .faq-item button .seta-faq-item3 {
-      transform: translate(36px, 0px);
+      transform: translate(60px, 0px) !important;
     }
     .content-faq {
-      width: 302px;
-      font-size: 16px;
+      width: 302px !important;
+      font-size: 16px !important;
     }
   }
 
@@ -2667,13 +2680,13 @@
     font-size: 18px;
   }
   .faq-item button .seta-faq-item1 {
-    transform: translate(210px, -65px);
+    transform: translate(200px, -65px) !important;
   }
   .faq-item button .seta-faq-item2 {
-    transform: translate(82px, 0px);
+    transform: translate(92px, 0px) !important;
   }
   .faq-item button .seta-faq-item3 {
-    transform: translate(5px, 0px);
+    transform: translate(15px, 0px);
   }
   .content-faq {
     width: 290px;
@@ -2688,13 +2701,13 @@
       font-size: 16px;
     }
     .faq-item button .seta-faq-item1 {
-      transform: translate(198px, -67px);
+      transform: translate(195px, -67px) !important;
     }
     .faq-item button .seta-faq-item2 {
-      transform: translate(74px, 0px);
+      transform: translate(83px, 0px) !important;
     }
     .faq-item button .seta-faq-item3 {
-      transform: translate(336px, -36px);
+      transform: translate(5px, 0px) !important;
     }
     .content-faq {
       width: 260px;
@@ -2777,23 +2790,23 @@
     width: 197px;
     height: 43px;
     background-color: #F9F6EC;
-    border: 1px solid #333;
+    border: 1px solid #000000;
     border-radius: 25px;
-    font-size: 14px;
-    cursor: pointer;
+    font-size: 12px;
     font-family: 'DM Mono', monospace; /* Fonte aplicada */
-    color: #333; /* Cor inicial do texto */
-    transition: background-color 0.3s, color 0.3s; /* Suaviza a transição */
+    color: #000000; /* Cor inicial do texto */
 }
 
 .btn-faqs:hover {
     background-color: #C45D16;
     color: white;
+    border: none;
 }
 
 .btn-faqs:active {
     background-color: #C45D16;
     color: white;
+    border: none;
 }
 /*================= BTN FAQS ==================*/
 
