@@ -295,8 +295,8 @@
     right: 40px !important;               /* Ajusta a distância da borda direita da tela */
     top: 50% !important;                  /* Ajusta a posição para ficar alinhado ao centro da tela verticalmente */
     transform: translateY(-50%) !important; /* Centraliza verticalmente */
-    width: 60px !important;               /* Largura do círculo */
-    height: 60px !important;              /* Altura do círculo */
+    width: 53px !important;               /* Largura do círculo */
+    height: 53px !important;              /* Altura do círculo */
     background-color: #0E0466 !important; /* Cor azul escura */
     border-radius: 50% !important;        /* Deixa o elemento circular inicialmente */
     display: flex !important;             /* Para centralizar a imagem dentro do círculo */
