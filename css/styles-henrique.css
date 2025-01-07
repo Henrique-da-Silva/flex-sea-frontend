@@ -454,8 +454,14 @@ align-items: center;
     font-weight: 400px;
     color: #9A9998;
     margin-top: 20px;
-    outline: none;  
 
+}
+
+
+.news-input-name:focus{
+    outline-width: 1,5px;     
+    outline-color: #24242F;    
+    outline-style: solid;
 }
 
 .news-input-email{
@@ -471,6 +477,12 @@ align-items: center;
     margin-top: 10px;
     outline: none;  
 
+}
+
+.news-input-email:focus{
+    outline-width: 1,5px;     
+    outline-color: #24242F;    
+    outline-style: solid;
 }
 
 .button-news{
@@ -992,8 +1004,13 @@ footer{
     border-radius: 5px;
     border: 0.5px solid;
     padding: 10px;
-    outline: none;  
 
+}
+
+.input-name:focus{
+    outline-width: 1,5px;     
+    outline-color: #24242F;    
+    outline-style: solid;
 }
 
 .input-email{
@@ -1005,8 +1022,15 @@ footer{
     margin-top: 14px;
     display: flex;
     flex-direction: column;
-    outline: none;  
+   
 
+}
+
+
+.input-email:focus{
+    outline-width: 1,5px;     
+    outline-color: #24242F;    
+    outline-style: solid;
 }
 
 .checkbox-container {
@@ -1022,13 +1046,23 @@ input[type="checkbox"] {
     width: 21px; 
     height: 21px; 
     border: 0.5px solid #000000; 
-    background-color: white; /* Cor de fundo */
+    background-color: #EFEDE5; /* Cor de fundo */
     cursor: pointer; 
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-input[type="checkbox"]:checked {
-    background-color: #EFEDE5; /* Cor de fundo quando marcado verificar com Mário*/
+input[type="checkbox"]:checked::after {
+   
+    content: '';
+    width: 9px;
+    height: 9px;
+    display: block;
+    background-color: #000; /* Sem conteúdo, fundo é preto */
+
+   
 }
 
 label {
