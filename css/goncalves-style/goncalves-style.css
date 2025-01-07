@@ -2646,6 +2646,24 @@
 
 /*======================================== FAQ-ITEM ===================================*/
 
+  /*========================= FAQS TELAS MAIORES ======================*/
+
+/* Ajuste para telas maiores (desktop) */
+@media screen and (min-width: 769px) {
+  .faq-item button .seta-faq-item1 {
+      transform: translate(420px, -35px); /* Ajuste o valor conforme necessário */
+  }
+
+  .faq-item button .seta-faq-item2 {
+      transform: translateX(312px); /* Ajuste o valor conforme necessário */
+  }
+
+  .faq-item button .seta-faq-item3 {
+      transform: translateX(235px); /* Ajuste o valor conforme necessário */
+  }
+}
+/*========================= FIM FAQS TELAS MAIORES ======================*/
+
 @media screen and (max-width: 768px) {
     /* Ajusta o botão dentro de faq-item */
     .faq-item button {
@@ -2689,24 +2707,6 @@
       margin: 16px auto;
     }
   }
-
-  /*========================= FAQS TELAS MAIORES ======================*/
-
-/* Ajuste para telas maiores (desktop) */
-@media screen and (min-width: 769px) {
-    .faq-item button .seta-faq-item1 {
-        transform: translate(420px, -35px); /* Ajuste o valor conforme necessário */
-    }
-
-    .faq-item button .seta-faq-item2 {
-        transform: translateX(312px); /* Ajuste o valor conforme necessário */
-    }
-
-    .faq-item button .seta-faq-item3 {
-        transform: translateX(235px); /* Ajuste o valor conforme necessário */
-    }
-}
-/*========================= FIM FAQS TELAS MAIORES ======================*/
 
 
   /* Media query para iPhone 14 Pro Max (430px) */
