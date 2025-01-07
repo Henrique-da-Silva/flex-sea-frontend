@@ -140,11 +140,22 @@
   margin-right: auto; /* Empurra o logo para o lado esquerdo */
 }
 
+/*============== collapse =============*/
 .collapse {
   display: flex; /* Garante alinhamento do menu em dispositivos maiores */
   justify-content: flex-end; /* Alinha o menu à direita */
   flex-grow: 1; /* Preenche o espaço disponível */
+  transform: translateY(13px);
 }
+
+/* Para telas menores */
+@media (max-width: 768px) {
+  .collapse {
+    transform: translateY(0); /* Remove o deslocamento vertical */
+  }
+}
+
+/*============== fim collapse =============*/
 
 @media (min-width: 992px) {
   .navbar-toggler {
