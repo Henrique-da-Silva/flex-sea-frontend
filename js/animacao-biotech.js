@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
             image1.style.opacity = 1;
             image2.style.opacity = 0;
             isTransitioning = false;
-          }, 15000); // Tempo total da transição
+          }, 5000); // Tempo total da transição
         }
       } else {
         // Antes do ponto de transição
