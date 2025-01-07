@@ -12,6 +12,7 @@
 
       .navbar {
         background-color: transparent;
+        height: 89px; /* Altura definida para o navbar */
       }
 
       .navbar .nav-link {
@@ -20,6 +21,7 @@
 
       .navbar.scrolled {
         background-color: #fff;
+        height: 89px; /* Altura definida para o navbar */
       }
 
       .navbar.scrolled .nav-link {
@@ -1027,7 +1029,7 @@
 
 
 
-/*================================================= ABOUT US STYELE ==================================================*/
+/*================================================= ABOUT US STYLE ==================================================*/
 
 /*===================== FUNDO ABOUT-US 1 ==================*/
 
