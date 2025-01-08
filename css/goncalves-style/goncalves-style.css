@@ -30,6 +30,7 @@
 
       .dropdown-menu {
         border: none;
+        top: 80% !important
       }
       
 
