@@ -62,6 +62,7 @@
         .navbar-toggler {
           display: block; /* Garante que o botão do menu esteja visível no mobile */
           z-index: 1060; /* Mantém o botão acima do menu */
+          border: none;
         }
       
         /* Ajusta o botão de toggler para não ter margens desnecessárias */
@@ -86,18 +87,20 @@
       
       .bar-hamburguer {
           width: 100%; /* Define a largura de cada barra como igual à largura do menu-hamburguer. */
-          height: 5px; /* Define a altura de cada barra como 5px. */
-          background-color: #333; /* Define a cor de fundo das barras como um cinza escuro (#333). */
+          height: 3px; /* Define a altura de cada barra como 3px. */
+          background-color: #ffffff; /* Define a cor de fundo das barras como um cinza escuro (#333). */
           border-radius: 5px; /* Adiciona bordas arredondadas às barras. */
           transition: 0.3s ease-in-out; /* Adiciona uma transição suave para mudanças nas propriedades das barras. */
       }
       
       .menu-hamburguer.active .bar-hamburguer:nth-child(1) {
           transform: rotate(45deg) translateY(10px); /* Rotaciona a primeira barra em 45 graus e a move para baixo. */
+          background-color: #000000; /* Define a cor de fundo das barras como um cinza escuro (#333). */
       }
       
       .menu-hamburguer.active .bar-hamburguer:nth-child(2) {
           transform: rotate(-45deg) translateY(-10px); /* Rotaciona a segunda barra em -45 graus e a move para cima. */
+          background-color: #000000; /* Define a cor de fundo das barras como um cinza escuro (#333). */
       }
       }
 
@@ -131,7 +134,7 @@
     margin-left: auto; /* Empurra o botão para o lado direito */
     display: flex; /* Garante alinhamento interno no botão */
     align-items: center;
-    transform: translate(-52px, -41px); /* Sobe o botão em 5px */
+    transform: translate(-52px, -41px); /* Sobe o botão em -41px */
   }
 }
 
