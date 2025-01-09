@@ -55,7 +55,7 @@
         .navbar-nav {
           display: flex;
           flex-direction: column; /* Organiza os itens verticalmente */
-          transform: translate(-200px, -40px);
+          transform: translate(-260px, -190px);
           width: 100px;
         }
       
@@ -102,7 +102,10 @@
           transform: rotate(-45deg) translateY(-10px); /* Rotaciona a segunda barra em -45 graus e a move para cima. */
           background-color: #000000; /* Define a cor de fundo das barras como um cinza escuro (#333). */
       }
+      .dropdown-menu {
+        margin: none;
       }
+    }
 
       .bg-white {
         background-color: #fff !important;
