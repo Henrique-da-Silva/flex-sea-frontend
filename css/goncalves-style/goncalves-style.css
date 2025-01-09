@@ -1887,18 +1887,31 @@ body {
   .sticky-menu li.active {
     font-weight: bold; /* Em negrito quando ativo */
   }
+
+  .mobile-sticky-menu {
+    display: none;
+  }
   
   /* Adiciona ajustes para telas menores */
   @media screen and (max-width: 767px) {
-    .sticky-menu {
-      top: 200px; /* Ajuste para dispositivos móveis */
-      left: 10px; /* Ajuste da posição para telas menores */
+    .mobile-sticky-menu {
+      display: block;
       max-width: 336px;
+      font-weight: 500;
+      line-height: 30px;
+     
+      margin-left: 8px;
     }
-  
-    .sticky-menu li {
-      font-size: 22px; /* Tamanho do texto menor em dispositivos móveis */
+
+    .mobile-sticky-menu :hover {
+      color: #000000;
     }
+
+    .mobile-sticky-menu li {
+      font-size: 22px !important;
+      margin-bottom: 5px !important;
+    }
+
   }
   
   /*================= FIM STICK MENU =======================*/

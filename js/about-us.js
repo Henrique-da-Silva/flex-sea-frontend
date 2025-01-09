@@ -1,69 +1,42 @@
-window.onscroll = function() {
+window.onscroll = function () {
   handleScroll();
 };
 
 function handleScroll() {
   var scrollY = window.pageYOffset || document.documentElement.scrollTop;
   var stickyMenu = document.getElementById('sticky-menu');
-  var storyItem = document.getElementById('story');
-  var approachItem = document.getElementById('approach');
-  var teamItem = document.getElementById('team');
+  var mobileStickyMenu = document.getElementById('mobile-sticky-menu');
+  var storyItem = document.getElementById('desktop-story');
+  var approachItem = document.getElementById('desktop-approach');
+  var teamItem = document.getElementById('desktop-team');
 
-  // Verifica se estamos em um dispositivo móvel (largura da tela <= 767px)
   if (window.innerWidth <= 767) {
-    // Mobile-specific scroll behavior
-    if (scrollY < 900) {
-      stickyMenu.style.display = 'none';
-      return;
-    }
-
-    if (scrollY >= 900 && scrollY < 1800) {
-      stickyMenu.style.display = 'block';
-      storyItem.classList.add('active');
-      approachItem.classList.remove('active');
-      teamItem.classList.remove('active');
-    }
-
-    if (scrollY >= 1800 && scrollY < 3000) {
-      stickyMenu.style.display = 'block';
-      storyItem.classList.remove('active');
-      approachItem.classList.add('active');
-      teamItem.classList.remove('active');
-    }
-
-    if (scrollY >= 3000 && scrollY < 6000) {
-      stickyMenu.style.display = 'block';
-      storyItem.classList.remove('active');
-      approachItem.classList.remove('active');
-      teamItem.classList.add('active');
-    }
-
-    if (scrollY >= 7500) {
-      stickyMenu.style.display = 'none';
-    }
+    // Comportamento para telas menores
+    stickyMenu.style.display = 'none';
+    mobileStickyMenu.style.display = 'block';
   } else {
-    // Desktop-specific scroll behavior (já existente no seu código)
+    // Comportamento para telas maiores
+    stickyMenu.style.display = 'block';
+    mobileStickyMenu.style.display = 'none';
+
     if (scrollY < 310) {
       stickyMenu.style.display = 'none';
       return;
     }
 
     if (scrollY >= 310 && scrollY < 767) {
-      stickyMenu.style.display = 'block';
       storyItem.classList.add('active');
       approachItem.classList.remove('active');
       teamItem.classList.remove('active');
     }
 
     if (scrollY >= 767 && scrollY < 2010) {
-      stickyMenu.style.display = 'block';
       storyItem.classList.remove('active');
       approachItem.classList.add('active');
       teamItem.classList.remove('active');
     }
 
     if (scrollY >= 2010 && scrollY < 3710) {
-      stickyMenu.style.display = 'block';
       storyItem.classList.remove('active');
       approachItem.classList.remove('active');
       teamItem.classList.add('active');
@@ -75,26 +48,35 @@ function handleScroll() {
   }
 }
 
-// Função para rolar até a posição calculada das seções
-function scrollToSection(scrollYPosition) {
-  window.scrollTo({
-    top: scrollYPosition,
-    behavior: 'smooth' // Rolar suavemente
-  });
-}
-
-// Adiciona eventos de clique aos itens do menu
-document.getElementById('story').addEventListener('click', function() {
-  // Distância calculada para "Our story"
+// Adiciona eventos de clique ao menu desktop
+document.getElementById('desktop-story').addEventListener('click', function () {
   scrollToSection(900);
 });
 
-document.getElementById('approach').addEventListener('click', function() {
-  // Distância calculada para "Our approach"
+document.getElementById('desktop-approach').addEventListener('click', function () {
   scrollToSection(1800);
 });
 
-document.getElementById('team').addEventListener('click', function() {
-  // Distância calculada para "Our team"
+document.getElementById('desktop-team').addEventListener('click', function () {
   scrollToSection(3000);
 });
+
+// Adiciona eventos de clique ao menu mobile
+document.getElementById('mobile-story').addEventListener('click', function () {
+  scrollToSection(900);
+});
+
+document.getElementById('mobile-approach').addEventListener('click', function () {
+  scrollToSection(1800);
+});
+
+document.getElementById('mobile-team').addEventListener('click', function () {
+  scrollToSection(3000);
+});
+
+function scrollToSection(scrollYPosition) {
+  window.scrollTo({
+    top: scrollYPosition,
+    behavior: 'smooth'
+  });
+}
