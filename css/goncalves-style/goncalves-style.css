@@ -51,13 +51,36 @@
           z-index: 1050; /* Garante que o menu fique acima dos outros conteúdos */
           transform: none; /* Sem animação de transição */
         }
-      
+
         .navbar-nav {
           display: flex;
           flex-direction: column; /* Organiza os itens verticalmente */
-          transform: translate(-260px, -190px);
+          transform: translate(-260px, -150px);
           width: 100px;
         }
+
+        .nav-item .nav-link {
+          margin: 0px;
+        }
+
+        .navbar-nav .nav-item {
+          width: 133px;
+        }
+
+        .nav-item .dropdown-menu {
+          margin-left: 0px;
+        }
+
+        .dropdown-menu .dropdown-item {
+          padding: 0;
+          font-size: 18px;
+          color: #858585;
+          margin-bottom: 15px;
+        }
+
+        .navbar-nav .nav-item .nav-link {
+          margin-bottom: 15px !important;
+      }
       
         .navbar-toggler {
           display: block; /* Garante que o botão do menu esteja visível no mobile */
@@ -3319,3 +3342,7 @@ label span {
 
 
 /*============================================== FIM FOOTER STYELE ==================================================*/
+
+*, ::after, ::before {
+  box-sizing: content-box; /* Troque para 'content-box' ou ajuste conforme necessário */
+}
