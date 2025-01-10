@@ -570,7 +570,10 @@ align-items: center;
     background-repeat: no-repeat;
     background-position: 250px 323px;
     background-attachment: fixed;
+    overflow-x: hidden;
+
 }
+
 
 .title h1{
     font-family: 'DM Sans';
@@ -610,11 +613,16 @@ align-items: center;
 /* Animação*/
 
 .div-2 img{
-    margin-left: 233px;
+  margin-left: 233px;
+  width: 377px;
+  height: 591px;
+  height: auto;
 
 }
 
 .div-2{
+        
+  display: flex;
   position: relative;
   height: 100vh;
 
@@ -623,7 +631,6 @@ align-items: center;
 .animacao{
 
   position: absolute;
-  object-fit: cover; /* Ajusta a imagem sem distorcer */
   transition: opacity 0.6s ease-in-out; 
 }
 
@@ -824,7 +831,7 @@ align-items: center;
 
                                       /* Responsividade Biotech*/
 
-    @media (max-width: 522px){
+    @media (max-width: 917px){
 
         .body-biotech{
         background-image: none;
@@ -838,6 +845,11 @@ align-items: center;
             margin-left: 0px;
             padding: 30px;
         }
+
+        .first-section{
+    flex-direction: column;
+    
+}
 
         .div-1 h2{
             font-size: 22px;
@@ -855,6 +867,7 @@ align-items: center;
         }
 
         .div-2 img{
+
             margin-left: 0px;
             margin-top: 35px;
           
@@ -1014,7 +1027,7 @@ footer{
 }
 
 .input-email{
-    width: 351px ;
+    width: 351px;
     height: 56.9px;
     border-radius: 5px;
     border: 0.5px solid;
