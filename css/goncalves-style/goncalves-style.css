@@ -3342,7 +3342,3 @@ label span {
 
 
 /*============================================== FIM FOOTER STYELE ==================================================*/
-
-*, ::after, ::before {
-  box-sizing: content-box; /* Troque para 'content-box' ou ajuste conforme necessário */
-}
