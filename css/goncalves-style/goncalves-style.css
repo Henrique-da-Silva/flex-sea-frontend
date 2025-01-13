@@ -2563,12 +2563,12 @@ body {
     display: flex;
     align-items: center;
     font-size: 36px;
-    font-weight: 600;
     color: #000000;
   }
   
   .process-item-left h2 {
     margin-bottom: 100px; /* Espaçamento entre h2 e p */
+    font-weight: 500;
   }
   
   .process-item-right h2 {
