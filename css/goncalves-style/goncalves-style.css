@@ -1446,14 +1446,15 @@ body {
     
     .left-our ul {
       list-style-type: none;
-      font-size: 1rem;
       padding-left: 10px;
     }
     
     .left-our ul li {
-      margin-bottom: 15px;
-      color: #aaa;
+      color: #9A9998;
       cursor: pointer;
+      font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
+      font-size: 22px;
+      font-weight: 500;
     }
     
     .left-our ul li.active {
