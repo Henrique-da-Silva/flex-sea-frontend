@@ -431,7 +431,7 @@ body {
 .bioplastic-and-elements .h1-bioplastic-bioplastic {
   max-width: 175px;
   font-family: 'DM Sans', sans-serif; /* Estilo da fonte */
-  font-weight: 500;
+  font-weight: normal; /* Remove o peso bold */
   font-size: 42px;
   color: #000000;
 }
@@ -582,7 +582,7 @@ body {
 .biotech-and-elements .but-thats-biotech{
   max-width: 343px;
   font-family: 'DM Mono', monospace; /* Fonte do texto */
-  font-weight: 500px;
+  font-weight: 500;
   font-size: 12px;
   line-height: 15.62px;
   color: #000000;
@@ -602,7 +602,7 @@ body {
 .biotech-and-elements .h1-biotech-biotech{
   max-width: 137px;
   font-family: 'DM Sans', sans-serif; /* Estilo da fonte */
-  font-weight: 500;
+  font-weight: normal; /* Remove o peso bold */
   font-size: 42px;
   line-height: 46px;
   color: #000000;
