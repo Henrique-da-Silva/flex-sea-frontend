@@ -19,9 +19,17 @@
         color: #000000 !important;
       }
 
+      .navbar-nav .nav-item {
+        margin-right: 25px; /* Adiciona um espaçamento à direita entre os itens */
+      }
+      
+      .navbar-nav .nav-item:last-child {
+        margin-right: 0; /* Remove o espaçamento do último item, para evitar excesso de espaço à direita */
+      }
+      
+
       .navbar.scrolled {
         background-color: #fff;
-        height: 89px; /* Altura definida para o navbar */
       }
 
       .navbar.scrolled .nav-link {
@@ -30,7 +38,7 @@
 
       .dropdown-menu {
         border: none;
-        top: 80% !important
+        top: 60% !important
       }
       
 
@@ -132,6 +140,8 @@
 
       .bg-white {
         background-color: #fff !important;
+        transform: translateY(-155px);
+        height: 400px;
       }
 
       /* Remove o caret do About us e Enquiries */
@@ -431,7 +441,7 @@ body {
 .bioplastic-and-elements .h1-bioplastic-bioplastic {
   max-width: 175px;
   font-family: 'DM Sans', sans-serif; /* Estilo da fonte */
-  font-weight: 500;
+  font-weight: normal; /* Remove o peso bold */
   font-size: 42px;
   color: #000000;
 }
@@ -582,7 +592,7 @@ body {
 .biotech-and-elements .but-thats-biotech{
   max-width: 343px;
   font-family: 'DM Mono', monospace; /* Fonte do texto */
-  font-weight: 500px;
+  font-weight: 500;
   font-size: 12px;
   line-height: 15.62px;
   color: #000000;
@@ -602,7 +612,7 @@ body {
 .biotech-and-elements .h1-biotech-biotech{
   max-width: 137px;
   font-family: 'DM Sans', sans-serif; /* Estilo da fonte */
-  font-weight: 500;
+  font-weight: normal; /* Remove o peso bold */
   font-size: 42px;
   line-height: 46px;
   color: #000000;
@@ -1335,16 +1345,25 @@ body {
       background-color: transparent;
       color: #000000;
       border-radius: 30px;
-      transition: all 0.3s ease;
       width: 223px;
       height: 54px;
       font-family: 'DM Mono', monospace; /* Aplica a fonte DM Mono */
+    }
+
+    .more-button img {
+      height: 0.7em; /* Define o tamanho da imagem igual ao tamanho da fonte */
+      width: auto; /* Mantém a proporção da imagem */
+      transition: filter; /* Adiciona uma transição suave para a imagem */
     }
     
     .more-button:hover {
       background-color: #C45D16;
       color: #fff;
-  
+      border: none;
+    }
+
+    .more-button:hover img {
+      filter: invert(1); /* Inverte as cores da imagem para se adaptar ao fundo */
     }
   
     /* Responsividade more botton */
@@ -1427,14 +1446,15 @@ body {
     
     .left-our ul {
       list-style-type: none;
-      font-size: 1rem;
       padding-left: 10px;
     }
     
     .left-our ul li {
-      margin-bottom: 15px;
-      color: #aaa;
+      color: #9A9998;
       cursor: pointer;
+      font-family: 'DM Sans', sans-serif; /* Aplicar DM Sans */
+      font-size: 22px;
+      font-weight: 500;
     }
     
     .left-our ul li.active {
@@ -2543,12 +2563,12 @@ body {
     display: flex;
     align-items: center;
     font-size: 36px;
-    font-weight: 600;
     color: #000000;
   }
   
   .process-item-left h2 {
     margin-bottom: 100px; /* Espaçamento entre h2 e p */
+    font-weight: 500;
   }
   
   .process-item-right h2 {
