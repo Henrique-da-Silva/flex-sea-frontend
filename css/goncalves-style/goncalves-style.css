@@ -1345,16 +1345,25 @@ body {
       background-color: transparent;
       color: #000000;
       border-radius: 30px;
-      transition: all 0.3s ease;
       width: 223px;
       height: 54px;
       font-family: 'DM Mono', monospace; /* Aplica a fonte DM Mono */
+    }
+
+    .more-button img {
+      height: 0.7em; /* Define o tamanho da imagem igual ao tamanho da fonte */
+      width: auto; /* Mantém a proporção da imagem */
+      transition: filter; /* Adiciona uma transição suave para a imagem */
     }
     
     .more-button:hover {
       background-color: #C45D16;
       color: #fff;
-  
+      border: none;
+    }
+
+    .more-button:hover img {
+      filter: invert(1); /* Inverte as cores da imagem para se adaptar ao fundo */
     }
   
     /* Responsividade more botton */
