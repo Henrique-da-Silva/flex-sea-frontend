@@ -30,7 +30,6 @@
 
       .navbar.scrolled {
         background-color: #fff;
-        height: 89px; /* Altura definida para o navbar */
       }
 
       .navbar.scrolled .nav-link {
@@ -39,7 +38,7 @@
 
       .dropdown-menu {
         border: none;
-        top: 80% !important
+        top: 60% !important
       }
       
 
@@ -141,6 +140,8 @@
 
       .bg-white {
         background-color: #fff !important;
+        transform: translateY(-155px);
+        height: 400px;
       }
 
       /* Remove o caret do About us e Enquiries */
