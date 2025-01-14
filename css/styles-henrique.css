@@ -971,7 +971,7 @@ align-items: center;
 
      }
 
-                                            /* Estilos do Footer*/
+                                                     /* Estilos do Footer*/
  /* Div do botao do mobile para nao aparecer no Desktop*/
     .getintouch-mobile{
         display: none;
@@ -1679,70 +1679,17 @@ textarea::placeholder{
 
 
 }
-                                            /* Estilos do botao lateral fixo - Albino */
-
-    /* Estilo para o botão azul fixo à direita */
-      .fixed-circle {
-        position: fixed;           /* Mantém o elemento fixo na tela mesmo com scroll */
-        right: 20px;               /* Ajusta a distância da borda direita da tela */
-        top: 50%;                  /* Ajusta a posição para ficar alinhado ao centro da tela verticalmente */
-        transform: translateY(-50%); /* Centraliza verticalmente */
-        width: 53px;               /* Largura do círculo */
-        height: 53px;              /* Altura do círculo */
-        background-color: #0E0466; /* Cor azul escura */
-        border-radius: 50%;        /* Deixa o elemento circular inicialmente */
-        display: flex;             /* Para centralizar a imagem dentro do círculo */
-        align-items: center;       /* Alinha verticalmente a imagem no centro */
-        justify-content: center;   /* Alinha horizontalmente a imagem no centro */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra suave ao círculo */
-        cursor: pointer;           /* Define o ponteiro do mouse como 'pointer' */
-        z-index: 1000;             /* Garante que o círculo fique acima de outros elementos */
-        transition: all 0.3s ease; /* Transição suave ao passar o mouse */
-      }
-
-      .fixed-circle a{
-        text-decoration: none;
-      }
-
-      .fixed-circle:hover {
-        width: 176px;              /* Aumenta a largura do botão ao passar o mouse */
-        padding: 10px 20px;        /* Adiciona um espaçamento para o texto */
-        justify-content: space-between; /* Alinha o conteúdo à esquerda */
-        border-radius: 30px;       /* Torna o botão oval ao passar o mouse */
-        background-color: #0E0466; /* Mantém a cor de fundo */
-      }
-
-      .fixed-circle img {
-        width: 24px;               /* Largura da imagem ajustada */
-        height: 24px;              /* Altura da imagem para mantê-la proporcional */
-      }
-
-   .fixed-circle span {
-        color: #ffffff;            /* Cor do texto */
-        font-family: 'DM Mono', monospace; /* Fonte do texto */
-        font-weight: 500;          /* Peso da fonte */
-        font-size: 12px;           /* Tamanho do texto */
-        line-height: 15.62px;      /* Altura da linha */
-        text-align: center;        /* Centraliza o texto */
-        display: none;             /* Ocultar o texto inicialmente */
-        transition: opacity 0.3s ease; /* Transição suave para o texto */
-      }
-
-      .fixed-circle:hover span {
-        display: inline;           /* Exibir o texto ao passar o mouse */
-        opacity: 1;                /* Exibir suavemente */
-      }
 
                                     /* Estilos das páginas Privacy Policy e Terms & Conditions*/
 
-.privacy-policy{
+.page-privacy-policy{
     font-family: 'DM Sans';
     margin-top: 100px;
     width: 50%;
     padding: 5px;
 } 
 
-.privacy-policy p{
+.page-privacy-policy p{
 
     font-family: 'DM Mono';
 
@@ -1750,22 +1697,22 @@ textarea::placeholder{
 
 @media (max-width: 769px ){
 
-    .privacy-policy{
+    .page-privacy-policy{
 
         font-family: 'DM Sans';
         padding: 20px;
         width: 100%;
     }
 
-    .privacy-policy p{
+    .page-privacy-policy p{
 
     font-family: 'DM Mono';
 
 
-}
-       
+}      
 
 }
+                             /* Página Terms e Conditions*/
 
 .termsconditions{
 
