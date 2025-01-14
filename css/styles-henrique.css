@@ -1732,3 +1732,80 @@ textarea::placeholder{
         display: inline;           /* Exibir o texto ao passar o mouse */
         opacity: 1;                /* Exibir suavemente */
       }
+
+                                    /* Estilos das páginas Privacy Policy e Terms & Conditions*/
+
+.privacy-policy{
+    font-family: 'DM Sans';
+    margin-top: 100px;
+    width: 50%;
+    padding: 5px;
+} 
+
+.privacy-policy p{
+
+    font-family: 'DM Mono';
+
+}
+
+@media (max-width: 769px ){
+
+    .privacy-policy{
+
+        font-family: 'DM Sans';
+        padding: 20px;
+        width: 100%;
+    }
+
+    .privacy-policy p{
+
+    font-family: 'DM Mono';
+
+
+}
+       
+
+}
+
+.termsconditions{
+
+    font-family: 'DM Sans';
+    margin-top: 100px;
+    width: 50%;
+    padding: 5px;
+
+}
+
+.termsconditions p{
+    font-family: 'DM Mono';
+
+}
+.termsconditions a{
+     color: inherit; 
+    }
+.termsconditions ul{
+    font-family: 'DM Mono';
+
+}
+
+@media (max-width: 769px ){
+
+    .termsconditions{
+
+        font-family: 'DM Sans';
+        padding: 20px;
+        width: 100%;
+    }
+
+    .termsconditions p{
+
+    font-family: 'DM Mono';
+
+}
+    .termsconditions li{
+        margin-left: 30px;
+    }
+       
+
+}
+
