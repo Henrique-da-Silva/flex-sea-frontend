@@ -39,7 +39,7 @@ function handleTransition() {
     imagem1.style.opacity = 1;
     imagem2.style.opacity = 0;
     isTransitioning = false; 
-  }, 10000); // Tempo total da transição
+  }, 8000); // Tempo total da transição
 }
 
 // Função para resetar as imagens
