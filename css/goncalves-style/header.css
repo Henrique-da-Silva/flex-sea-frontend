@@ -100,7 +100,12 @@ header .brand img {
 
 header.scroll-adjust .brand img {
 
-    transform: translateY(-13px);
+    transform: translateY(-8px);
+}
+
+header.scroll-adjust {
+
+    transform: translateY(-5px);
 }
 
 .section-two {
@@ -210,6 +215,21 @@ header .menu-btn {
     header .btn {
         display: block; /* Exibe o botão menu em telas menores */
     }
+
+    header.scroll-adjust .brand img {
+
+        transform: translateY(0px);
+    }
+    
+    header.scroll-adjust {
+    
+        transform: translateY(0px);
+    }
+
+    .menu-icon-scroll {
+        transform: translateY(15px); /* Move o menu-icon 10px para baixo */
+    }
+    
 
     header .menu-btn {
         display: block;
