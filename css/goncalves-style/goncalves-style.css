@@ -8,116 +8,142 @@
 
 /*================================================= INDEX STYELE =====================================================*/
 
-.banner-image {
-    background-image: url('img/1.png'); /* Define a imagem de fundo do banner */
-    background-size: cover; /* Imagem de fundo cobre toda a área */
-  }
-
-/*=================== REQUEST TEXT====================*/
-  .request-text p {
-    font-size: 1.2rem;
-    font-family: 'DM Sans', sans-serif; /* Fonte DM Sans aplicada */
-  }
-
-  /*=================== RESPONSIVE REQUEST TEXT====================*/
-
-
-/* Exibir o novo texto no modo mobile */
-.banner-video .request-text-mobile {
-  display: block; /* Exibe o novo texto */
-  position: relative; /* Posição padrão para centralização */
-  text-align: center; /* Centraliza o texto horizontalmente */
-  margin-top: 370px; /* Adiciona espaço acima do texto */
-  margin-bottom: 20px; /* Aumenta o espaço entre o texto e os botões */
-  color: white; /* Cor do texto */
-  font-size: 18px; /* Tamanho da fonte */
-  font-weight: 500; /* Peso da fonte */
-  font-family: 'DM Sans', sans-serif; /* Estilo da fonte */
+.section-main {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;  /* Move os filhos para o fim (parte de baixo) */
+  overflow: hidden;
 }
 
-/* Ocultar o novo texto em telas maiores */
-@media (min-width: 769px) {
-  .banner-video .request-text-mobile {
-    display: none;
-  }
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
-/*=====================================================================*/
 
-  /*==============================  BOTÕES ================================*/
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px; /* Opcional: adiciona margem inferior */
+}
 
-  .btn-custom {
-    background-color: #F9F6EC; /* Cor de fundo do botão */
-    border: none; /* Sem borda */
-    padding: 10px 10px; /* Preenchimento interno do botão */
-    font-size: 12px; /* Tamanho do texto */
-    color: #000; /* Cor do texto do botão */
-    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
-    font-family: 'DM Mono', monospace; /* Fonte DM Mono aplicada */
-    margin-bottom: 10px;
-    width: 90%;
-    max-width: 244px;
+.content hr {
+      width: 100%; /* Ocupa toda a largura */
+      border: none; /* Remove bordas padrão */
+      height: 1px; /* Define a altura da linha */
+      background-color: #FFFFFF; /* Cor da linha */
+      margin: 20px 0; /* Espaçamento acima e abaixo */
+      transform: translateY(45px);
   }
 
-  /*=====================================================================*/
+  .content h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 18px; /* Tamanho maior */
+      line-height: 28px;
+      text-align: left; /* Alinha à esquerda */
+      margin-bottom: 20px;
+      transform: translate(100px, 58px);
+  }
 
-  /*==============================  BOTÕES RESPONSIVO ================================*/
+  .content div {
+      display: flex; /* Layout em linha */
+      justify-content: center; /* Alinha os botões à esquerda */
+      gap: 20px; /* Espaçamento entre os botões */
+  }
 
-  @media (min-width: 768px) {
-    .btn-custom {
-      width: auto; /* Ajusta o tamanho dos botões em telas maiores */
+  .content div button {
+      width: 244px;
+      height: 54px;
+      background-color: #F9F6EC;
+      color: #000000;
+      font-family: 'DM Mono', monospace;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15.62px;
+      text-align: center;
+      border: none;
+      border-radius: 40px; /* Bordas arredondadas opcionais */
+      cursor: pointer;
+      display: block; /* Faz o botão ocupar toda a largura e altura */
+      padding: 0; /* Remove qualquer padding para garantir o tamanho do botão */
+      box-sizing: border-box; /* Faz o botão ocupar toda a área definida */
+      /* Para que o conteúdo do botão fique centralizado, usamos flexbox */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .content div button:hover {
+      background-color: #C45D16;
+      color: #FFFFFF;
+  }
+
+  @media (max-width: 1060px) {
+    .background-video {
+      object-fit: cover; /* Garante que o vídeo ocupe toda a tela */
+      height: 100%; /* Ocupa 100% da altura */
+      width: 100%; /* Ocupa 100% da largura */
+  }
+  
+  .content {
+      display: flex;
+      flex-direction: column; /* Organiza em coluna */
+      align-items: center; /* Centraliza os elementos */
+      text-align: center; /* Alinha textos ao centro */
+  }
+
+  .content h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 18px; /* Ajuste para telas menores */
+      line-height: 28px;
+      margin-bottom: 20px;
+  }
+
+  .content h1 {
+      transform: none;
+  }
+
+  .content div {
+      display: flex;
+      flex-direction: column; /* Botões em coluna */
+      gap: 25px; /* Aumenta o espaçamento entre os botões */
+  }
+
+  .content div button {
+      width: 244px;
+      height: 54px;
+      background-color: #F9F6EC;
+      color: #000000;
+      font-family: 'DM Mono', monospace;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15.62px;
+      text-align: center;
+      border: none;
+      border-radius: 40px; /* Ajustável, se necessário */
+      cursor: pointer;
+  }
+
+  .content div button:hover {
+      background-color: #C45D16;
+      color: #FFFFFF;
+  }
+
+  .content hr {
+      display: none;
     }
   }
-
-  .button-group {
-    flex-direction: column; /* Botões em coluna por padrão */
-  }
-
-  @media (min-width: 768px) {
-    .button-group {
-      flex-direction: row; /* Botões lado a lado em telas maiores */
-    }
-
-    .button-group button:hover {
-      color: #FFFFFF; /* Cor do texto ao passar o mouse */
-      background: #C45D16; /* Fundo ao passar o mouse */
-    }
-  }
-
-  .btn-custom:hover {
-    background-color: #e0e0e0; /* Cor de fundo do botão ao passar o mouse */
-  }
-
-  .button-group button {
-    width: 244px; /* Largura dos botões */
-    height: 54px; /* Altura dos botões */
-    border-radius: 40px; /* Bordas arredondadas */
-    margin-right: 10px; /* Espaço entre os botões */
-  }
-
-  .button-group button:hover {
-    color: #FFFFFF; /* Cor do texto ao passar o mouse */
-    background: #C45D16; /* Fundo ao passar o mouse */
-  }
-  /*=====================================================================*/
-
-
-  /*================================ LINE  ================================*/
-  .line {
-    width: 100%; /* Linha ocupa toda a largura */
-    height: 2px; /* Espessura da linha */
-    background-color: #ffffff; /* Cor da linha, branca como o texto */
-    margin-bottom: 20px; /* Espaço entre a linha e os botões */
-  }
-/*=====================================================================*/
-
-/*==============================  LINE RESPONSIVO ====================================*/
-  @media (max-width: 768px) {
-    .line {
-      display: none; /* Esconde a linha em telas menores */
-    }
-  }
-/*=====================================================================*/
-
 
   /* ============== Estilo para o ícone circular no menu ======== */
   .icon-circle {

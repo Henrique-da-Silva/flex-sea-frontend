@@ -91,32 +91,20 @@
   <span>GET IN TOUCH</span>
 </a>
 
-<!-- Banner com vídeo -->
-<div class="banner-video w-100 vh-100 d-flex justify-content-center align-items-center position-relative">
-  <!-- Vídeo como fundo -->
-  <video autoplay muted loop class="w-100 h-100 position-absolute" style="object-fit: cover;">
-    <source src="video/FlexSeaWebsiteAnimationH264.mp4" type="video/mp4">
+<div class="section-main">
+  <video autoplay muted loop class="background-video">
+      <source src="video/FlexSeaWebsiteAnimationH264.mp4" type="video/mp4">
+      Seu navegador não suporta a tag de vídeo.
   </video>
-
-  <!-- Texto "Make a request" posicionado -->
-  <div class="request-text position-absolute d-none d-md-block" style="bottom: 4%; left: 10%;">
-    <p class="text-white mb-">Make a request:</p>
-  </div>
-
-  <!-- Novo texto para mobile -->
-  <div class="request-text-mobile">
-    <p>Make a request:</p>
-  </div>
-
-  <!-- Linha horizontal abaixo do texto -->
-  <div class="line position-absolute" style="bottom: 12%;"></div>
-  <!-- Grupo de botões de ação -->
-  <div class="button-group position-absolute d-flex justify-content-center" style="bottom: 4%;">
-    <a href="/pages/enquiries-contactus.html">
-      <button class="btn btn-custom mx-2">I WANT INJECTION MODE</button>
-      <button class="btn btn-custom mx-2">I WANT 3D PRINT</button>
-      <button class="btn btn-custom mx-2">I WANT COSMETICS INGREDIENTS</button>
-    </a>
+  <div class="content">
+      <!-- Conteúdo que ficará sobre o vídeo -->
+       <hr>
+      <h1>Make a request:</h1>
+      <div>
+          <button>I WANT INJECTION MODE</button>
+          <button>I WANT 3D PRINT</button>
+          <button>I WANT COSMETICS INGREDIENTS</button>
+      </div>
   </div>
 </div>
 
@@ -583,5 +571,6 @@
       <script src="js/menu-hamburguer.js"></script>
       <script src="js/fixedCircle.js"></script>   
       <script src="js/animacao-home.js"></script>
+      <script src="js/home.js"></script>
 </body>
 </html>
