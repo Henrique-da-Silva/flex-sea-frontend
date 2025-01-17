@@ -249,6 +249,7 @@ body {
   line-height: 15.62px;
   color: #000000;
   margin: 0;
+  font-family: 'DM Mono', monospace; /* Fonte do texto */
 }
 
 .bioplastic-and-elements .number-one-bioplastic {
@@ -303,6 +304,24 @@ body {
 }
 
 /* Estilos para Mobile */
+
+@media (max-width: 768px) {
+  .container-learn-more-button-bioplastic-mobile {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .learn-more-button-bioplastic-mobile {
+    display: block !important; /* Garante visibilidade */
+    visibility: visible !important; /* Garante que não está oculto */
+    opacity: 1 !important; /* Garante que é totalmente visível */
+  }
+}
+
+
 @media (max-width: 768px) {
   /* Ajusta o layout geral */
   .bioplastic-section-home {
@@ -343,16 +362,7 @@ body {
     margin: 0;
   }
 
-  .bioplastic-and-botton .container-learn-more-button-bioplastic-mobile {
-    display: flex; /* Torna visível no mobile */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    margin-top: 10px; /* Espaçamento superior */
-    width: 100%; /* Ocupa toda a largura do pai */
-  }
-
   .bioplastic-section-home .learn-more-button-bioplastic-mobile {
-    display: block; /* Torna visível no mobile */
     width: 223px; /* Ajusta o tamanho automaticamente */
     height: 54px;
     padding: 10px 20px; /* Adiciona espaçamento interno para um botão mais visível */
