@@ -6,15 +6,7 @@
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />
         
-        <!-- Script para forçar recarregamento sem cache -->
-        <script>
-          (function () {
-            if (!window.location.search.includes('nocache')) {
-              var separator = window.location.search ? '&' : '?';
-              window.location.replace(window.location.pathname + separator + 'nocache=' + new Date().getTime());
-            }
-          })();
-        </script>
+
     <!-- Metadados básicos -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,6 +26,7 @@
   </head>
   
   <body>
+
     <header>
       <a href="/index.html" class="brand"> <img src="/img/flexseaLogo.svg" alt="Logotipo"></a>
       <div class="menu">
@@ -76,8 +69,7 @@
         </div>
       </div>
     </header>
-
-    <!-- Botão Fixo no Canto Direito -->
+    
     <!-- Botão Fixo no Canto Direito -->
     <a href="/pages/enquiries-contactus.html" class="fixed-circle">
       <img src="/img/icon-get-in-touch.svg" alt="Icon Image" />
