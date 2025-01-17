@@ -1921,7 +1921,7 @@ body {
     height: 54px;
     background: transparent;
     border-radius: 50px;
-    border: 1px solid #000000; /* Define uma borda fina */
+    border: 0.5px solid #000000;
     color: #000000;
     font-size: 12px;
   }
@@ -2185,7 +2185,7 @@ body {
     display: flex; /* Garante que o botão funcione como flexbox */
     align-items: center; /* Centraliza o conteúdo verticalmente */
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    border: 1px solid black;
+    border: 1px solid #000000;
 
   }
 
