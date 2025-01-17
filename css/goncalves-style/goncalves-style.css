@@ -2195,7 +2195,7 @@ body {
       display: flex;
       flex-direction: column;
       align-items: flex-start; /* Alinha o conteúdo à esquerda */
-      text-align: left; /* Alinha o texto à esquerda */*/
+      text-align: left; /* Alinha o texto à esquerda */
   }
 
   .bioplastic-left-section-mobile {
