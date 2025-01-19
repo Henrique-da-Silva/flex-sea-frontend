@@ -2606,67 +2606,154 @@ body {
     }
   }
 
+    /* Media query para iPhone 14 Pro Max (430px) */
+    @media screen and (max-width: 430px) {
+      .faq-item button {
+        width: 302px !important;
+        font-size: 16px !important;
+      }
+      .faq-item button .seta-faq-item1 {
+        transform: translate(191px, -25px) !important;
+      }
+      .faq-item button .seta-faq-item2 {
+        transform: translate(201px, 0px) !important;
+      }
+      .faq-item button .seta-faq-item3 {
+        transform: translate(147px, 0px) !important;
+      }
+      .content-faq {
+        width: 290px !important;
+        font-size: 16px !important;
+      }
+    }
 
-  /* Media query para iPhone 14 Pro Max (430px) */
-  @media screen and (max-width: 430px) {
-    .faq-item button {
-      width: 310px;
-      font-size: 18px;
+
+    /* Media query para (428px) */
+    @media screen and (max-width: 428px) {
+      .faq-item button {
+        width: 310px !important;
+        font-size: 18px !important;
+      }
+      .faq-item button .seta-faq-item1 {
+        transform: translate(376px, -65px) !important;
+      }
+      .faq-item button .seta-faq-item2 {
+        transform: translate(174px, 0px) !important;
+      }
+      .faq-item button .seta-faq-item3 {
+        transform: translate(110px, 0px) !important;
+      }
+      .content-faq {
+        width: 300px !important;
+        font-size: 14px !important;
+      }
     }
-    .faq-item button .seta-faq-item1 {
-      transform: translate(120px, -3px) !important;
+
+    /* Media query para iPhone 15 Pro Max (428px) */
+    @media screen and (max-width: 414px) {
+      .faq-item button {
+        width: 310px !important;
+        font-size: 18px !important;
+      }
+      .faq-item button .seta-faq-item1 {
+        transform: translate(360px, -65px) !important;
+      }
+      .faq-item button .seta-faq-item2 {
+        transform: translate(160px, 0px) !important;
+      }
+      .faq-item button .seta-faq-item3 {
+        transform: translate(96px, 0px) !important;
+      }
+      .content-faq {
+        width: 300px !important;
+        font-size: 10px !important;
+      }
     }
-    .faq-item button .seta-faq-item2 {
-      transform: translate(135px, 0px) !important;
-    }
-    .faq-item button .seta-faq-item3 {
-      transform: translate(60px, 0px) !important;
-    }
-    .content-faq {
-      width: 302px !important;
-      font-size: 16px !important;
-    }
-  }
+
 
     /* Media query para iPhone 12 Pro (390px) */
 @media screen and (max-width: 390px) {
   .faq-item button {
-    width: 300px;
-    font-size: 18px;
+    width: 300px !important;
+    font-size: 18px !important;
   }
   .faq-item button .seta-faq-item1 {
-    transform: translate(200px, -65px) !important;
+    transform: translate(225px, -65px) !important;
   }
   .faq-item button .seta-faq-item2 {
-    transform: translate(92px, 0px) !important;
+    transform: translate(138px, 0px) !important;
   }
   .faq-item button .seta-faq-item3 {
-    transform: translate(15px, 0px);
+    transform: translate(75px, 0px)!important;
   }
   .content-faq {
-    width: 290px;
-    font-size: 16px;
+    width: 290px !important;
+    font-size: 16px !important;
   }
 }
 
-  /* Media query para iPhone SE (375px) */
-@media screen and (max-width: 375px) {
+    /* Media query para (378px) */
+    @media screen and (max-width: 378px) {
+      .faq-item button {
+        width: 270px !important;
+        font-size: 16px !important;
+      }
+      .faq-item button .seta-faq-item1 {
+        transform: translate(195px, -67px) !important;
+      }
+      .faq-item button .seta-faq-item2 {
+        transform: translate(85px, 0px) !important;
+      }
+      .faq-item button .seta-faq-item3 {
+        transform: translate(9px, 0px) !important;
+      }
+      .content-faq {
+        width: 260px !important;
+        font-size: 14px !important;
+      }
+    }
+
+
+  /* Media query para  (376px) */
+  @media screen and (max-width: 376px) {
     .faq-item button {
-      width: 270px;
-      font-size: 16px;
+      width: 270px !important;
+      font-size: 16px !important;
     }
     .faq-item button .seta-faq-item1 {
       transform: translate(195px, -67px) !important;
     }
     .faq-item button .seta-faq-item2 {
-      transform: translate(83px, 0px) !important;
+      transform: translate(85px, 0px) !important;
     }
     .faq-item button .seta-faq-item3 {
-      transform: translate(5px, 0px) !important;
+      transform: translate(10px, 0px) !important;
     }
     .content-faq {
-      width: 260px;
-      font-size: 14px;
+      width: 260px !important;
+      font-size: 14px !important;
+    }
+  }
+
+
+  /* Media query para iPhone SE (375px) */
+@media screen and (max-width: 375px) {
+    .faq-item button {
+      width: 270px !important;
+      font-size: 16px !important;
+    }
+    .faq-item button .seta-faq-item1 {
+      transform: translate(222px, -50px) !important;
+    }
+    .faq-item button .seta-faq-item2 {
+      transform: translate(144px, 0px) !important;
+    }
+    .faq-item button .seta-faq-item3 {
+      transform: translate(90px, 0px) !important;
+    }
+    .content-faq {
+      width: 260px !important;
+      font-size: 14px !important;
     }
   }
 
