@@ -7,7 +7,6 @@
     /* Estilos Latest H1 e Button*/
 
    .latest-news{
-    align-items: center;
     display: flex;
     justify-content: space-between;
 
@@ -206,20 +205,16 @@
     .latest-news {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
     } 
 
        .latest-news h1{
-    margin-left: 0px;
+    margin-left: 30px;
  
    }
 
       .latest-news button{
         display: none;
-   
-    margin-right: 0px;
-   
+        margin-right: 0px;
 
    }
        .slick-carousel{
@@ -239,15 +234,13 @@
        
     display: flex;
     flex-direction: column;
+
    
     } 
 
     .latest-news h1 {
-
-    margin-left: 0px;
-    margin-bottom: 5px;
+    margin-left: 30px;
     font-size: 36px;
-    text-align: left;
  
    }
 
@@ -1290,6 +1283,14 @@ label span {
         display: none;
     } 
 
+    .input-name{
+        width: 336px;
+    }
+
+    .input-email{
+        width: 336px;
+    }
+
     #fixed-mobile{
         display: none; /* Botão oculto em dispositivos móveis */
         }
@@ -1297,7 +1298,7 @@ label span {
     .mobile{
         display: flex;
         flex-direction: column;
-        margin-left: 20px;
+        margin-left: 16px;
     }
 
 
@@ -1314,7 +1315,7 @@ label span {
     .p-a img{
         width: 28px;
         height: 28px;
-        margin-left: 105px;
+        margin-left: 89px;
 
     }
 
@@ -1332,7 +1333,7 @@ label span {
 
     #list2{
 
-        margin-left: 100px;
+        margin-left: 82px;
 
     }
 
@@ -1362,6 +1363,15 @@ label span {
     color: #000000;
     text-decoration: none;     
 
+  }
+
+  .developed-by{
+    color: #D2D2D2 ;
+    margin-left: 60px ;
+  }
+
+  .grid-space{
+    color: #858585;
   }
 
   .rodape{
