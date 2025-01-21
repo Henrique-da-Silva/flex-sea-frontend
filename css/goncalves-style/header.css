@@ -227,7 +227,7 @@ header .menu-btn {
     }
 
     .menu-icon-scroll {
-        transform: translateY(15px); /* Move o menu-icon 10px para baixo */
+        transform: translateY(12px); /* Move o menu-icon 10px para baixo */
     }
     
 
