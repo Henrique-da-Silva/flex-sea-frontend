@@ -552,7 +552,7 @@ align-items: center;
                                         /* Estilos da página Biotech*/
 
 .main-biotech{
-    margin-top: 150px;
+    margin-top: 130px;
     margin-left: 140px;  
     flex-wrap: wrap;   
 }
@@ -834,32 +834,33 @@ align-items: center;
         }
 
         .main-biotech{
+            margin-top: 100px;
             margin-left: 0px;
-            padding: 30px;
+            padding: 15px;
         }
 
         .first-section{
     flex-direction: column;
     
-}
+        }
 
         .div-1 h2{
             font-size: 22px;
-            margin-top: 50px;
+            margin-top: 30px;
             max-width: 100%;
             width: 333px;
             height: 155px;
 
         }
         .div-1 p{
-            margin-top: 5px;
+            margin-top: 30px;
             max-width: 100%;
             width: 333px;
             height: 313px;
         }
 
         .div-2 img{
-
+            width: 350px;
             margin-left: 0px;
             margin-top: 35px;
           
@@ -868,7 +869,7 @@ align-items: center;
             max-width: 100%;
             width: 352px;
             height: 187px;
-            margin-top: 35px;
+            margin-top: 0px;
         }
 
         .div-4 p{
