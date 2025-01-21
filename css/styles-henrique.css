@@ -319,7 +319,7 @@
 /* Estilos do H1 e Botão Linkedin*/
 
 .div-title{
-    margin-top: 160px;
+    margin-top: 130px;
     display: flex;
 }
 
@@ -511,7 +511,7 @@ align-items: center;
 @media (max-width: 550px){
     .main-news{
     margin-left: 0px;
-    padding: 30px;
+    padding: 17px;
     align-items: center;
     
     }
@@ -520,13 +520,25 @@ align-items: center;
         line-height: none;
 
     }
+
+    .div-title{
+    margin-top: 90px;
+    }
+
+
+
     .cards-1{
     margin-top: 25px;
     }
+
     .div-form h3{
-    width: 358px;  
+        
+    width: 358px; 
+    margin-top: 30px;
+ 
     
     }
+
     .news-input-name{
     width: 348px;
 
@@ -538,7 +550,7 @@ align-items: center;
 }
 .section-form{
   
-    height: 501px;
+    max-height: 501px;
 }
 .button-news{
  
