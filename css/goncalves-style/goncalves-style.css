@@ -2436,7 +2436,7 @@ body {
     background-color: rgba(225, 255, 225, 0.10); /* Cor com opacidade */
   }
   
-  .process-image img {
+  .process-image video {
     width: 100%;
     max-width: 1163px; /* Limita a largura da imagem ao total dos process items */
     height: auto; /* Mantém as proporções da imagem */
