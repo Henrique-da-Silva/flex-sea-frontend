@@ -12,7 +12,7 @@ window.addEventListener("scroll", function() {
 
         // Ajustar a altura do header somente para telas maiores
         if (isLargeScreen) {
-            header.style.height = "276px";
+            header.style.height = "89px";
         }
 
         // Ajustar a posição do menu-icon para telas menores
@@ -53,8 +53,7 @@ closeBtn.addEventListener("click", () => {
 });
 
 document.querySelectorAll('.has-submenu').forEach(item => {
-    item.addEventListener('click', function(e) {
-        e.preventDefault(); // Evita navegação padrão
+    item.addEventListener('click', function (e) {
         const parent = this.parentElement;
 
         // Fecha outros submenus abertos
@@ -66,5 +65,10 @@ document.querySelectorAll('.has-submenu').forEach(item => {
 
         // Alterna a classe 'active' no item clicado
         parent.classList.toggle('active');
+
+        // Permite navegação padrão se o link principal for clicado
+        if (!parent.querySelector('.submenu')) {
+            return; // Permite o clique em links que não têm submenu
+        }
     });
 });
