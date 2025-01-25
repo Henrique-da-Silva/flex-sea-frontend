@@ -53,6 +53,9 @@
             
     }
 
+        .slick-track {
+        margin-left: 189px; 
+    }
 
         .card-latest {
             
@@ -201,6 +204,10 @@
 
 @media (max-width: 768px) {
 
+        .slick-track {
+        margin-left: 0px; 
+    }
+
     .latest-news {
     display: flex;
     flex-direction: column;
@@ -217,7 +224,7 @@
 
    }
        .slick-carousel{
-        margin-left: 25px;
+        margin-left: 20px;
    
             
     }
@@ -228,14 +235,18 @@
 
 
     @media (max-width: 500px) {
+    
 
     .latest-news {
        
     display: flex;
     flex-direction: column;
-
    
     } 
+  
+    .slick-track {
+        margin-left: 0px; 
+    }
 
     .latest-news h1 {
     margin-left: 30px;
@@ -296,6 +307,8 @@
         }
 
     }
+
+
 
 
 
@@ -1043,7 +1056,6 @@ footer{
    
 
 }
-
 
 .input-email:focus{
     outline-width: 1,5px;     

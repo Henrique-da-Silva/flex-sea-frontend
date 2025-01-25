@@ -251,28 +251,53 @@
 <script>
     $(document).ready(function () {
         $('.slick-carousel').slick({
-            infinite: false,
+            infinite: true,
             slidesToShow: 3.5,
+            centerMode: false,       
+            centerPadding: '0',     
+            initialSlide: 0, 
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 2000,
             arrows: false,
-            dots: false,
             responsive: [
-                {
+                      
+              {
+                breakpoint: 1052,
+                settings: {
+                  slidesToShow: 2.5,
+                  variableWidth: false,
+                }
+              },
+            
+            {
                     breakpoint: 768,
                     settings: {
                         slidesToShow: 2,
-                        variableWidth: false
+                        variableWidth: false,
                     }
                 },
                 {
-                    breakpoint: 480,
+                    breakpoint: 503,
                     settings: {
                         slidesToShow: 1,
-                        variableWidth: false
+                        variableWidth: true,
+                        slidesToScroll: 1, 
+                        centerMode: false,  
+                        centerPadding: '0'
                     }
+                },
+                     {
+                breakpoint: 355,
+                settings: {
+                  slidesToShow: 1,
+                  variableWidth: false,
+                  slidesToScroll: 1,
+                  centerMode: false,
+                  centerPadding: '0'
                 }
+              }
+
             ]
         });
 
