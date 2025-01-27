@@ -1290,7 +1290,7 @@ body {
     }
     
     .left-our ul li.active {
-      font-weight: bold;
+      font-weight: normal;
       color: #000;
     }
     
@@ -1772,7 +1772,7 @@ body {
   }
   
   .sticky-menu li.active {
-    font-weight: bold; /* Em negrito quando ativo */
+    font-weight: normal; /* Em negrito quando ativo */
   }
 
   .mobile-sticky-menu {
