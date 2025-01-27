@@ -92,3 +92,26 @@ function scrollToSection(scrollYPosition) {
     behavior: 'smooth' // Adiciona uma transição suave ao movimento do scroll
   });
 }
+
+// -------------- DESLISAMENTO DO BOTÃO MORE -------------- //
+document.addEventListener("DOMContentLoaded", () => {
+  // Seleciona o botão MORE
+  const moreButton = document.querySelector(".more-button");
+
+  // Adiciona um evento de clique no botão
+  moreButton.addEventListener("click", (event) => {
+    event.preventDefault(); // Previne o comportamento padrão do botão, caso seja um submit ou link
+
+    // Seleciona o elemento .left-our para o qual queremos deslizar
+    const targetElement = document.querySelector(".left-our");
+
+    // Verifica se o elemento existe
+    if (targetElement) {
+      // Faz o scroll suave até o elemento
+      targetElement.scrollIntoView({
+        behavior: "smooth", // Animação suave
+        block: "start", // Alinha ao topo da seção
+      });
+    }
+  });
+});

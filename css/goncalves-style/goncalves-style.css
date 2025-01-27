@@ -1185,6 +1185,7 @@ body {
       height: 0.7em; /* Define o tamanho da imagem igual ao tamanho da fonte */
       width: auto; /* Mantém a proporção da imagem */
       transition: filter; /* Adiciona uma transição suave para a imagem */
+      transform: translateY(-1px);
     }
     
     .more-button:hover {
