@@ -1,4 +1,3 @@
-// Evento de scroll na janela que chama a função handleScroll
 window.onscroll = function () {
   handleScroll();
 };
@@ -17,12 +16,10 @@ function handleScroll() {
   // Verifica se a largura da janela é para dispositivos móveis
   if (window.innerWidth <= 767) {
     // Comportamento para telas menores
-    // Esconde o menu desktop e exibe o menu mobile
     stickyMenu.style.display = 'none';
     mobileStickyMenu.style.display = 'block';
   } else {
     // Comportamento para telas maiores
-    // Mostra o menu desktop e esconde o menu mobile
     stickyMenu.style.display = 'block';
     mobileStickyMenu.style.display = 'none';
 
@@ -33,21 +30,21 @@ function handleScroll() {
     }
 
     // Ativa o item "Story" do menu desktop se o scroll estiver entre 310 e 767px
-    if (scrollY >= 310 && scrollY < 767) {
+    if (scrollY >= 310 && scrollY < 1600) { // Ajuste o valor de 1600 conforme a altura da sua seção
       storyItem.classList.add('active');
       approachItem.classList.remove('active');
       teamItem.classList.remove('active');
     }
 
-    // Ativa o item "Approach" do menu desktop se o scroll estiver entre 767 e 2010px
-    if (scrollY >= 767 && scrollY < 2010) {
+    // Ativa o item "Approach" do menu desktop se o scroll estiver entre 1600 e 2600px
+    if (scrollY >= 1600 && scrollY < 3000) { // Ajuste o valor de 2600 conforme a altura da sua seção
       storyItem.classList.remove('active');
       approachItem.classList.add('active');
       teamItem.classList.remove('active');
     }
 
-    // Ativa o item "Team" do menu desktop se o scroll estiver entre 2010 e 3710px
-    if (scrollY >= 2010 && scrollY < 3710) {
+    // Ativa o item "Team" do menu desktop se o scroll estiver entre 2600 e 3710px
+    if (scrollY >= 2600 && scrollY < 3710) { // Ajuste o valor de 3000 conforme a altura da sua seção
       storyItem.classList.remove('active');
       approachItem.classList.remove('active');
       teamItem.classList.add('active');
@@ -72,6 +69,13 @@ document.getElementById('desktop-approach').addEventListener('click', function (
 document.getElementById('desktop-team').addEventListener('click', function () {
   scrollToSection(3000);
 });
+
+function scrollToSection(scrollYPosition) {
+  window.scrollTo({
+    top: scrollYPosition, // Define a posição vertical para onde o scroll irá
+    behavior: 'smooth' // Adiciona uma transição suave ao movimento do scroll
+  });
+}
 
 // Adiciona eventos de clique ao menu mobile
 document.getElementById('mobile-story').addEventListener('click', function () {
