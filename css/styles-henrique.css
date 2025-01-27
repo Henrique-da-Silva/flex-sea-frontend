@@ -464,9 +464,10 @@ align-items: center;
 
 
 .news-input-name:focus{
-    outline-width: 1,5px;     
-    outline-color: #24242F;    
-    outline-style: solid;
+    border-width: 1.5px; 
+    border-style: solid; 
+    border-color: #24242F; 
+    outline: none;   
 }
 
 .news-input-email{
@@ -485,9 +486,10 @@ align-items: center;
 }
 
 .news-input-email:focus{
-    outline-width: 1,5px;     
-    outline-color: #24242F;    
-    outline-style: solid;
+    border-width: 1.5px; 
+    border-style: solid; 
+    border-color: #24242F; 
+    outline: none;
 }
 
 .button-news{
