@@ -2629,6 +2629,27 @@ body {
       }
     }
 
+    /* Media query para 1280px até 1920px*/
+     @media screen and (min-width: 1280px) and (max-width: 1920px) {
+      .faq-item button {
+        width: 600px !important;
+        font-size: 22px !important;
+      }
+      .faq-item button .seta-faq-item1 {
+        transform: translate(420px, -35px) !important;
+      }
+      .faq-item button .seta-faq-item2 {
+        transform: translateX(313px) !important;
+      }
+      .faq-item button .seta-faq-item3 {
+        transform: translate(238.5px, 0px) !important;
+      }
+      .content-faq {
+        width: 610px !important;
+        font-size: 16px !important;
+      }
+    }
+
 
 
     /* Media query para iPhone 14 Pro Max (430px) */
