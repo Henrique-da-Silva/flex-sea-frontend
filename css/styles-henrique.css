@@ -1655,6 +1655,12 @@ textarea::placeholder{
   font-family: 'DM Mono';
   font-weight: 500;
 
+}
+.card-enquiries button:hover {
+    
+    background-color: #C45D16;
+    border: none;
+    color: #FFFFFF;
 
 }
                                 /* Responsividade Material request e Contact us*/
