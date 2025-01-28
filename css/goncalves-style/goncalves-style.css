@@ -2577,7 +2577,7 @@ body {
   }
 
 /* Ajuste para telas maiores (desktop) */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 769px) and (max-width: 1279px) {
 
   .faq-item button {
     width: 600px !important;
