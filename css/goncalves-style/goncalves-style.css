@@ -46,6 +46,7 @@
   }
 
   .content h1 {
+    
       font-family: 'DM Sans', sans-serif;
       font-weight: 500;
       font-size: 18px; /* Tamanho maior */
@@ -61,7 +62,7 @@
       gap: 20px; /* Espaçamento entre os botões */
   }
 
-  .content div button {
+  .content a {
       width: 244px;
       height: 54px;
       background-color: #F9F6EC;
@@ -74,7 +75,7 @@
       border: none;
       border-radius: 40px; /* Bordas arredondadas opcionais */
       cursor: pointer;
-      display: block; /* Faz o botão ocupar toda a largura e altura */
+      display: inline-block; /* Faz o botão ocupar toda a largura e altura */
       padding: 0; /* Remove qualquer padding para garantir o tamanho do botão */
       box-sizing: border-box; /* Faz o botão ocupar toda a área definida */
       /* Para que o conteúdo do botão fique centralizado, usamos flexbox */
@@ -84,9 +85,14 @@
       z-index: 2; /* Garante que os botões fiquem acima do vídeo */
   }
   
-  .content div button:hover {
+  .content a:hover {
       background-color: #C45D16;
       color: #FFFFFF;
+      cursor: pointer;
+  }
+
+  .content a{
+    text-decoration: none;
   }
 
   @media (max-width: 1060px) {
