@@ -2572,50 +2572,26 @@ body {
 }
 /*========================= FIM FAQS TELAS MAIORES ======================*/
 
-@media screen and (max-width: 768px) {
-    /* Ajusta o botão dentro de faq-item */
-    .faq-item button {
-      width: 310px;
-      font-size: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
+  /* Media query para 1280px até 1920px*/
+  @media screen and (min-width: 110px) and (max-width: 1920px) {
+      .faq-item button {
+        width: 600px !important;
+        font-size: 22px !important;
+      }
+      .faq-item button .seta-faq-item1 {
+        transform: translate(420px, -35px) !important;
+      }
+      .faq-item button .seta-faq-item2 {
+        transform: translateX(313px) !important;
+      }
+      .faq-item button .seta-faq-item3 {
+        transform: translate(238.5px, 0px) !important;
+      }
+      .content-faq {
+        width: 610px !important;
+        font-size: 16px !important;
+      }
     }
-
-  
-    /* Ajusta a imagem para alinhar à direita */
-    .faq-item button .seta-faq-item1 {
-        transform: translate(180px, -65px); /* Move a imagem  (ajuste conforme necessário) */
-    }
-
-    /* Ajusta a imagem para alinhar à direita */
-    .faq-item button .seta-faq-item2 {
-        transform: translate(193px, 0px); /* Move a imagem  (ajuste conforme necessário) */
-    }
-
-    /* Ajusta a imagem para alinhar à direita */
-    .faq-item button .seta-faq-item3 {
-        transform: translate(117px, 0px); /* Move a imagem  (ajuste conforme necessário) */
-    }
-
-    /* Ajusta as dimensões e o estilo de content-faq */
-    .content-faq {
-      width: 302px;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 1.5;
-      margin: 8px 0;
-    }
-  
-    /* Para dispositivos menores, certifique-se de centralizar e espaçar os elementos */
-    .faq-item {
-      margin: 16px auto;
-    }
-  }
-
      /* Media query para iPhone 14 Pro Max (430px) */
      @media screen and (min-width: 1440px) and (max-width: 1440px) {
       .faq-item button {
@@ -2636,28 +2612,52 @@ body {
         font-size: 16px !important;
       }
     }
+  
+  /*========================= FAQS TELAS MENORES ======================*/
 
-    /* Media query para 1280px até 1920px*/
-     @media screen and (min-width: 1280px) and (max-width: 1920px) {
-      .faq-item button {
-        width: 600px !important;
-        font-size: 22px !important;
-      }
-      .faq-item button .seta-faq-item1 {
-        transform: translate(420px, -35px) !important;
-      }
-      .faq-item button .seta-faq-item2 {
-        transform: translateX(313px) !important;
-      }
-      .faq-item button .seta-faq-item3 {
-        transform: translate(238.5px, 0px) !important;
-      }
-      .content-faq {
-        width: 610px !important;
-        font-size: 16px !important;
-      }
+  @media screen and (min-width: 768px) and (max-width: 768px) {
+
+        /* Ajusta as dimensões e o estilo de content-faq */
+    .content-faq {
+      width: 460px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 8px 0;
+    }
+  
+    /* Para dispositivos menores, certifique-se de centralizar e espaçar os elementos */
+    .faq-item {
+      margin: 16px auto;
     }
 
+    /* Ajusta o botão dentro de faq-item */
+    .faq-item button {
+      width: 300px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  
+    /* Ajusta a imagem para alinhar à direita */
+    .faq-item button .seta-faq-item1 {
+        transform: translate(420px, -35px) !important; /* Move a imagem  (ajuste conforme necessário) */
+    }
+
+    /* Ajusta a imagem para alinhar à direita */
+    .faq-item button .seta-faq-item2 {
+        transform: translate(311px, 0px)!important; /* Move a imagem  (ajuste conforme necessário) */
+    }
+
+    /* Ajusta a imagem para alinhar à direita */
+    .faq-item button .seta-faq-item3 {
+        transform: translate(237px, 0px)!important; /* Move a imagem  (ajuste conforme necessário) */
+    }
+  }
 
 
     /* Media query para iPhone 14 Pro Max (430px) */
