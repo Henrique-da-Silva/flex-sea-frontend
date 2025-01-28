@@ -53,7 +53,9 @@
       line-height: 28px;
       text-align: left; /* Alinha à esquerda */
       margin-bottom: 20px;
-      transform: translate(100px, 58px);
+      transform: translate(80px, 58px);
+      text-transform: none;
+      color: #F9F6EC;
   }
 
   .content div {
