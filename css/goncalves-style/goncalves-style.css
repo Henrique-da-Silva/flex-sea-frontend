@@ -2579,25 +2579,22 @@ body {
 /* Ajuste para telas maiores (desktop) */
 @media screen and (min-width: 769px) {
 
-  .content-faq {
-    width: 610px !important;
-    font-size: 16px !important;
-  }
-  
   .faq-item button {
     width: 600px !important;
     font-size: 22px !important;
   }
   .faq-item button .seta-faq-item1 {
-      transform: translate(420px, -35px) !important; /* Ajuste o valor conforme necessário */
+    transform: translate(420px, -35px) !important;
   }
-
   .faq-item button .seta-faq-item2 {
-      transform: translateX(313px) !important; /* Ajuste o valor conforme necessário */
+    transform: translateX(313px) !important;
   }
-
   .faq-item button .seta-faq-item3 {
-      transform: translateX(238.5px) !important; /* Ajuste o valor conforme necessário */
+    transform: translate(238.5px, 0px) !important;
+  }
+  .content-faq {
+    width: 610px !important;
+    font-size: 16px !important;
   }
 }
 /*========================= FIM FAQS TELAS MAIORES ======================*/
