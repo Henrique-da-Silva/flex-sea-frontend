@@ -1,5 +1,8 @@
 /*================================================= HEADER STYELE =====================================================*/
- 
+
+.header-index{
+ border-bottom: none;
+}
 
 
 /*============================================== FIM HEADER STYELE ==================================================*/
@@ -227,6 +230,10 @@
 
 body {
   overflow-x: hidden; /* Remove o scroll horizontal */
+}
+
+.header-bioplastic{
+  border-bottom: none;
 }
 
 /* Estilos para Desktop */
@@ -691,6 +698,10 @@ body {
   padding: 20px 0;
 }
 /*========================================================*/
+
+.header-newsarticle{
+  border-bottom: none;
+}
 
 .hr-news-article {
   margin: 0;
