@@ -2504,7 +2504,7 @@ body {
 }
 
   .faq {
-            width: 43%;
+            width: 613px;
             margin-left: 144px;
         }
         .h1-faqs{
@@ -2618,36 +2618,14 @@ body {
         }   
           
         }
-        @media (min-width: 650px) and (max-width: 983px) {
+        @media (min-width: 650px) and (max-width: 845px) {
 
-          #faqs-first{
-          padding: 20px 0;
-          padding-top: 0px;
-        }
-             #faqs-answer-first {
-          padding-top: 50px;
-        }
-
-           .faq-answer p{
-          width: 302px;
+            .faq {
+            
+            margin-left: 40px;
         }
      
         }
-        @media (min-width: 983px) and (max-width: 1250px) {
-
-            #faqs-first{
-          padding: 20px 0;
-          padding-top: 0px;
-
-        }
-
-           .faq-answer p{
-          width: 302px;
-      
-        }
-     
-        }
-
 
 /*============== FIM FAQ-ITEM =======================*/
 
