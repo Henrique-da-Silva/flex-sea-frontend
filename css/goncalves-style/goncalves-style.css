@@ -2497,8 +2497,10 @@ body {
 .background-container-faq {
     background-image: url('/pages/imgpages/fundo-faqs.png');
     background-repeat: no-repeat;
-    background-position: 268px center; /* Alinha a posição à esquerda */
-    background-size: 800px 900px; /* Reduz o tamanho para largura e altura específicas */
+    background-position: 280px -25px;
+    background-attachment: fixed;
+
+    
 }
 
   .faq {
