@@ -2499,410 +2499,153 @@ body {
     background-repeat: no-repeat;
     background-position: 268px center; /* Alinha a posição à esquerda */
     background-size: 800px 900px; /* Reduz o tamanho para largura e altura específicas */
-    padding: 20px 0;
 }
 
-/*=========================  container-faq ======================*/
-.container-faq {
-    width: 50%;
-    margin-left: 146px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.10);
-    border-radius: 10px;
-}
+  .faq {
+            width: 43%;
+            margin-left: 144px;
+        }
+        .h1-faqs{
+          font-family: 'Dm Sans';
+          font-weight: 500;
+          font-size: 42px;
+          margin-bottom: 60px;
+        }
 
-/* Estilo para telas menores (ex: mobile)  para não alterar a responsividade do modo mobile*/
-@media (max-width: 768px) {
-    .container-faq {
-        width: 100%; /* Ajusta para ocupar toda a largura */
-        margin-left: 0; /* Remove o margin-left */
-        padding: 10px; /* Opcional: ajusta o padding para um layout mais compacto */
-    }
-}
+        .faq-item {
+            border-bottom: 1px solid #ccc;
+            padding: 15px 0;
+        }
 
-/*========================= fim container-faq ======================*/
+        .faq-question {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
 
-.faq {
-    margin-bottom: 20px;
-}
+        .faq-question h3{
+          width: 568px;
+          height: 56px;
+          font-family: 'DM Sans';
+          font-weight: 500;
+          font-size: 22px;
+          margin-top: 25px;
+        }
 
-/*========================= h1-faqs ======================*/
-.h1-faqs{
-    width: 185px;
-    height: 50px;
-    font-size: 42px;
-    font-family: 'DM Sans', sans-serif; /* Aplicar la fuente */
-    color: #000000;
-    font-weight: 500;
-    margin-bottom: 60px;
-}
+        .faq-answer {
+            display: none;
+            padding: 10px 0;
+        }
 
-@media (max-width: 768px) {
-    .h1-faqs {
-        margin-bottom: 20px;
-    }
-}
+        .faq-answer p{
+          width: 545px;
+          font-family: 'Dm Sans';
+          font-weight: 400;
+          font-size: 16px;
+        }
 
-/*========================= fim h1-faqs ======================*/
+        .arrow {
+            transition: transform 0.3s ease;
+        }
 
-
-.faq-item {
-    border-bottom: 1px solid #000000;
-    max-width: 613px;
-    padding: 10px 0;
-}
-
-/*======================================== FAQ-ITEM ===================================*/
-
-  /*========================= FAQS TELAS MAIORES ======================*/
-  /* Media query para 1280px até 1920px*/
-  @media screen and (min-width: 1280px) and (max-width: 1920px) {
-    .faq-item button {
-      width: 600px !important;
-      font-size: 22px !important;
-    }
-    .faq-item button .seta-faq-item1 {
-      transform: translate(420px, -35px) !important;
-    }
-    .faq-item button .seta-faq-item2 {
-      transform: translateX(313px) !important;
-    }
-    .faq-item button .seta-faq-item3 {
-      transform: translate(238.5px, 0px) !important;
-    }
-    .content-faq {
-      width: 610px !important;
-      font-size: 16px !important;
-    }
-  }
-
-/* Ajuste para telas maiores (desktop) */
-@media screen and (min-width: 769px) and (max-width: 1279px) {
-
-  .faq-item button {
-    width: 600px !important;
-    font-size: 22px !important;
-  }
-  .faq-item button .seta-faq-item1 {
-    transform: translate(435px, -35px) !important;
-  }
-  .faq-item button .seta-faq-item2 {
-    transform: translateX(317px) !important;
-  }
-  .faq-item button .seta-faq-item3 {
-    transform: translate(235.5px, 0px) !important;
-  }
-  .content-faq {
-    width: 610px !important;
-    font-size: 16px !important;
-  }
-}
-/*========================= FIM FAQS TELAS MAIORES ======================*/
+        .expanded .arrow {
+            transform: rotate(180deg);
+        }
 
 
-     /* Media query para iPhone 14 Pro Max (430px) */
-     @media screen and (min-width: 1440px) and (max-width: 1440px) {
-      .faq-item button {
-        width: 600px !important;
-        font-size: 22px !important;
-      }
-      .faq-item button .seta-faq-item1 {
-        transform: translate(420px, -35px) !important;
-      }
-      .faq-item button .seta-faq-item2 {
-        transform: translateX(313px) !important;
-      }
-      .faq-item button .seta-faq-item3 {
-        transform: translate(238.5px, 0px) !important;
-      }
-      .content-faq {
-        width: 610px !important;
-        font-size: 16px !important;
-      }
-    }
-  
-  /*========================= FAQS TELAS MENORES ======================*/
+        @media (max-width: 650px){
 
-  @media screen and (min-width: 768px) and (max-width: 768px) {
+        .h1-faqs{
+          margin-bottom: 0px;
+        }  
 
-        /* Ajusta as dimensões e o estilo de content-faq */
-    .content-faq {
-      width: 460px;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 1.5;
-      margin: 8px 0;
-    }
-  
-    /* Para dispositivos menores, certifique-se de centralizar e espaçar os elementos */
-    .faq-item {
-      margin: 16px auto;
-    }
+        .faq {
+            width: 99%;
+            margin-left: 0px;
+            padding: 20px;
+            padding-top: 0;
+        }
 
-    /* Ajusta o botão dentro de faq-item */
-    .faq-item button {
-      width: 300px;
-      font-size: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
-    }
-  
-    /* Ajusta a imagem para alinhar à direita */
-    .faq-item button .seta-faq-item1 {
-        transform: translate(420px, -35px) !important; /* Move a imagem  (ajuste conforme necessário) */
-    }
+        .faq-question h3{
+          width: 310px;
+          height: 56px;
+          font-family: 'DM Sans';
+          font-weight: 500;
+          font-size: 18px;
+          margin-top: 40px;
+        }
 
-    /* Ajusta a imagem para alinhar à direita */
-    .faq-item button .seta-faq-item2 {
-        transform: translate(311px, 0px)!important; /* Move a imagem  (ajuste conforme necessário) */
-    }
+        .faq-answer p{
+          width: 302px;
+          font-family: 'Dm Sans';
+          font-weight: 400;
+          font-size: 16px;
+        }
 
-    /* Ajusta a imagem para alinhar à direita */
-    .faq-item button .seta-faq-item3 {
-        transform: translate(237px, 0px)!important; /* Move a imagem  (ajuste conforme necessário) */
-    }
-  }
+        .faq-item {
+          padding: 1px 0;
+          padding-top: 0;
+        }
+
+        .faq-answer {
+          display: none;
+          padding: 10px 0;
+          padding-top: 0;
+        }
+
+        #faqs-first{
+          padding: 20px 0;
+
+        }
+
+        }
+        @media (min-width: 300px) and (max-width: 400px) {
+
+            #faqs-answer-first {
+          
+          padding-top: 10px;
+        }
 
 
-    /* Media query para iPhone 14 Pro Max (430px) */
-    @media screen and (max-width: 430px) {
-      .faq-item button {
-        width: 302px !important;
-        font-size: 16px !important;
-      }
-      .faq-item button .seta-faq-item1 {
-        transform: translate(191px, -25px) !important;
-      }
-      .faq-item button .seta-faq-item2 {
-        transform: translate(201px, 0px) !important;
-      }
-      .faq-item button .seta-faq-item3 {
-        transform: translate(147px, 0px) !important;
-      }
-      .content-faq {
-        width: 290px !important;
-        font-size: 16px !important;
-      }
-    }
+        }
+        @media (min-width: 400px) and (max-width: 650px) {
 
+          .faq-question h3{
+          width: 568px;
+          
+        }   
+          
+        }
+        @media (min-width: 650px) and (max-width: 983px) {
 
-    /* Media query para (428px) */
-    /* Regras CSS específicas para o iPhone 13 Pro Max ou dispositivos similares */
-    @media screen and (max-width: 428px) {
-      .faq-item button {
-        width: 400px !important;
-        font-size: 18px !important;
-      }
-      .faq-item button .seta-faq-item1 {
-        transform: translate(150px, -25px) !important;
-      }
-      .faq-item button .seta-faq-item2 {
-        transform: translate(160px, 0px) !important;
-      }
-      .faq-item button .seta-faq-item3 {
-        transform: translate(92px, 0px) !important;
-      }
-      .content-faq {
-        width: 420px !important;
-        font-size: 14px !important;
-      }
-    }
+          #faqs-first{
+          padding: 20px 0;
+          padding-top: 0px;
+        }
+             #faqs-answer-first {
+          padding-top: 50px;
+        }
 
+           .faq-answer p{
+          width: 302px;
+        }
+     
+        }
+        @media (min-width: 983px) and (max-width: 1250px) {
 
+            #faqs-first{
+          padding: 20px 0;
+          padding-top: 0px;
 
-    /* Media query para iPhone 15 Pro Max (428px) */
-    @media screen and (max-width: 414px) {
-      .faq-item button {
-        width: 390px !important;
-        font-size: 18px !important;
-      }
-      .faq-item button .seta-faq-item1 {
-        transform: translate(140px, -27px) !important;
-      }
-      .faq-item button .seta-faq-item2 {
-        transform: translate(150px, 0px) !important;
-      }
-      .faq-item button .seta-faq-item3 {
-        transform: translate(86px, 0px) !important;
-      }
-      .content-faq {
-        width: 410px !important;
-        font-size: 10px !important;
-      }
-    }
-    @media (max-width: 393px) {
-      /* Suas regras CSS para o iPhone 15 ou dispositivos com largura igual ou menor */
-      .faq-item button {
-        width: 330px !important;
-        font-size: 18px !important;
-      }
-      .faq-item button .seta-faq-item1 {
-        transform: translate(105px, -26px) !important;
-      }
-      .faq-item button .seta-faq-item2 {
-        transform: translate(130px, 0px) !important;
-      }
-      .faq-item button .seta-faq-item3 {
-        transform: translate(69px, 0px)!important;
-      }
-      .content-faq {
-        width: 390px !important;
-        font-size: 16px !important;
-      }
-    }
+        }
 
-    /* Media query para iPhone 12 Pro (390px) */
-@media screen and (max-width: 390px) {
-  .faq-item button {
-    width: 330px !important;
-    font-size: 18px !important;
-  }
-  .faq-item button .seta-faq-item1 {
-    transform: translate(105px, -26px) !important;
-  }
-  .faq-item button .seta-faq-item2 {
-    transform: translate(128px, 0px) !important;
-  }
-  .faq-item button .seta-faq-item3 {
-    transform: translate(65px, 0px)!important;
-  }
-  .content-faq {
-    width: 388px !important;
-    font-size: 16px !important;
-  }
-}
+           .faq-answer p{
+          width: 302px;
+      
+        }
+     
+        }
 
-    /* Media query para (378px) */
-    @media screen and (max-width: 378px) {
-      .faq-item button {
-        width: 270px !important;
-        font-size: 16px !important;
-      }
-      .faq-item button .seta-faq-item1 {
-        transform: translate(195px, -67px) !important;
-      }
-      .faq-item button .seta-faq-item2 {
-        transform: translate(85px, 0px) !important;
-      }
-      .faq-item button .seta-faq-item3 {
-        transform: translate(9px, 0px) !important;
-      }
-      .content-faq {
-        width: 260px !important;
-        font-size: 14px !important;
-      }
-    }
-
-
-  /* Media query para  (376px) */
-  @media screen and (max-width: 376px) {
-    .faq-item button {
-      width: 270px !important;
-      font-size: 16px !important;
-    }
-    .faq-item button .seta-faq-item1 {
-      transform: translate(195px, -67px) !important;
-    }
-    .faq-item button .seta-faq-item2 {
-      transform: translate(85px, 0px) !important;
-    }
-    .faq-item button .seta-faq-item3 {
-      transform: translate(10px, 0px) !important;
-    }
-    .content-faq {
-      width: 260px !important;
-      font-size: 14px !important;
-    }
-  }
-
-
-  /* Media query para iPhone SE (375px) */
-@media screen and (max-width: 375px) {
-    .faq-item button {
-      width: 270px !important;
-      font-size: 16px !important;
-    }
-    .faq-item button .seta-faq-item1 {
-      transform: translate(222px, -50px) !important;
-    }
-    .faq-item button .seta-faq-item2 {
-      transform: translate(144px, 0px) !important;
-    }
-    .faq-item button .seta-faq-item3 {
-      transform: translate(90px, 0px) !important;
-    }
-    .content-faq {
-      width: 260px !important;
-      font-size: 14px !important;
-    }
-  }
-
-  @media (max-width: 360px) {
-    /* Regras CSS para dispositivos com largura de viewport de 360px ou menos (mari) */
-    .faq-item button {
-      width: 340px !important;
-      font-size: 16px !important;
-    }
-    .faq-item button .seta-faq-item1 {
-      transform: translate(120px, -26px) !important;
-    }
-    .faq-item button .seta-faq-item2 {
-      transform: translate(126px, 0px) !important;
-    }
-    .faq-item button .seta-faq-item3 {
-      transform: translate(70px, 0px) !important;
-    }
-    .content-faq {
-      max-width: 360px !important;
-      font-size: 14px !important;
-    }
-  }
-
-  @media (max-width: 363px) {
-    /* Regras CSS para dispositivos com largura de viewport de 360px ou menos (mari) */
-    .faq-item button {
-      width: 340px !important;
-      font-size: 16px !important;
-    }
-    .faq-item button .seta-faq-item1 {
-      transform: translate(120px, -26px) !important;
-    }
-    .faq-item button .seta-faq-item2 {
-      transform: translate(126px, 0px) !important;
-    }
-    .faq-item button .seta-faq-item3 {
-      transform: translate(70px, 0px) !important;
-    }
-    .content-faq {
-      max-width: 360px !important;
-      font-size: 14px !important;
-    }
-  }
-
-  /* Media query para resolução de 341px responsiv mode*/
-@media screen and (max-width: 341px) {
-  .faq-item button {
-    width: 310px !important;
-    font-size: 18px !important;
-  }
-  .faq-item button .seta-faq-item1 {
-    transform: translate(178px, -57px);
-  }
-  .faq-item button .seta-faq-item2 {
-    transform: translate(77px, 0px);
-  }
-  .faq-item button .seta-faq-item3 {
-    transform: translate(15px, 0px);
-  }
-  .content-faq {
-    width: 302px !important;
-    font-size: 13px;
-  }
-}
 
 /*============== FIM FAQ-ITEM =======================*/
 

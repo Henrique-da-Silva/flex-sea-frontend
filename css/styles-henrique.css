@@ -1497,8 +1497,6 @@ label span {
       justify-content: center;
     }
 
-   
-
     .radio-container input[type="radio"]:checked::after {
       content: '';
       display: block;
