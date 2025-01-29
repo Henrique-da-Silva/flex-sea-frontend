@@ -575,6 +575,20 @@ align-items: center;
    
 
 }
+  @media (max-width: 368px ){
+
+  .news-input-name{
+    width: 318px;
+
+    }
+
+  .news-input-email{
+    width: 318px;
+ 
+    }
+
+      
+    }
 
                                         /* Estilos da página Biotech*/
 
@@ -1682,6 +1696,12 @@ textarea::placeholder{
     background-image: none;
    
     }
+
+    .radio-group{
+        width: 360px;
+    }
+
+
     .body-enquiries-contact{
     background-image: none;
    
@@ -1689,12 +1709,16 @@ textarea::placeholder{
 
     .main-material-request{
         margin-left: 0px;
-        padding: 20px;
+        padding: 15px;
         margin-top: 100px;
     }
     .title-enquiries h1{
         font-size: 36px;
     }
+    .radio-container{
+        width: 360px;
+    }
+
     .radio-container{
         flex-direction: column;
     }
@@ -1720,6 +1744,15 @@ textarea::placeholder{
 
 
 }
+    @media (max-width: 384px ){
+        .form-enquiries input{
+            width: 330px;
+        }
+
+        .contact-contentp{
+            width: 330px;
+        }
+    }
 
                                     /* Estilos das páginas Privacy Policy e Terms & Conditions*/
 
