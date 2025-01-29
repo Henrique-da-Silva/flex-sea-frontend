@@ -12,7 +12,7 @@ window.addEventListener("scroll", function() {
 
         // Ajustar a altura do header somente para telas maiores
         if (isLargeScreen) {
-            header.style.height = "89px";
+            header.style.height = "276px";
         }
 
         // Ajustar a posição do menu-icon para telas menores
