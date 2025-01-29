@@ -39,7 +39,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 100px;
+    padding: 19px 100px;
     border-bottom: 0.5px solid #9A9998;
 }
 
@@ -101,7 +101,7 @@ header .brand img {
 
 header.scroll-adjust .brand img {
 
-    transform: translateY(-8px);
+    transform: translateY(-9px);
 }
 
 header.scroll-adjust {

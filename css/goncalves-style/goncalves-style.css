@@ -997,6 +997,7 @@ body {
     font-size: 22px;
     max-width: 460px;
     color: #000000;
+    margin-bottom: 40px;
   }
   
   /* Styles for h3-left-content in mobile mode */
@@ -1177,6 +1178,7 @@ body {
     .right-about-us-laranja ul li {
       margin-bottom: 15px;
       font-size: 16px;
+      line-height: 24px;
     }
   }
     /*====================== MORE BOTTON =========================*/
@@ -1681,7 +1683,7 @@ body {
   
   /* Seção de cada grupo */
   .team-section {
-    margin: 40px 0;
+    margin-bottom: 40px;
   }
   
   /* Grid para a equipe */
