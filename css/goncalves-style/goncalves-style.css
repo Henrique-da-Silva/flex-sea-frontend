@@ -1770,7 +1770,7 @@ body {
   /*================= STICK MENU =======================*/
   .sticky-menu {
     position: fixed;
-    top: 240px; /* Ajuste conforme necessário */
+    top: 260px; /* Ajuste conforme necessário */
     left: 100px; /* Ajuste conforme necessário */
     background-color: rgba(255, 255, 255, 0.10);
     padding: 10px;
