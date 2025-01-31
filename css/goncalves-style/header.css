@@ -245,6 +245,12 @@ header.submenu-open {
     header.sticky {
         background: #FFFFFF;
         padding: 20px 20px;
+        border-bottom: 0.5px solid #9A9998;
+    }
+
+    header.sticky .menu-icon span {
+        background-color: #000000 !important;
+        transform: translateY(12px) !important;
     }
       
     header .btn {
