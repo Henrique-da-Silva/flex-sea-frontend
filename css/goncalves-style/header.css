@@ -39,13 +39,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-items: flex-start; /* Alinha os elementos no topo */
     padding: 19px 100px;
     border-bottom: 0.5px solid #9A9998;
+    transition: height 0.3s ease, background-color 0.3s ease; /* Adiciona transição suave */
 }
 
 header.sticky {
     background: #FFFFFF;
     padding: 20px 100px;
+    align-items: flex-start; /* Mantém o alinhamento no topo */
 }
 
 header .brand {
@@ -55,14 +58,17 @@ header .brand {
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 2px;
+    margin-top: 0; /* Remove margem superior */
 }
 
 header .menu {
     position: relative;
-    z-index: 998; /* Para telas grandes */
+    z-index: 998;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Alinha os itens do menu no topo */
+    margin-top: 0; /* Remove margem superior */
+    top: 10px;
 }
 
 header .menu a {
@@ -72,6 +78,7 @@ header .menu a {
     text-decoration: none;
     margin: 0 30px;
     border-radius: 20px;
+    display: block; /* Garante que os links ocupem toda a largura */
 }
 
 
@@ -129,6 +136,16 @@ header .menu-btn {
     display: none;
 }
 
+/* Classe para o nav transparente */
+.nav-transparent {
+    background-color: transparent !important;
+}
+
+/* Classe para o nav branco */
+.nav-white {
+    background-color: white !important;
+}
+
 /*=========================== Estilos para o submenu =======================*/
 .menu-item {
     position: relative;
@@ -139,7 +156,7 @@ header .menu-btn {
     position: absolute;
     top: 100%; /* Alinha abaixo do item pai */
     left: 0;
-    background: #fff;
+    background: transparent;
     list-style: none;
     padding: 10px 0;
     margin: 0;
@@ -166,8 +183,18 @@ header .menu-btn {
     color: #000000;
 }
 
-.menu-item:hover .submenu {
-    display: block; /* Mostra o submenu ao passar o mouse */
+.menu-item .submenu {
+    display: none; /* Esconde o submenu por padrão */
+}
+
+.menu-item.active .submenu {
+    display: block; /* Mostra o submenu quando o item está ativo */
+}
+
+header.submenu-open {
+    height: 250px; /* Aumenta a altura do header */
+    background-color: #FFFFFF;
+    transition: height 0.3s ease, background-color 0.3s ease; /* Transição suave */
 }
 
 /*======================== Fim Estilos para o submenu =============================*/

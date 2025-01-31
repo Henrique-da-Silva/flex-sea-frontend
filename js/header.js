@@ -1,74 +1,60 @@
-// Adicionar e remover classe 'sticky' ao fazer scroll
-window.addEventListener("scroll", function() {
-    const header = document.querySelector("header");
-    const menuIcon = document.querySelector(".menu-icon");
-    const menuIconSpans = document.querySelectorAll(".menu-icon span");
-    const isLargeScreen = window.matchMedia("(min-width: 1060px)").matches;
-    const isSmallScreen = window.matchMedia("(max-width: 1060px)").matches;
-
-    if (window.scrollY > 0) {
-        header.classList.add('sticky');
-        header.classList.add('scroll-adjust'); // Adicionar ajuste de posição
-
-        // Ajustar a altura do header somente para telas maiores
-        if (isLargeScreen) {
-            header.style.height = "276px";
-        }
-
-        // Ajustar a posição do menu-icon para telas menores
-        if (isSmallScreen) {
-            menuIcon.classList.add('menu-icon-scroll'); // Adiciona a classe para mover o menu-icon
-        }
-
-        // Mudar a cor das barras do menu-icon para preto
-        menuIconSpans.forEach(span => span.style.backgroundColor = "#000000");
-    } else {
-        header.classList.remove('sticky');
-        header.classList.remove('scroll-adjust'); // Remover ajuste de posição
-
-        // Voltar à altura padrão
-        header.style.height = ""; // Reseta para o valor padrão do CSS
-
-        // Reverter o ajuste da posição do menu-icon para telas menores
-        if (isSmallScreen) {
-            menuIcon.classList.remove('menu-icon-scroll'); // Remove a classe para reverter o movimento
-        }
-
-        // Mudar a cor das barras do menu-icon para branco
-        menuIconSpans.forEach(span => span.style.backgroundColor = "#FFFFFF");
-    }
-});
-
 // Controle do menu responsivo
-const menu = document.querySelector('.menu');
-const menuBtn = document.querySelector('.menu-btn');
-const closeBtn = document.querySelector('.close-btn');
+const menu = document.querySelector(".menu");
+const menuBtn = document.querySelector(".menu-btn");
+const closeBtn = document.querySelector(".close-btn");
 
 menuBtn.addEventListener("click", () => {
-    menu.classList.add('active');
+  menu.classList.add("active");
 });
 
 closeBtn.addEventListener("click", () => {
-    menu.classList.remove('active');
+  menu.classList.remove("active");
 });
 
-document.querySelectorAll('.has-submenu').forEach(item => {
-    item.addEventListener('click', function (e) {
-        const parent = this.parentElement;
+document.querySelectorAll(".menu-item").forEach((item) => {
+  const arrow = item.querySelector(".arrow"); // Seleciona o span que contém a imagem SVG
 
-        // Fecha outros submenus abertos
-        document.querySelectorAll('.menu-item').forEach(menuItem => {
-            if (menuItem !== parent) {
-                menuItem.classList.remove('active');
-            }
-        });
+  arrow.addEventListener("click", function (e) {
+    e.preventDefault(); // Impede o comportamento padrão do link
+    e.stopPropagation(); // Impede a propagação do evento para o link pai
 
-        // Alterna a classe 'active' no item clicado
-        parent.classList.toggle('active');
-
-        // Permite navegação padrão se o link principal for clicado
-        if (!parent.querySelector('.submenu')) {
-            return; // Permite o clique em links que não têm submenu
-        }
+    // Fecha outros submenus abertos
+    document.querySelectorAll(".menu-item").forEach((menuItem) => {
+      if (menuItem !== item) {
+        menuItem.classList.remove("active");
+      }
     });
+
+    // Alterna a classe 'active' no item clicado
+    item.classList.toggle("active");
+
+    // Adiciona ou remove a classe 'submenu-open' no header
+    const header = document.querySelector("header");
+    if (item.classList.contains("active")) {
+      header.classList.add("submenu-open");
+    } else {
+      header.classList.remove("submenu-open");
+    }
+  });
+
+  // Permite navegação padrão se o link principal for clicado
+  item.querySelector("a").addEventListener("click", function (e) {
+    if (item.classList.contains("active")) {
+      e.preventDefault(); // Impede a navegação se o submenu estiver aberto
+    }
+  });
 });
+
+
+ // Js para definir qual página tem Nav transparent ou Branco
+    const currentPage = window.location.pathname;
+
+    const transparentPages = ['/index.html']; // Adicione as URLs das páginas aqui
+
+    const nav = document.getElementById('main-nav');
+
+if (transparentPages.includes(currentPage)) {
+    nav.classList.add('nav-transparent');
+} else {
+    nav.classList.add('nav-white');
+}
