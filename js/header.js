@@ -1,4 +1,3 @@
-// Controle do menu responsivo
 const menu = document.querySelector(".menu");
 const menuBtn = document.querySelector(".menu-btn");
 const closeBtn = document.querySelector(".close-btn");
@@ -11,9 +10,10 @@ closeBtn.addEventListener("click", () => {
   menu.classList.remove("active");
 });
 
+let timeoutId; // Variável global para armazenar o ID do timeout
+
 document.querySelectorAll(".menu-item").forEach((item) => {
   const arrow = item.querySelector(".arrow"); // Seleciona o span que contém a imagem SVG
-  let timeoutId; // Variável para armazenar o ID do timeout
 
   // Evento de clique para abrir/fechar o submenu
   arrow.addEventListener("click", function (e) {
@@ -39,19 +39,37 @@ document.querySelectorAll(".menu-item").forEach((item) => {
     }
   });
 
-  // Evento de mouseenter para cancelar o timeout se o mouse voltar
+  // Evento de mouseenter para abrir o submenu em telas maiores
   item.addEventListener("mouseenter", function () {
-    clearTimeout(timeoutId); // Cancela o timeout se o mouse voltar ao item
+    if (window.innerWidth > 1060) {
+      // Verifica se a tela é maior que 1060px
+      clearTimeout(timeoutId); // Cancela o timeout se o mouse voltar ao item
+
+      // Fecha outros submenus abertos
+      document.querySelectorAll(".menu-item").forEach((menuItem) => {
+        if (menuItem !== item) {
+          menuItem.classList.remove("active");
+        }
+      });
+
+      // Abre o submenu do item atual
+      item.classList.add("active");
+
+      // Aumenta o tamanho do header
+      const header = document.querySelector("header");
+      header.classList.add("submenu-open");
+    }
   });
 
-  // Evento de mouseleave para fechar o submenu ao mover o mouse para fora
+  // Evento de mouseleave para fechar o submenu em telas maiores
   item.addEventListener("mouseleave", function () {
-    // Adiciona um pequeno atraso antes de fechar o submenu
-    timeoutId = setTimeout(() => {
-      item.classList.remove("active");
-      const header = document.querySelector("header");
-      header.classList.remove("submenu-open");
-    }, 300); // Ajuste o tempo de atraso conforme necessário (300ms = 0.3s)
+    if (window.innerWidth > 1060) {
+      // Verifica se a tela é maior que 1060px
+      // Adiciona um pequeno atraso antes de fechar o submenu
+      timeoutId = setTimeout(() => {
+        item.classList.remove("active");
+      }, 300); // Ajuste o tempo de atraso conforme necessário (300ms = 0.3s)
+    }
   });
 
   // Permite navegação padrão se o link principal for clicado
@@ -61,6 +79,23 @@ document.querySelectorAll(".menu-item").forEach((item) => {
     }
   });
 });
+
+// Evento para fechar o header quando o mouse sai completamente do menu
+menu.addEventListener("mouseleave", function () {
+  if (window.innerWidth > 1060) {
+    // Verifica se a tela é maior que 1060px
+    timeoutId = setTimeout(() => {
+      const header = document.querySelector("header");
+      header.classList.remove("submenu-open");
+
+      // Fecha todos os submenus
+      document.querySelectorAll(".menu-item").forEach((menuItem) => {
+        menuItem.classList.remove("active");
+      });
+    }, 300); // Ajuste o tempo de atraso conforme necessário (300ms = 0.3s)
+  }
+});
+
 
 // Js para definir qual página tem Nav transparent ou Branco
 const currentPage = window.location.pathname;
