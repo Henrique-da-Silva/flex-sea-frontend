@@ -1761,11 +1761,12 @@ textarea::placeholder{
     margin-top: 100px;
     width: 50%;
     padding: 5px;
+    margin-left: 100px;
 } 
 
 .page-privacy-policy p{
 
-    font-family: 'DM Mono';
+    font-family: 'DM Sans';
 
 }
 
@@ -1776,11 +1777,12 @@ textarea::placeholder{
         font-family: 'DM Sans';
         padding: 20px;
         width: 100%;
+        margin-left: 0px;
     }
 
     .page-privacy-policy p{
 
-    font-family: 'DM Mono';
+    font-family: 'DM Sans';
 
 
 }      
@@ -1794,18 +1796,19 @@ textarea::placeholder{
     margin-top: 100px;
     width: 50%;
     padding: 5px;
+    margin-left: 100px;
 
 }
 
 .termsconditions p{
-    font-family: 'DM Mono';
+    font-family: 'DM Sans';
 
 }
 .termsconditions a{
      color: inherit; 
     }
 .termsconditions ul{
-    font-family: 'DM Mono';
+    font-family: 'DM Sans';
 
 }
 
@@ -1816,11 +1819,12 @@ textarea::placeholder{
         font-family: 'DM Sans';
         padding: 20px;
         width: 100%;
+        margin-left: 0px;
     }
 
     .termsconditions p{
 
-    font-family: 'DM Mono';
+    font-family: 'DM Sans';
 
 }
     .termsconditions li{
