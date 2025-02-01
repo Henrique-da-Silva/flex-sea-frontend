@@ -64,35 +64,46 @@ document.querySelectorAll(".menu-item").forEach((item) => {
   // Evento de mouseleave para fechar o submenu em telas maiores
   item.addEventListener("mouseleave", function () {
     if (window.innerWidth > 1060) {
-      // Verifica se a tela é maior que 1060px
-      // Adiciona um pequeno atraso antes de fechar o submenu
       timeoutId = setTimeout(() => {
         item.classList.remove("active");
-      }, 300); // Ajuste o tempo de atraso conforme necessário (300ms = 0.3s)
+        const header = document.querySelector("header");
+        header.classList.remove("submenu-open");
+      }, 300);
     }
   });
 
   // Permite navegação padrão se o link principal for clicado
   item.querySelector("a").addEventListener("click", function (e) {
-    if (item.classList.contains("active")) {
-      e.preventDefault(); // Impede a navegação se o submenu estiver aberto
+    if (!item.classList.contains("active")) {
+      // Se o submenu não estiver aberto, permite a navegação
+      return;
     }
+    // Se o submenu estiver aberto, fecha o submenu e permite a navegação
+    item.classList.remove("active");
+    const header = document.querySelector("header");
+    header.classList.remove("submenu-open");
   });
 });
 
-// Evento para fechar o header quando o mouse sai completamente do menu
-menu.addEventListener("mouseleave", function () {
-  if (window.innerWidth > 1060) {
-    // Verifica se a tela é maior que 1060px
-    timeoutId = setTimeout(() => {
-      const header = document.querySelector("header");
-      header.classList.remove("submenu-open");
+document.addEventListener("DOMContentLoaded", function () {
+  const menu = document.querySelector(".menu");
+  const header = document.querySelector("header");
 
-      // Fecha todos os submenus
-      document.querySelectorAll(".menu-item").forEach((menuItem) => {
-        menuItem.classList.remove("active");
-      });
-    }, 300); // Ajuste o tempo de atraso conforme necessário (300ms = 0.3s)
+  if (menu && header) {
+    menu.addEventListener("mouseleave", function () {
+      if (window.innerWidth > 1060) {
+        clearTimeout(timeoutId); // Cancela qualquer timeout ativo
+        timeoutId = setTimeout(() => {
+          // Remove a classe que aumenta o tamanho do header
+          header.classList.remove("submenu-open");
+
+          // Fecha todos os submenus
+          document.querySelectorAll(".menu-item").forEach((menuItem) => {
+            menuItem.classList.remove("active");
+          });
+        }, 300); // Tempo de atraso antes de fechar
+      }
+    });
   }
 });
 
