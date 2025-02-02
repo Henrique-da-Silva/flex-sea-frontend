@@ -2508,9 +2508,9 @@ body {
 /*================================================= FAQS STYELE ==================================================*/
 
 .background-container-faq {
-    background-image: url('/pages/imgpages/fundo-faqs.png');
+    background-image: url('/pages/imgpages/Fundofaqs.svg');
     background-repeat: no-repeat;
-    background-position: 280px -25px;
+    background-position: 280px 10px;
     background-attachment: fixed;
 
     
@@ -2566,6 +2566,10 @@ body {
         .expanded .arrow {
             transform: rotate(180deg);
         }
+        
+        #hr-faqs{
+          margin-top: 70px;
+        }
 
 
         @media (max-width: 650px){
@@ -2613,6 +2617,10 @@ body {
 
         }
 
+        #hr-faqs{
+          margin-top: 0px;
+        }
+
         }
         @media (min-width: 300px) and (max-width: 400px) {
 
@@ -2640,141 +2648,8 @@ body {
      
         }
 
-/*============== FIM FAQ-ITEM =======================*/
-
-.p-info{
-    font-weight: 500;
-    font-size: 12px;
-    font-family: 'DM Mono', monospace; /* Fonte aplicada */
-    color: #000000;
-}
-
-.faq-item .content-faq p {
-    width: 90%; /* Largura especificada */
-    font-family: 'DM Sans', sans-serif; /* Fonte aplicada */
-    font-weight: 400; /* Peso da fonte */
-    font-size: 16px; /* Tamanho da fonte */
-    color: #000000; /* Cor da fonte */
-    margin-top: 10px;
-}
-
-.h2-info {
-    font-weight: 500;
-    font-size: 36px;
-    width: 312px;
-    font-family: 'DM Sans', sans-serif; /* Aplicar la fuente */
-    height: auto;
-    color: #000000;
-}
-
-.faq-item button {
-    display: block;
-    width: 100%;
-    text-align: left;
-    background: none;
-    border: none;
-    font-size: 22px;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 10px 0;
-    font-family: 'DM Sans', sans-serif; /* Fonte aplicada */
-    font-weight: 500; /* Peso da fonte */
-    color: #000000; /* Cor da fonte */
-}
-
-.container-btn-faqs {
-    position: relative; /* Necessário para usar position absoluta dentro do contêiner */
-}
-
-/*================= BTN FAQS ==================*/
-.btn-faqs {
-    position: absolute;
-    top: 130px; /* Ajuste conforme necessário */
-    left: 0; /* Alinha à esquerda */
-    width: 197px;
-    height: 43px;
-    background-color: #F9F6EC;
-    border: 1px solid #000000;
-    border-radius: 25px;
-    font-size: 12px;
-    font-family: 'DM Mono', monospace; /* Fonte aplicada */
-    color: #000000; /* Cor inicial do texto */
-}
-
-.btn-faqs:hover {
-    background-color: #C45D16;
-    color: white;
-    border: none;
-}
-
-.btn-faqs:active {
-    background-color: #C45D16;
-    color: white;
-    border: none;
-}
-/*================= BTN FAQS ==================*/
-
-.faq-item button:focus {
-    outline: none;
-}
-
-.faq-item button:hover {
-    color: #06274b;
-}
-
-.faq-item .content-faq {
-    display: none;
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-.info-links {
-    background-color: rgba(255, 255, 255, 0.10);
-    padding: 20px;
-    margin-top: 40px;
-    text-align: center;
-    border-top: 1px solid #ddd;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    border-radius: 10px;
-}
-
-.info-links .link-box {
-    margin: 10px;
-    width: 90%;
-    max-width: 377px;
-    height: 320px;
-    background-color: #F9F6EC;
-    border-radius: 50px;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: left; /* Alinha os elementos filhos à esquerda */
-}
-
-.info-links .p-info {
-    margin-bottom: 10px; /* Ajusta o espaço entre os elementos */
-    text-align: left;
-}
-
-.info-links .h2-info {
-    text-align: left;
-    margin-bottom: 20px; /* Ajusta o espaço entre os elementos */
-}
 
 
-.info-links .link-box a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #333;
-    display: block;
-    margin-bottom: 20px;
-}
-
-.hr-faqs {
-    margin: 0;
-}
 
 /*============================================== FIM FAQS STYELE ==================================================*/
 
