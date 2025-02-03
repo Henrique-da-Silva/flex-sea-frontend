@@ -50,7 +50,7 @@
 
   .content h1 {
     
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'DM Sans';
       font-weight: 500;
       font-size: 18px; /* Tamanho maior */
       line-height: 28px;
@@ -59,12 +59,15 @@
       transform: translate(80px, 58px);
       text-transform: none;
       color: #F9F6EC;
+      letter-spacing: -0.4px;
+      margin-left: 60px;
   }
 
   .content div {
       display: flex; /* Layout em linha */
       justify-content: center; /* Alinha os botões à esquerda */
       gap: 20px; /* Espaçamento entre os botões */
+      margin-left: 30px;
   }
 
   .content a {
@@ -100,7 +103,7 @@
     text-decoration: none;
   }
 
-  @media (max-width: 1060px) {
+  @media (max-width: 1315px) {
     .background-video {
       object-fit: cover; /* Garante que o vídeo ocupe toda a tela */
       height: 100%; /* Ocupa 100% da altura */
@@ -120,6 +123,7 @@
       font-size: 18px; /* Ajuste para telas menores */
       line-height: 28px;
       margin-bottom: 20px;
+      margin-left: 0px;
   }
 
   .content h1 {
@@ -130,6 +134,7 @@
       display: flex;
       flex-direction: column; /* Botões em coluna */
       gap: 25px; /* Aumenta o espaçamento entre os botões */
+      margin-left: 0px;
   }
 
   .content div button {
@@ -199,12 +204,14 @@
     justify-content: space-between !important; /* Alinha o conteúdo à esquerda */
     border-radius: 30px !important;       /* Torna o botão oval ao passar o mouse */
     background-color: #0E0466 !important; /* Mantém a cor de fundo */
+    text-decoration: none;
   }
 
   .fixed-circle img {
     width: 24px !important;               /* Largura da imagem ajustada */
     height: 24px !important;              /* Altura da imagem para mantê-la proporcional */
   }
+
 
   .fixed-circle span {
     color: #ffffff !important;            /* Cor do texto */
