@@ -97,17 +97,19 @@
               <ul>
                 <li>1 ton per shift production capacity in our Wolverhampton facility</li>
                 <li>Selling pellets for injection moulding and 3D printing</li>
-                <li id="story">Selling biopolymers for a diverse range of applications including cosmetics, wastewater treatment</li>
+                <li>Selling biopolymers for a diverse range of applications including cosmetics, wastewater treatment</li>
               </ul>
             </div>
           </a>
         </div>
     
         <!-- Div para o botão -->
-        <div class="button-container">
+        <div class="button-container" id="story">
           <button class="more-button">MORE <img src="/pages/imgpages/arrow-3-about.svg" alt="seta baixo"> </button>
         </div>       
-      </div>
+      </div><br>
+
+      <hr class="full-width-hr"><br>
 
       <br> <br>
       <div class="left-our">
@@ -160,7 +162,7 @@
             biotechnology vertical.
           </h3>
           <br>
-          <p class="story-p2" id="APPROACH">
+          <p class="our-story-p2" id="APPROACH" style="font-size: 16px; font-family: 'Dm Sans'; font-weight: 400;">
             In FlexSea’s first four years, we have moved from a London flat kitchen to 1 ton per shift
             production capacity in our Wolverhampton facility. We are proud to show that we have raised
             £4 million through a combination of private investment and grant funding so far.
@@ -188,10 +190,10 @@
           <p class="content-paragraph" >
             Meanwhile, land crop-derived bioplastics present multiple further hurdles. Firstly, by being cultivated on land, these crops are in direct competition with conventional farming for food production. Even those derived from the by-products and waste streams of human food crops are removing resources used in animal feeds. Land crops require high levels of ecologically harmful, energy intensive fertilisers and pesticides. They also place huge demands on freshwater supplies, depleting rivers and aquifers across the world with knock-on ecological, environmental, social and political consequences. Finally, industrially degradable bioplastics are reliant on significant investment into dedicated collection and processing infrastructure - economically expensive to build and maintain and environmentally costly to operate - which is yet to be delivered on a global scale.
           </p>
-          <p class="content-paragraph" id="TEAM">
+          <p class="content-paragraph">
             FlexSea are addressing these problems with truly home compostable biomaterials produced from a non-competing feedstock, seaweed. We utilise red seaweeds, which are sustainably and reliably cultivated year round, at scale, to deliver the next generation of sustainable packaging solutions. 
           </p>
-          <p class="content-paragraph">
+          <p class="content-paragraph" id="TEAM">
             Our Biotechnology vertical has been developed to consolidate our circular approach, producing valuable materials derived from 100% of the seaweed we receive. Discover more about our <strong><u>Bioplastics</u></strong> and <strong><u>Biopolymers</u></strong>.
           </p>
         </div>
@@ -543,6 +545,12 @@
     <script src="../js/header.js"></script>
     <script src="../js/fixedCircle.js"></script>
     <script src="js/spinner.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          document.getElementById("main-nav").classList.add("nav-white");
+        });
+
+    </script>
   
 </body>
 </html>

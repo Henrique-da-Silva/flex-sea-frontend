@@ -24,30 +24,33 @@ function handleScroll() {
     mobileStickyMenu.style.display = 'none';
 
     // Esconde o menu sticky se o scroll estiver no topo da página
-    if (scrollY < 310) {
+    if (scrollY < 450) {
       stickyMenu.style.display = 'none';
       return; // Sai da função para evitar aplicar outras regras
     }
 
     // Ativa o item "Story" do menu desktop se o scroll estiver entre 310 e 767px
-    if (scrollY >= 310 && scrollY < 1600) { // Ajuste o valor de 1600 conforme a altura da sua seção
-      storyItem.classList.add('active');
-      approachItem.classList.remove('active');
-      teamItem.classList.remove('active');
+    if (scrollY >= 300 && scrollY < 605) {
+      // Ajuste o valor de 1600 conforme a altura da sua seção
+      storyItem.classList.add("active");
+      approachItem.classList.remove("active");
+      teamItem.classList.remove("active");
     }
 
     // Ativa o item "Approach" do menu desktop se o scroll estiver entre 1600 e 2600px
-    if (scrollY >= 1600 && scrollY < 3000) { // Ajuste o valor de 2600 conforme a altura da sua seção
-      storyItem.classList.remove('active');
-      approachItem.classList.add('active');
-      teamItem.classList.remove('active');
+    if (scrollY >= 1000 && scrollY < 1100) {
+      // Ajuste o valor de 2600 conforme a altura da sua seção
+      storyItem.classList.remove("active");
+      approachItem.classList.add("active");
+      teamItem.classList.remove("active");
     }
 
     // Ativa o item "Team" do menu desktop se o scroll estiver entre 2600 e 3710px
-    if (scrollY >= 2600 && scrollY < 3710) { // Ajuste o valor de 3000 conforme a altura da sua seção
-      storyItem.classList.remove('active');
-      approachItem.classList.remove('active');
-      teamItem.classList.add('active');
+    if (scrollY >= 2380 && scrollY < 2430) {
+      // Ajuste o valor de 3000 conforme a altura da sua seção
+      storyItem.classList.remove("active");
+      approachItem.classList.remove("active");
+      teamItem.classList.add("active");
     }
 
     // Esconde o menu sticky se o scroll passar de 3710px
@@ -59,15 +62,15 @@ function handleScroll() {
 
 // Adiciona eventos de clique ao menu desktop
 document.getElementById('desktop-story').addEventListener('click', function () {
-  scrollToSection(900);
+  scrollToSection(605);
 });
 
 document.getElementById('desktop-approach').addEventListener('click', function () {
-  scrollToSection(1800);
+  scrollToSection(1100);
 });
 
 document.getElementById('desktop-team').addEventListener('click', function () {
-  scrollToSection(3000);
+  scrollToSection(2430);
 });
 
 function scrollToSection(scrollYPosition) {
@@ -79,15 +82,15 @@ function scrollToSection(scrollYPosition) {
 
 // Adiciona eventos de clique ao menu mobile
 document.getElementById('mobile-story').addEventListener('click', function () {
-  scrollToSection(900);
+  scrollToSection(1300);
 });
 
 document.getElementById('mobile-approach').addEventListener('click', function () {
-  scrollToSection(1800);
+  scrollToSection(1810);
 });
 
 document.getElementById('mobile-team').addEventListener('click', function () {
-  scrollToSection(3000);
+  scrollToSection(3500);
 });
 
 function scrollToSection(scrollYPosition) {
