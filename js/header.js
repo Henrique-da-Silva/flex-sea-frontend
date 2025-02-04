@@ -13,6 +13,29 @@ closeBtn.addEventListener("click", () => {
 let timeoutId; // Variável global para armazenar o ID do timeout
 
 document.querySelectorAll(".menu-item").forEach((item) => {
+
+  document.querySelectorAll(".menu-item .submenu a").forEach((link) => {
+    link.addEventListener("click", function () {
+      // Fecha todos os submenus
+      document.querySelectorAll(".menu-item").forEach((menuItem) => {
+        menuItem.classList.remove("active");
+      });
+
+      // Fecha o menu principal em telas menores
+      const menu = document.querySelector(".menu");
+      if (window.innerWidth <= 1060) {
+        menu.classList.remove("active");
+      }
+
+      // Remove a classe que aumenta o tamanho do header
+      const header = document.querySelector("header");
+      header.classList.remove("submenu-open");
+    });
+  });
+
+
+
+
   const arrow = item.querySelector(".arrow"); // Seleciona o span que contém a imagem SVG
 
   // Evento de clique para abrir/fechar o submenu
