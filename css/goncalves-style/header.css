@@ -294,6 +294,8 @@ header.submenu-open {
         transition: 0.5s;
         transition-property: right;
         align-items: flex-start;
+        justify-content: flex-start; /* Mantém o conteúdo no topo */
+
     }
 
     header .menu.active {
@@ -311,7 +313,7 @@ header.submenu-open {
 
     header .menu a {
         display: block;
-        margin: 20px;
+        margin: 20px 0;
         padding: 0 15px;
         font-family: 'DM Sans', sans-serif; /* Define a fonte como DM Sans */
         font-weight: 500; /* Define o peso da fonte como 500 */

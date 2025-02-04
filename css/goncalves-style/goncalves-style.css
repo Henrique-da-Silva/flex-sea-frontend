@@ -1380,7 +1380,7 @@ body {
     }
   
     /* .right-our our-story-p2 */
-    .right-our .our-story-p2 {
+      .our-story-p2 {
         max-width: 357px;
         font-family: 'DM Sans', sans-serif;
         font-weight: 400;
